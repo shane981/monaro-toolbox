@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-06",
+  "title": "Fit to drive: fatigue and the new 'unfit to drive' duty",
+  "date": "2026-10-06",
+  "week_label": "Week of Tuesday 6 October 2026",
+  "prepared_by": "Monaro Milk safety (weekly toolbox talk)",
+  "summary": "Since 1 August 2026 the amended Heavy Vehicle National Law (HVNL) says you must not drive a heavy vehicle while impaired by fatigue OR otherwise unfit to drive. It applies to every truck we run over 4.5 t GVM — rigid tankers, semis and the small rigids — and it applies even when you're inside your work and rest hours. With school holiday traffic still on the roads and early farm pick-ups, this week is about checking yourself before you turn the key, and speaking up without fear when something isn't right.",
+  "key_risk": "A driver who is tired, unwell, injured, on new medication, or distracted by stress keeps driving a loaded milk tanker because the run 'has to be done' — on dark farm roads, through dairy yards and onto highways busy with school holiday traffic. Being unfit slows reaction times and weakens judgement and lane control. Under the amended HVNL the driver must not start, or must stop, and anyone in the Chain of Responsibility who causes or encourages an unfit driver to keep going breaches the Primary Duty.",
+  "drivers_need_to_know": [
+    "The law changed on 1 August 2026. Section 228 of the HVNL: you must not drive a heavy vehicle on a road while impaired by fatigue or otherwise unfit to drive. It covers every heavy vehicle over 4.5 t, not just fatigue-regulated trucks over 12 t.",
+    "'Unfit' means you are not of sufficiently good health or fitness to drive safely right now. NHVR examples: a medical episode (e.g. a low blood sugar 'hypo'), a back injury causing pain, flu, side effects from new medication, alcohol or other drugs, or being distressed by something happening at home.",
+    "Being inside your work and rest hours does NOT mean you are fit. The NHVR says you can still be impaired by fatigue or unfit to drive even within the hours limits — and that applies whether you're on Standard Hours or BFM, local or non-local work.",
+    "Check yourself before every shift, keep checking during the shift, and look after sleep and health between shifts. Being fit yesterday doesn't guarantee you're fit today.",
+    "Warning signs to act on: drowsiness or yawning, trouble concentrating, slower reactions, blurred vision, dizziness, pain or discomfort, poor coordination, or feeling emotionally overwhelmed.",
+    "SafeWork NSW's guidance compares fatigue to alcohol: about 17 hours awake impairs you like a 0.05 blood alcohol reading; about 20 hours awake is like 0.1. Our early starts make this a real risk.",
+    "If you're unfit: don't start, or pull over at the first safe place, and ring your supervisor. Telling us is how you meet your legal duty. The law prohibits us from requiring you to start or continue driving when you're unfit — there will be no reprisal for making that call.",
+    "The maximum penalty for a driver breaching s228(1) is $28,230 and 3 demerit points (NHVR schedule, 1 August 2026 to 30 June 2027).",
+    "NHVR says authorised officers won't do roadside medical tests or diagnose conditions, and having a managed medical condition doesn't automatically make you unfit. The focus is on you making the right call before it becomes a serious risk.",
+    "School holidays mean more cars, caravans and drivers on unfamiliar routes. The NHVR is asking everyone to slow down, stay alert, take regular breaks and allow extra time. Expect people to cut in and sit in your blind spots.",
+    "Look out for your mates. If a workmate doesn't seem right, ask 'Are you OK?' and let the supervisor know if you're worried about their safety. You can also report unsafe practices anonymously to the NHVR's Heavy Vehicle Confidential Reporting Line on 1800 931 785."
+  ],
+  "supervisors_must_check": [
+    "Every driver has done a genuine fit-to-drive check before departure — a quick word at the start of the shift, not just a ticked box. NHVR says a declaration on its own is only a small part of meeting the Primary Duty.",
+    "Rosters and run times are realistic with school holiday traffic, farm access conditions and dairy collection windows, so no-one is under pressure to skip breaks or push on.",
+    "There is a backup plan (relief driver, swapped run, or later pick-up arranged with the farm/factory) so a driver who calls in unfit can actually stop.",
+    "Every 'unfit' call or early stop is recorded with what was done about it, with no reprisal, criticism or loss of shifts for the driver.",
+    "Work and rest records are in order for the hours option each driver is on (Standard Hours, or BFM while our accreditation remains current), including written work diaries where required. Current written work diaries can be used until full; the updated v1.4 diaries are coming in as stock runs out.",
+    "Drivers returning from illness, injury, or a change in medication have had a fitness conversation and any medical clearance/restrictions are on file (kept confidential) before they're rostered on.",
+    "Supervisors and schedulers know the signs of a driver who isn't fit and know who has the authority to stand a driver down.",
+    "Our fitness-for-duty / fatigue policy and procedure reflect the amended HVNL and are actually followed in practice — the prosecution the NHVR highlighted in July 2026 involved a company with insufficient fitness-for-duty procedures and backdated safety manuals."
+  ],
+  "discussion_questions": [
+    "What would make you feel unfit to drive at 3 am on a farm pick-up, and what would you do about it?",
+    "If you rang in unfit right now, what would happen to your run? Is our backup plan good enough?",
+    "Which medications, illnesses or injuries could affect your driving that you might not think of straight away?",
+    "Where on our routes and in which dairy yards do you get most tired, or feel most rushed, and why?",
+    "How can we make it easier for someone to say 'I'm not right today' — or to check in on a mate who doesn't seem OK?"
+  ],
+  "practical_checklist": [
+    "Before the shift: ask yourself — Am I tired or drowsy? Am I alert and able to concentrate? Any pain, illness or restricted movement? Any new medication, alcohol or other drugs? Anything weighing on my mind?",
+    "Had enough sleep before an early start? If not, tell your supervisor before you take the truck.",
+    "Read the label on any new medication (including cold and flu tablets) and ask a pharmacist or GP if it could affect your driving.",
+    "Plan your breaks for the run and allow extra time for school holiday traffic.",
+    "During the shift: if you notice warning signs, stop at the first safe place, rest and reassess. Don't push on to 'just one more farm'.",
+    "Unfit? Don't start or stop safely, then call your supervisor. Record it as required.",
+    "Keep your work and rest records up to date for your hours option (work diary where required).",
+    "Watch for holiday traffic: cars cutting in, caravans and vehicles sitting in your blind spots — leave extra following distance.",
+    "Check in on a workmate who doesn't seem themselves."
+  ],
+  "required_records": [
+    "Toolbox talk sign-on register for this talk (this app's CSV export, or the printed register).",
+    "Pre-shift fit-to-drive checks or declarations (as one part of the process, not the whole process).",
+    "Log of any 'unfit to drive' notifications or early stops: date, driver, what was arranged (relief driver/rescheduled run), and confirmation there was no reprisal.",
+    "Work and rest records for each driver's hours option — written work diary/EWD where required, and record-keeper records for local work — including BFM records while that accreditation is current.",
+    "Return-to-work / medical clearance notes and any driving restrictions, stored confidentially.",
+    "Entries in the CoR breach/exception register for fatigue or fitness incidents, near misses and schedule pressure, reviewed by the Director monthly.",
+    "Updated fitness-for-duty / fatigue policy and procedure with version date, plus training records showing supervisors and drivers have been briefed."
+  ],
+  "follow_up_actions": [
+    {
+      "action": "Confirm our fitness-for-duty and fatigue policy/procedure covers the amended HVNL s228 'unfit to drive' duty, applies to all trucks over 4.5 t, and states drivers can stop without reprisal.",
+      "owner": "Director / Operations Manager",
+      "due": "Friday 16 October 2026"
+    },
+    {
+      "action": "Set up (or check) a simple log for 'unfit to drive' calls and early stops, and confirm a relief driver / run-swap plan exists for each depot.",
+      "owner": "Supervisor",
+      "due": "Friday 16 October 2026"
+    },
+    {
+      "action": "Review this week's rosters and run times for school holiday traffic and early starts; adjust where breaks are being squeezed.",
+      "owner": "Scheduler / Supervisor",
+      "due": "Thursday 8 October 2026"
+    },
+    {
+      "action": "Check that every driver on BFM hours is carrying current work diaries and that BFM accreditation expiry dates are known; diarise the transition plan to the Heavy Vehicle Accreditation (HVA) scheme.",
+      "owner": "Compliance",
+      "due": "Friday 30 October 2026"
+    },
+    {
+      "action": "Share NHVR's 'Unfit to Drive' guidance and the Heavy Vehicle Confidential Reporting Line number (1800 931 785) on the depot noticeboard.",
+      "owner": "Supervisor",
+      "due": "Friday 9 October 2026"
+    },
+    {
+      "action": "Follow up with any driver who raised a health, fatigue or roster concern during this talk.",
+      "owner": "Supervisor",
+      "due": "Within 7 days"
+    }
+  ],
+  "sources_reviewed": [
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Unfit to Drive",
+      "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/human-factors/unfit-to-drive",
+      "date": "undated",
+      "accessed": "2026-10-06",
+      "note": "Driver duties, definition of unfit, signs, examples, notifying employer; content reflects the HVNL amendments from 1 Aug 2026."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Duties for managing fatigue and fitness to drive",
+      "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive",
+      "date": "undated",
+      "accessed": "2026-10-06",
+      "note": "s228 and s225 definitions; Primary Duty; causing or encouraging an unfit driver is a breach."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Work and rest hours",
+      "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/work-and-rest-hours",
+      "date": "undated",
+      "accessed": "2026-10-06",
+      "note": "From 1 Aug 2026 a driver must not drive any HV over 4.5 t GVM while impaired by fatigue or unfit, even within hours; BFM continues until accreditation expiry or transition."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "HVNL reform implementation",
+      "url": "https://www.nhvr.gov.au/law-policies/hvnl-reform-implementation",
+      "date": "undated",
+      "accessed": "2026-10-06",
+      "note": "Amended HVNL commenced 1 August 2026."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "HVNL Information Session May 2026 – Fatigue and Fitness to Drive (slides)",
+      "url": "https://www.nhvr.gov.au/files/media/document/880/202605-1757-hvnl-info-session-fatigue-and-fitness-to-drive.pdf",
+      "date": "2026-05",
+      "accessed": "2026-10-06",
+      "note": "Duty applies regardless of hours option (incl. BFM/AFM) and local/non-local work; a fit-to-drive declaration is only a small part; updated WWDs from Aug 2026 as stock depletes."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "HVNL Schedule of Infringement Penalties and Demerit Points – 1 August 2026 to 30 June 2027",
+      "url": "https://www.nhvr.gov.au/files/media/document/910/202606-1769-hvnl-penalties-and-infringements-2026-27.pdf",
+      "date": "2026-06",
+      "accessed": "2026-10-06",
+      "note": "s228(1): maximum penalty $28,230, 3 demerit points."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR highlights fit for duty requirements after successful prosecution",
+      "url": "https://www.nhvr.gov.au/news/2026/07/03/nhvr-highlights-fit-for-duty-requirements-after-successful-prosecution",
+      "date": "2026-07-03",
+      "accessed": "2026-10-06",
+      "note": "Sydney earthmoving company: Category 2 offence, $1.2m fine + $75,000 costs confirmed 10 June 2026; 12-month Supervisory Intervention Order."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR spotlighting mental health resources for heavy vehicle industry this R U OK? Day",
+      "url": "https://www.nhvr.gov.au/news/2026/09/10/nhvr-spotlighting-mental-health-resources-for-heavy-vehicle-industry-this-r-u-ok-day",
+      "date": "2026-09-10",
+      "accessed": "2026-10-06",
+      "note": "Checking in on mates; NRSPP toolbox talk videos."
+    },
+    {
+      "name": "SafeWork NSW",
+      "type": "regulator",
+      "title": "A guide to work health and safety in the road freight transport industry",
+      "url": "https://www.safework.nsw.gov.au/__data/assets/pdf_file/0015/1031703/Guide-to-work-health-and-safety-in-the-road-freight-transport-industry.pdf",
+      "date": "2024-11",
+      "accessed": "2026-10-06",
+      "note": "Fatigue section: 17 hours awake ≈ 0.05 BAC, 20 hours ≈ 0.1; early warning signs. Date taken from PDF metadata."
+    },
+    {
+      "name": "Safe Work Australia",
+      "type": "regulator",
+      "title": "WHS profile: Truck drivers (November 2025)",
+      "url": "https://data.safeworkaustralia.gov.au/sites/default/files/2025-11/Truck_drivers_WHS_profile_November2025.pdf",
+      "date": "2025-11",
+      "accessed": "2026-10-06",
+      "note": "Background: 430 truck drivers died at work in the ten years to 2023, 322 from vehicle incidents; fatality rate 22.6 per 100,000 workers vs 1.5 for all occupations."
+    },
+    {
+      "name": "Safe Work Australia",
+      "type": "regulator",
+      "title": "Mental health – Identifying, assessing, controlling and reviewing (psychosocial hazards)",
+      "url": "https://www.safeworkaustralia.gov.au/safety-topic/managing-health-and-safety/mental-health/managing-risks/identifying-assessing-controlling-and-reviewing",
+      "date": "undated",
+      "accessed": "2026-10-06",
+      "note": "Job demands and remote or isolated work are psychosocial hazards to be managed under WHS law."
+    },
+    {
+      "name": "Big Rigs",
+      "type": "industry",
+      "title": "Regulator addresses truckies' fears over new unfit to drive law",
+      "url": "https://bigrigs.com.au/2026/07/14/regulator-addresses-truckies-fears-over-new-unfit-to-drive-law/",
+      "date": "2026-07-14",
+      "accessed": "2026-10-06",
+      "note": "Context only: NHVR statement that officers will not conduct roadside medical or fitness assessments."
+    },
+    {
+      "name": "Big Rigs",
+      "type": "industry",
+      "title": "Unfit to drive laws: an operator's guide to the HVNL changes",
+      "url": "https://bigrigs.com.au/2026/07/28/unfit-to-drive-laws-an-operators-guide-to-the-hvnl-changes/",
+      "date": "2026-07-28",
+      "accessed": "2026-10-06",
+      "note": "Context only: practical fitness-for-duty system elements for small operators."
+    },
+    {
+      "name": "Truck & Bus News",
+      "type": "industry",
+      "title": "Holiday time! NHVR warns truckies and road users of risks in weeks ahead",
+      "url": "https://www.truckandbus.net.au/79206-2/",
+      "date": "2026-09-22",
+      "accessed": "2026-10-06",
+      "note": "Context only: reports NHVR school holiday message (slow down, stay alert, take regular breaks, allow more time)."
+    }
+  ]
+}

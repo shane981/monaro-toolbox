@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-06T03:57:04.092Z",
+  "latest": "2026-10-06",
+  "count": 1,
+  "talks": [
+    {
+      "id": "2026-10-06",
+      "title": "Fit to drive: fatigue and the new 'unfit to drive' duty",
+      "date": "2026-10-06",
+      "week_label": "Week of Tuesday 6 October 2026",
+      "file": "2026-10-06.json"
+    }
+  ]
+}

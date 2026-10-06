@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Monaro Milk Toolbox Talks",
+  "short_name": "MM Toolbox",
+  "description": "Weekly toolbox talks and sign-on for Monaro Milk drivers and supervisors.",
+  "lang": "en-AU",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#13783c",
+  "categories": ["business", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "This week's talk", "url": "./#/", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Archive", "url": "./#/archive", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
