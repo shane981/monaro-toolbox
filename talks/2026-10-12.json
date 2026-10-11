@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-12",
+  "title": "Hooked up right: couplings, tug tests and stopping trailer drops",
+  "date": "2026-10-12",
+  "week_label": "Week of Monday 12 October 2026",
+  "prepared_by": "Monaro Milk safety (weekly toolbox talk)",
+  "summary": "The NHVR has warned that trailers coming off trucks on the road are on the rise, with incidents in 2026 running at double the rate of the same time last year. Most are preventable with a proper coupling check, a tug test and a walk-around before every trip. This week is for anyone who drives or couples a combination (a semi, or a truck and dog), and for every driver doing a daily check in the dark before an early farm run. If you only drive a rigid, the daily check and immobilising parts still apply to you.",
+  "key_risk": "A trailer that isn't properly coupled, or has a worn or damaged coupling, comes away from the truck: on a highway, on a bend on a rural road, or while you're standing between the truck and trailer in a dark yard. NHVR data shows trailer drops and decoupling events are rising, driven by worn or failed coupling parts, driver error or distraction, poor loading and the normal forces a combination puts through the coupling. A dropped trailer can kill other road users who hit it or swerve to miss it, and a truck or trailer that moves while you're coupling can crush you.",
+  "drivers_need_to_know": [
+    "The NHVR issued a Safety Bulletin in March 2026 because of a clear rise in unplanned trailer drop and decoupling events causing heavy vehicle crashes. In May 2026 it said incidents had doubled on the same time last year, with 8 already recorded in 2026, and 26 recorded between July 2024 and April 2026. The NHVR says many more probably go unreported.",
+    "This is happening close to home. In April 2025 there was a fatal crash in NSW when a dolly and two rear trailers came away from the lead trailer.",
+    "The NHVR lists four main causes: worn, damaged or out-of-adjustment coupling parts; driver error or distraction (including not following a set coupling procedure); the normal up-and-down, forward-and-back and side forces on a combination, especially where maintenance or fitting isn't good enough; and poor load stability or weight distribution putting extra stress on the coupling.",
+    "Before every trip the NHVR expects you to: inspect the couplings properly (drawbars and towbars too), taking off any covers or protective plates to look for wear, damage or defects; make sure the coupling is clean and free of mud and debris that could stop the jaws or locks engaging; check that air lines, electrical cables and safety chains are secured and working; walk right around the combination for a final look; and do a tug test before you leave.",
+    "Coupling a semi, step by step (WorkSafe Queensland): park the truck and trailer in a straight line on flat, hard ground. Keep people out of the area. Make sure you have enough light where the fifth wheel is (yard lights, a torch or a work light). Once you've reversed under, check by eye that the jaws have closed on the kingpin, raise the legs clear of the ground, do a tug test, wind the legs fully up, connect the air and electrical lines, take one more look at the jaws, then do a second tug test in a low forward gear with the trailer brakes on.",
+    "If anything interrupts you while you're coupling (a phone call, the farmer coming over for a chat, a cow on the track), start the whole procedure again from the beginning. Distraction is one of the causes the NHVR names.",
+    "Safety chains on dog trailers (fixed or rigid drawbar trailers): they must be connected so they can't come off by accident, crossed under the drawbar so it can't drop to the ground if the coupling lets go, and the brackets must not be cracked, bent or loose. The NHVIM says shackles and ramshorn hooks are not allowed for attaching safety chains. Tell us if a chain, pin or bracket doesn't look right. Don't make do.",
+    "The NHVR daily check covers more than couplings: brakes (warning lights, gauges, air tank drains), wheels and tyres (pressure, tread, wheel nuts, leaking hub seals), lights and reflectors, mirrors, windscreen and wipers, body and structure, and fluid leaks. If you find a fault, write it up and report it before the truck moves. If the vehicle isn't safe, it doesn't go.",
+    "Before you get out of the cab to check or work on anything: engine off, key out, park brake on. Chock the wheels if you're on a slope or doing an inspection. SafeWork NSW says roll-aways have killed several people in NSW, and coupling and uncoupling is one of the times a vehicle can move on you. Never get under or between a truck and trailer unless both are fully immobilised.",
+    "Uncoupling or dropping a trailer at a farm entrance, a roadside or a depot: pick flat, firm ground, apply the trailer brakes, use chocks where the ground isn't level, and make sure the legs are down on solid footing before you release the jaws or pin. WorkSafe Queensland describes a worker knocked under his vehicle while uncoupling on uneven ground, and another whose hand was crushed when a coupling released unexpectedly.",
+    "Harvest is starting, so expect more trucks, slow farm machinery and pressure on rural roads over the coming weeks. The NHVR's message is not to rush. A rushed coupling check is how trailers come off.",
+    "If you're worried about a coupling, a trailer or pressure to skip checks, tell your supervisor. You can also report safety concerns anonymously to the NHVR's Heavy Vehicle Confidential Reporting Line on 1800 931 785."
+  ],
+  "supervisors_must_check": [
+    "We have a written, step-by-step coupling and uncoupling procedure for each type of coupling we run (fifth wheel/kingpin, pin coupling/drawbar, safety chains), and every driver who couples has been trained and signed off on it for the actual vehicles they drive.",
+    "Daily pre-start checks are actually being done and recorded before every trip, including the coupling items: fifth wheel and mountings secure, kingpin properly engaged in the jaws, towbar, drawbar and couplings secure, air, electrical and ABS/EBS connections attached, and a tug test done.",
+    "Every fault a driver reports on a pre-start is followed up: someone is assigned to fix it, it is fixed before the vehicle goes out if it affects safety, and the outcome is recorded. Drivers are never pressured to take a vehicle with a known coupling or brake defect.",
+    "Coupling inspections and servicing are done by suitably skilled people to the manufacturer's recommendations and the NHVIM V3.2 Section 3 (Couplings) criteria. Workshop checks include fifth wheel mounting bolts and plates, locking mechanisms and kingpin locks, pin and drawbar eye wear, drawbars (including the underside) and safety chain brackets.",
+    "Where manufacturer limits aren't known, the NHVIM gives allowable wear for 50 mm pin couplings: coupling pin no smaller than 47.2 mm across (standard 48.7 mm) and drawbar eye bush no larger than 51.5 mm (standard 50.0 mm). Make sure the workshop has the gauges and measures these.",
+    "Any safety chains fitted or retro-fitted to drawbars were installed by competent tradespeople with technical oversight, and have been checked against the ATA's recommended checklist for retro-fitted safety chains.",
+    "Places where drivers couple or drop trailers (depot, farm entrances, changeover points) are flat, firm and lit well enough to see the fifth wheel jaws in the dark. Wheel chocks are on every truck.",
+    "Every decoupling event, trailer drop, coupling that didn't lock, or near miss is reported, investigated and written up, and what we learn goes back into maintenance and driver training. This is an NHVR expectation in the March 2026 bulletin.",
+    "Run times and schedules leave enough time for a proper pre-start and coupling check, especially on early starts and as harvest traffic builds on rural roads."
+  ],
+  "discussion_questions": [
+    "Walk us through exactly how you couple up at 3 am in the yard. Where do you look, and how do you know the jaws have actually locked?",
+    "When did you last take the cover off, or get down low with a torch, to check the coupling, drawbar or safety chains properly? What would make that easier to do every time?",
+    "Where on our runs do we couple, uncouple or leave trailers on ground that isn't flat, firm or well lit? What should we change?",
+    "What gets in the way of a full pre-start and tug test: time pressure, weather, darkness, distractions at the farm? How do we fix it?",
+    "Has anyone had a coupling that didn't lock, a trailer that moved, or a near miss here or at a previous job? What happened, and was it reported?"
+  ],
+  "practical_checklist": [
+    "Engine off, key out, park brake on before you get out to do your checks. Chock the wheels if you're on a slope.",
+    "Daily check: brake warning lights and gauges working, air tanks drained, tyres inflated with good tread, wheel nuts all there and tight, no leaking hub seals.",
+    "Lights, reflectors, mirrors, windscreen, wipers and horn all OK. No fuel, oil, coolant or air leaks.",
+    "Couplings: remove any covers or plates and look for wear, cracks, damage and loose or missing bolts on the fifth wheel, mountings, pin coupling, drawbar (including underneath) and towbar.",
+    "Coupling clean and free of mud, gravel and old grease build-up that could stop the jaws or lock engaging.",
+    "Couple on flat, firm ground in a straight line, with enough light and nobody standing nearby.",
+    "Check by eye that the jaws are closed on the kingpin, or the pin is fully home and locked.",
+    "Legs raised clear, tug test, legs fully up.",
+    "Air lines, electrical and ABS/EBS connectors attached and secure. Safety chains connected, crossed and unable to come off.",
+    "Final walk-around of the whole combination, then a second tug test in low gear with the trailer brakes on.",
+    "Got interrupted while coupling? Start again from the beginning.",
+    "Found a fault? Record it on your pre-start and tell your supervisor before you move. Unsafe means the truck doesn't go."
+  ],
+  "required_records": [
+    "Toolbox talk sign-on register for this talk (this app's CSV export, or the printed register).",
+    "Completed daily pre-start check for each vehicle and trailer each shift, showing who did it, when, and that couplings were checked and a tug test done.",
+    "Defect and fault reports raised by drivers, with the repair, who did it, the date, and when the vehicle was cleared to return to service.",
+    "Workshop service and inspection records for couplings: fifth wheels, kingpins, pin couplings, drawbar eyes, drawbars and safety chain brackets, including wear measurements.",
+    "Written coupling and uncoupling procedure (with version date), and driver training and sign-off records for each coupling type.",
+    "Incident and near-miss reports for any decoupling, trailer drop, roll-away or coupling that failed to lock, with the investigation findings and corrective actions.",
+    "Entries in the Chain of Responsibility breach/exception register for skipped pre-starts, unrepaired defects or schedule pressure, reviewed by the Director monthly."
+  ],
+  "follow_up_actions": [
+    {
+      "action": "Check that our written coupling and uncoupling procedure matches the NHVR March 2026 bulletin and the WorkSafe Queensland steps (jaws visual check, legs up, two tug tests, restart if interrupted). Update it if not and re-brief drivers.",
+      "owner": "Operations Manager",
+      "due": "Friday 16 October 2026"
+    },
+    {
+      "action": "Check that our pre-start check sheet includes all the NHVR daily check coupling items and a tug-test tick box. Update the sheet if anything is missing.",
+      "owner": "Supervisor",
+      "due": "Friday 16 October 2026"
+    },
+    {
+      "action": "Get the workshop to inspect and measure all fifth wheels, kingpins, pin couplings, drawbar eyes, drawbars and safety chain brackets against NHVIM V3.2 Section 3, and record the results.",
+      "owner": "Workshop / Maintenance",
+      "due": "Friday 30 October 2026"
+    },
+    {
+      "action": "Check that every truck carries wheel chocks and a working torch or work light, and that coupling and drop locations have adequate lighting and firm, level ground.",
+      "owner": "Supervisor",
+      "due": "Friday 23 October 2026"
+    },
+    {
+      "action": "Review the last 12 months of defect reports and incidents for any coupling, trailer or roll-away issues and confirm each one was closed out.",
+      "owner": "Compliance",
+      "due": "Friday 30 October 2026"
+    },
+    {
+      "action": "Put the NHVR trailer drop Safety Bulletin and the Heavy Vehicle Confidential Reporting Line number (1800 931 785) on the depot noticeboard.",
+      "owner": "Supervisor",
+      "due": "Wednesday 14 October 2026"
+    },
+    {
+      "action": "Follow up with any driver who raised a coupling, defect, lighting or schedule concern during this talk.",
+      "owner": "Supervisor",
+      "due": "Within 7 days"
+    }
+  ],
+  "sources_reviewed": [
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Safety Bulletin – Increase in trailer drop and decoupling events",
+      "url": "https://www.nhvr.gov.au/files/media/document/848/202603-1727-safety-bulletin-trailer-decoupling.pdf",
+      "date": "2026-03",
+      "accessed": "2026-10-12",
+      "note": "Main source: contributing factors (wear/failure, operator error/distraction, dynamic forces, improper loading), operator actions (maintenance, training, inspection reporting, investigate events and near misses) and driver pre-start steps including the tug test."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Trailer drop incidents double as NHVR warns operators to be alert",
+      "url": "https://www.nhvr.gov.au/news/2026/05/20/trailer-drop-incidents-double-as-nhvr-warns-operators-to-be-alert",
+      "date": "2026-05-20",
+      "accessed": "2026-10-12",
+      "note": "Incidents doubled on the same time last year; 8 in 2026 to date; 26 from July 2024 to April 2026; April 2025 fatal NSW crash when a dolly and two trailers detached; Confidential Reporting Line 1800 931 785."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Safety alerts and bulletins",
+      "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/safety-alerts-and-bulletins",
+      "date": "undated",
+      "accessed": "2026-10-12",
+      "note": "Confirms the trailer drop and decoupling bulletin is a current NHVR safety bulletin."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVIM V3.2 Section 3 – Couplings",
+      "url": "https://www.nhvr.gov.au/files/media/document/632/202607-0827-nhvim-section-3-couplings.pdf",
+      "date": "2026-07",
+      "accessed": "2026-10-12",
+      "note": "Rejection criteria for fifth wheels, pin couplings, towbars and towing attachments; Table 3.1 wear limits (pin 47.2 mm min, drawbar eye bush 51.5 mm max); safety chain arrangement and attachment (crossed, no shackles or ramshorn hooks)."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Creating heavy vehicle daily checks",
+      "url": "https://www.nhvr.gov.au/files/media/document/474/202405-0434-creating-heavy-vehicle-daily-checks.pdf",
+      "date": "2024",
+      "accessed": "2026-10-12",
+      "note": "Daily check items: brakes, couplings (kingpin engaged, air/electrical/ABS connectors), wheels and tyres, structure, lights, mirrors, windscreen, leaks; tug test tip for combinations. Date from the file reference and PDF metadata."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Bumper grain harvest puts spotlight on road safety in South Australia",
+      "url": "https://www.nhvr.gov.au/news/2026/10/07/bumper-grain-harvest-puts-spotlight-on-road-safety-in-south-australia",
+      "date": "2026-10-07",
+      "accessed": "2026-10-12",
+      "note": "Harvest season context: more trucks and farm machinery on rural roads, daily pre-start checks, checking brakes, tyres, lights and couplings, 'don't rush'."
+    },
+    {
+      "name": "SafeWork NSW",
+      "type": "regulator",
+      "title": "A guide to work health and safety in the road freight transport industry",
+      "url": "https://www.safework.nsw.gov.au/__data/assets/pdf_file/0015/1031703/Guide-to-work-health-and-safety-in-the-road-freight-transport-industry.pdf",
+      "date": "2024-11",
+      "accessed": "2026-10-12",
+      "note": "Immobilising heavy vehicles and trailers: roll-aways have caused several NSW deaths; coupling/uncoupling is a time of uncontrolled movement risk; engine off and key out, brakes, chocks, training to couple and uncouple. Date from PDF metadata."
+    },
+    {
+      "name": "WorkSafe Queensland",
+      "type": "regulator",
+      "title": "Coupling and decoupling trailers safely (film and transcript)",
+      "url": "https://www.worksafe.qld.gov.au/resources/videos/films/coupling-and-decoupling-trailers",
+      "date": "2017-06-14",
+      "accessed": "2026-10-12",
+      "note": "Step-by-step coupling procedure (flat hard ground, exclusion zone, lighting, jaws check, legs, two tug tests, restart if distracted) and Queensland incident examples. Page date is 'last updated'."
+    },
+    {
+      "name": "WorkSafe Queensland",
+      "type": "regulator",
+      "title": "Worker fatally crushed by prime mover (incident alert)",
+      "url": "https://www.worksafe.qld.gov.au/news-and-events/alerts/incident-alerts/2018/worker-fatally-crushed-by-prime-mover",
+      "date": "2018-08-09",
+      "accessed": "2026-10-12",
+      "note": "Background on crush and run-over risks from uncontrolled truck and trailer movement and controls (stationary, out of gear, handbrake on, don't get under a moving vehicle)."
+    },
+    {
+      "name": "Australian Trucking Association",
+      "type": "industry",
+      "title": "Trailer safety chains (safety alert)",
+      "url": "https://new.truck.net.au/safety-chains/",
+      "date": "undated",
+      "accessed": "2026-10-12",
+      "note": "Industry context: retro-fitted safety chains must be fitted by competent tradespeople with technical oversight; review installations against the ATA checklist."
+    },
+    {
+      "name": "Big Rigs",
+      "type": "industry",
+      "title": "Operators asked to be vigilant as trailer drop incidents double",
+      "url": "https://bigrigs.com.au/2026/05/20/operators-asked-to-be-vigilant-as-trailer-drop-incidents-double/",
+      "date": "2026-05-20",
+      "accessed": "2026-10-12",
+      "note": "Context only: industry coverage of the NHVR May 2026 warning."
+    }
+  ]
+}
