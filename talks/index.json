@@ -1,9 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-13T22:43:46.143Z",
-  "latest": "2026-10-12",
-  "count": 2,
+  "generated_at": "2026-10-18T19:10:01.267Z",
+  "latest": "2026-10-19",
+  "count": 3,
   "talks": [
+    {
+      "id": "2026-10-19",
+      "title": "Stopping power: daily brake checks, brake defects and braking with a milk load",
+      "date": "2026-10-19",
+      "week_label": "Week of Monday 19 October 2026",
+      "file": "2026-10-19.json"
+    },
     {
       "id": "2026-10-12",
       "title": "Hooked up right: couplings, tug tests and stopping trailer drops",
