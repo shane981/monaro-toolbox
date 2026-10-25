@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "id": "2026-10-26",
+  "title": "Wheels on, tyres right: wheel nut, tyre and hub checks, and staying safe around truck tyres",
+  "date": "2026-10-26",
+  "week_label": "Week of Monday 26 October 2026",
+  "prepared_by": "Monaro Milk safety (weekly toolbox talk)",
+  "summary": "The NHVR says major wheel, tyre and brake defects were among the most common problems it found on heavy vehicles in the NSW snowy region, which takes in the Monaro Highway at Cooma. Between winter 2024 and winter 2025, major defects found there rose from 107 to 195, an increase of around 82 per cent, and 650 defects were found in June 2026 alone. This week is for every Monaro Milk driver, heavy rigid (HR) tanker and semi alike: how to check wheel nuts, tyres and hubs properly on the pre-start, what to do after any wheel or tyre work, what to do with a flat or a tyre that has lost pressure out on a rural road, and why a truck tyre must be treated as stored energy that can explode.",
+  "key_risk": "A wheel that comes off, or a tyre that blows out, on a loaded milk tanker can cause loss of control, a rollover or a head-on, and a loose wheel can roll into oncoming traffic or a car behind. Wheel nuts can lose tension after a tyre change or wheel work if they are not tightened and rechecked properly, and loose nuts often give little warning until a stud snaps. Tyres on our trucks take a beating from gravel farm tracks, potholes, cattle grids and rocks, and a tyre that has been run flat or badly underinflated can be damaged inside where nobody can see it. That damage can later make the tyre fail on the road, or explode when someone reinflates it or removes the wheel. Truck tyres hold a large amount of stored energy: SafeWork NSW and WorkSafe Queensland report workers killed and seriously injured when tyres and rims exploded during removal, inspection or inflation.",
+  "drivers_need_to_know": [
+    "This is local. The NHVR's July 2026 winter warning said defects found on heavy vehicles in the NSW snowy region rose from 1,561 in winter 2024 to 1,682 in winter 2025, with major defects up from 107 to 195 (around 82 per cent). Major brake, wheel and tyre defects were one of the most common categories, which the NHVR said showed basic maintenance was slipping. In 2024 the NHVR issued 965 defect notices in the NSW snowy region, including 60 major defects for brakes or wheels and tyres, and it named the Monaro Highway at Cooma as one of the busiest heavy vehicle routes in the area.",
+    "The NHVR says weather events can make wheel bearings, tyres and brakes wear faster than usual, and that daily checks must be done before the truck starts its journey. Our early farm runs on cold, wet, gravel roads are exactly that kind of work.",
+    "NHVR daily check for wheels, tyres and hubs, HR rigid tankers and semis alike: tyres are correctly inflated, tread depth and condition are OK, and wheels are secure. Faults the NHVR lists include: less than 1.5 mm of tread in the main groove; deep cuts, chunking, bumps, bulges, exposed cords or other signs of carcass failure (sidewalls included); dual tyres touching each other; any wheel with missing, cracked or broken wheel nuts, studs or bolts; and leaking hub seals.",
+    "Wheel nut indicators, where fitted, are the quickest way to spot a nut that has moved. Know what the pattern on your truck looks like when it is right. The ATA lists wheel nut indicators that have moved or are missing as one of the things drivers must look for on the pre-trip. If one has turned out of line or is missing, report it before you move. A shiny mark, rust streak or crack around a nut or stud is also a reason to get the wheel checked.",
+    "On the walk-around, the NHVR inspection manual (NHVIM V3.2 Section 5, July 2026) says a wheel is unroadworthy if it is loose, cracked, buckled, has elongated stud holes or pieces missing, or the hub seal is leaking. Tyres are unroadworthy if they don't match the vehicle's tyre placard, have been regrooved without being marked as suitable, or have a retread without the correct RETREAD or REMOULD marking. Duals must not touch each other, and tyres must not rub on the body, chassis, brakes, steering or suspension.",
+    "Check duals with a gauge, not a kick or a glance. SafeWork NSW warns it is hard to see if one tyre in a dual set has dropped below 80 per cent of its recommended pressure, and running below 80 per cent, or overloaded, can cause a zipper failure (the sidewall splitting around the tyre). When one tyre of a dual is low, the other one ends up carrying more of the load.",
+    "After any wheel or tyre work, whether by our workshop, a tyre shop or a roadside service, the ATA's wheel end security procedure says the wheel nut tension should be checked again after 50 to 100 km of driving, with a torque wrench, and the check should be recorded. The person who did the work should leave a clear tag on the steering wheel, mirror or dash, or mark the wheel. If you see a tag or a freshly fitted wheel, make sure the recheck happens and is written up. Never use a rattle gun for the final tightening.",
+    "If a tyre loses pressure or goes flat on the road, the ATA says stop as soon as it is safe, because running underinflated heats up and breaks down the tyre. Pull well off the road on a firm, level spot, hazard lights and warning triangles out, park brake on and wheels chocked. Call your supervisor or the workshop. At Monaro Milk, drivers don't change heavy vehicle wheels or tyres on the roadside unless trained, equipped and approved for that job.",
+    "A tyre that has run flat or very low must not be pumped back up and driven on. SafeWork NSW says a tyre that has been overloaded or has dropped below 80 per cent pressure must be removed from the rim and inspected before it is refitted and inflated. WorkSafe Queensland says damage from running underinflated cannot always be seen from the outside, and in October 2023 a worker in Queensland suffered head and chest injuries when a reinflated truck tyre exploded as it was being fitted. Early information was that the inside of the tyre hadn't been checked and it wasn't inflated in a tyre cage.",
+    "Stay out of the danger zone. SafeWork NSW says to keep away from the sidewall even when the wheel is restrained, use an airline with a regulator and an in-line gauge, and use a hose with at least 3 metres after the gauge and trigger, with a clip-on chuck. Don't use a farm or shed compressor without a regulator and gauge to top up a truck tyre: WorkSafe Queensland says unregulated air is a common cause of over-inflation. Never inflate beyond the maximum cold pressure on the vehicle or the tyre.",
+    "Split and multi-piece rims can explode. SafeWork NSW has reported a rise in split rim incidents, including a tyre technician killed in October 2025 when a tyre exploded while he was removing an outer wheel from a reach stacker. If any truck, trailer or farm vehicle you are working around has split or multi-piece rims, only a trained tyre fitter deflates and removes it, and both tyres of a dual must be deflated first.",
+    "Hubs: on the walk-around, look for oil or grease thrown on the inside of the wheel or a wet, leaking hub seal. During the trip, report vibration, a wobble, the truck pulling to one side, a grinding or knocking noise from a wheel, a smell of hot rubber or bearings, or smoke from a wheel. Stop and get it checked. Don't grab a hub or tyre to check if it is hot: it can burn you.",
+    "On the farm tracks and at the gate: avoid running tyres hard against rocks, sharp cattle grid edges, kerbs and table drains, and look for stones jammed between duals after gravel sections. A stone between duals can cut both sidewalls. If you hit something hard, stop when safe and look at the tyres and wheels before you go on."
+  ],
+  "supervisors_must_check": [
+    "Every HR rigid tanker and prime mover/semi-trailer has a completed daily pre-start each shift, with the wheels, tyres and hubs items actually ticked (pressures, tread, damage, wheel nuts and indicators, hub seals, duals not touching).",
+    "Drivers have access to a working tyre pressure gauge and a tread depth gauge in each truck or at the depot, and are checking duals with a gauge, not by eye.",
+    "Every time a wheel is removed or fitted, by our workshop, a tyre shop or a roadside service, the vehicle is tagged and the 50 to 100 km wheel nut recheck is done with a torque wrench and recorded. Tyre suppliers have been told this is our requirement.",
+    "The workshop uses the manufacturer's wheel nut torque settings and a calibrated torque wrench for final tightening (not a rattle gun), uses the correct nut type for the wheel system, and is checking wheels, studs and nuts against NHVIM V3.2 Section 5.",
+    "Wheel nut indicators are fitted where practical, and replaced when missing or damaged, so drivers can see a nut that has moved.",
+    "Any tyre that has run flat, very low (below 80 per cent) or overloaded is taken off the rim and inspected inside by a tyre professional before it is reused, and is never reinflated on the vehicle and driven.",
+    "Tyre inflation at the depot is only done with a regulated airline, an in-line gauge, a long hose and a clip-on chuck, and in a tyre cage or restraint for any wheel off the vehicle. Any split or multi-piece rims in the fleet are identified, labelled and only handled by a trained tyre fitter.",
+    "Drivers know the procedure for a flat or tyre damage on a rural road (stop safely, warning triangles, chocks, call in), and who to call for roadside tyre service on each run.",
+    "Run times allow a proper wheel and tyre walk-around before each early run. Under the Chain of Responsibility primary duty, we must not directly or indirectly cause or encourage a driver to drive a vehicle that is unsafe or to skip checks."
+  ],
+  "discussion_questions": [
+    "When did you last check the pressures on your duals with a gauge, and did any of them surprise you?",
+    "If you saw a wheel nut indicator turned out of line on your pre-start at 4 am, what would you do, and who would you call?",
+    "Which farm tracks, gates, cattle grids or table drains on our runs are hardest on tyres, and is there anything we could change there?",
+    "If you got a flat on a narrow rural road in the dark with a full tank of milk, where would you stop and what would you do next?",
+    "After a tyre shop or the workshop has done wheel work on your truck, how do you know, and has anyone ever asked you to do the 50 to 100 km recheck? What would make that easier?"
+  ],
+  "practical_checklist": [
+    "Parked on level ground, park brake on, engine off, key out, wheels chocked before the walk-around.",
+    "Every tyre (steer, drive, trailer): pressure checked with a gauge, duals included. Any tyre noticeably low reported, not just topped up and driven on.",
+    "Tread: at least 1.5 mm in the main groove across most of the tyre. No deep cuts, chunking, bumps, bulges or exposed cords, sidewalls included.",
+    "No stones or debris jammed between duals. Duals not touching each other.",
+    "Wheel nuts: none missing, cracked or broken; indicators all in line; no shiny marks, rust streaks or cracks around nuts or studs.",
+    "Wheels: not cracked, buckled or damaged; no elongated stud holes.",
+    "Hubs: no leaking hub seals or oil or grease thrown on the inside of the wheel.",
+    "Valve caps fitted. Tyres not rubbing on mudguards, body, suspension or brakes.",
+    "Any wheel work tag on the dash, mirror or wheel: 50 to 100 km wheel nut recheck arranged and recorded.",
+    "On the road: stop when safe for vibration, wobble, pulling, wheel noise, hot smell or smoke, or after a hard hit on a rock, grid or pothole.",
+    "Flat or damaged tyre: well off the road, hazards and triangles out, chocked, call it in. No roadside wheel changes unless trained and approved.",
+    "Never reinflate a tyre that has run flat or very low. Stay out of the sidewall danger zone around any inflated tyre."
+  ],
+  "required_records": [
+    "Toolbox talk sign-on register for this talk (this app's CSV export, or the printed register).",
+    "Completed daily pre-start check for each HR rigid tanker, prime mover and semi-trailer each shift, with the wheels, tyres and hubs items ticked, who did it and when.",
+    "Driver defect and fault reports for wheels, tyres and hubs, with the repair, who did it, the date, and when the vehicle was cleared to return to service.",
+    "Wheel and tyre work records: date, vehicle, wheel position, who did the work, torque setting used, and the 50 to 100 km wheel nut recheck (who, when, result).",
+    "Tyre records for each vehicle: pressures, tread depth, tyre replacements and any tyre removed after running flat, low or overloaded, with the tyre professional's inspection outcome.",
+    "Register of any defect notices issued to our vehicles, with the date handed in, the repair, and the clearance record.",
+    "Incident and near-miss reports for any wheel-off, loose wheel nuts, tyre blowout, tyre or rim explosion, or roadside breakdown, with investigation findings and corrective actions.",
+    "Entries in the Chain of Responsibility breach/exception register for skipped pre-starts, unrepaired wheel or tyre defects or schedule pressure, reviewed by the Director monthly."
+  ],
+  "follow_up_actions": [
+    {
+      "action": "Check every truck has, or the depot has, a working tyre pressure gauge and tread depth gauge for drivers, and replace any missing or faulty gauges.",
+      "owner": "Supervisor",
+      "due": "Friday 30 October 2026"
+    },
+    {
+      "action": "Do a wheel nut and tyre audit of every truck and trailer against NHVIM V3.2 Section 5: missing or damaged nuts and studs, nut indicators, tread depth, tyre damage, mismatched or incorrectly marked tyres, hub seals. Record the results and fix defects before the vehicle runs.",
+      "owner": "Workshop / Maintenance",
+      "due": "Friday 6 November 2026"
+    },
+    {
+      "action": "Put in writing the wheel work rule: tag the vehicle, use the manufacturer's torque and a calibrated torque wrench, and recheck nut tension after 50 to 100 km with the result recorded. Send it to the workshop and every tyre supplier we use.",
+      "owner": "Operations Manager",
+      "due": "Friday 6 November 2026"
+    },
+    {
+      "action": "Confirm the depot tyre inflation set-up (regulator, in-line gauge, long hose with clip-on chuck, tyre cage) and identify and label any split or multi-piece rims across the fleet.",
+      "owner": "Workshop / Maintenance",
+      "due": "Friday 6 November 2026"
+    },
+    {
+      "action": "Confirm each truck carries warning triangles, wheel chocks and the roadside tyre service and after-hours contact numbers for each run.",
+      "owner": "Supervisor",
+      "due": "Friday 30 October 2026"
+    },
+    {
+      "action": "Put the NHVR daily check guide and the SafeWork NSW tyres, compressed air and split rims guidance on the depot noticeboard.",
+      "owner": "Supervisor",
+      "due": "Wednesday 28 October 2026"
+    },
+    {
+      "action": "Follow up with any driver who raised a tyre, wheel, farm track, schedule or equipment concern during this talk.",
+      "owner": "Supervisor",
+      "due": "Within 7 days"
+    }
+  ],
+  "sources_reviewed": [
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Increase in major heavy vehicle defects sparks winter safety warning",
+      "url": "https://www.nhvr.gov.au/news/2026/07/09/increase-in-major-heavy-vehicle-defects-sparks-winter-safety-warning",
+      "date": "2026-07-09",
+      "accessed": "2026-10-26",
+      "note": "Main source: NSW snowy region defects up from 1,561 (winter 2024) to 1,682 (winter 2025); major defects 107 to 195 (about 82%); major brake, wheel and tyre defects among the most common; 650 defects in June 2026; winter puts pressure on brakes, wheel bearings and tyres; daily checks before the journey."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Check your BRRRRakes: NHVR reminds operators to inspect their vehicles and ensure they're fit for the road this winter",
+      "url": "https://www.nhvr.gov.au/news/2025/06/17/check-your-brrrrakes-nhvr-reminds-operators-to-inspect-their-vehicles",
+      "date": "2025-06-17",
+      "accessed": "2026-10-26",
+      "note": "965 defect notices in the NSW snowy region in 2024, including 60 major defects for brakes or wheels and tyres; Monaro Highway at Cooma named; weather can make brakes, wheel bearings or tyres wear faster; daily checks before the journey."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVIM V3.2 Section 5 – Wheels, Tyres and Hubs",
+      "url": "https://www.nhvr.gov.au/files/media/document/634/202607-0829-nhvim-section-5-wheels-tyres-and-hubs.pdf",
+      "date": "2026-07",
+      "accessed": "2026-10-26",
+      "note": "Reasons for rejection: loose, cracked or buckled wheels, elongated stud holes, missing or broken nuts and studs, leaking hub seals, tread under 1.5 mm, carcass damage, tyres not matching placard, unmarked retreads, duals touching, tyres fouling. Date from file reference and PDF metadata (29 July 2026)."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Creating heavy vehicle daily checks",
+      "url": "https://www.nhvr.gov.au/files/media/document/474/202405-0434-creating-heavy-vehicle-daily-checks.pdf",
+      "date": "2024",
+      "accessed": "2026-10-26",
+      "note": "Daily check items for wheels, tyres and hubs: correct inflation, tread depth and condition, wheels secure; example faults; wheel nut indicators as a quick check. Date from file reference and PDF metadata."
+    },
+    {
+      "name": "SafeWork NSW",
+      "type": "regulator",
+      "title": "Tyres, compressed air and split rims",
+      "url": "https://www.safework.nsw.gov.au/hazards-a-z/split-rim-wheels",
+      "date": "undated",
+      "accessed": "2026-10-26",
+      "note": "Tyres can explode if over-pressurised or defective; remove and inspect tyres run below 80% or overloaded (zipper failure); use a gauge on duals; regulated airline with in-line gauge, 3 m hose after the gauge and trigger, clip-on chuck, stay clear of the sidewall; deflate split rims before removal."
+    },
+    {
+      "name": "SafeWork NSW",
+      "type": "regulator",
+      "title": "Worker fatally injured in split rim incident (18 October 2025)",
+      "url": "https://www.safework.nsw.gov.au/compliance-and-prosecutions/incident-information-releases/transport/worker-fatally-injured-in-split-rim-incident-18-october-2025",
+      "date": "2025-10-18",
+      "accessed": "2026-10-26",
+      "note": "Rise in split rim incidents; tyre technician killed on 17 October 2025 when an outer tyre exploded during removal from a reach stacker; controls including deflating first, tyre cages, regulated air, SWMS. Date from page title."
+    },
+    {
+      "name": "WorkSafe Queensland",
+      "type": "regulator",
+      "title": "Worker injured while inflating truck tyre",
+      "url": "https://www.worksafe.qld.gov.au/news-and-events/alerts/incident-alerts/2023/worker-injured-while-inflating-truck-tyre",
+      "date": "2023-11-06",
+      "accessed": "2026-10-26",
+      "note": "October 2023: worker suffered head and chest injuries when a reinflated truck tyre exploded; preliminary information that the inside wasn't inspected and no tyre cage was used; underinflation damage cannot always be seen; unregulated air causes over-inflation. Date is page last updated."
+    },
+    {
+      "name": "WorkSafe Queensland",
+      "type": "regulator",
+      "title": "Safety with tyre fitting",
+      "url": "https://www.worksafe.qld.gov.au/safety-and-prevention/hazards/workplace-hazards/transport/safety-with-tyre-fitting",
+      "date": "2017-10-25",
+      "accessed": "2026-10-26",
+      "note": "Over-inflation from unregulated shed or workshop compressors is a common contributor to tyre fitting injuries; use a remote filling hose with a pressure gauge to stay out of the danger zone. Date is page last updated."
+    },
+    {
+      "name": "Australian Trucking Association",
+      "type": "industry",
+      "title": "Technical Advisory Procedure – Wheel End Security (Edition 4)",
+      "url": "https://new.truck.net.au/wp-content/uploads/2025/05/TAP-Wheel-End-Security-November-2024-Final.pdf",
+      "date": "2024-11",
+      "accessed": "2026-10-26",
+      "note": "Context only: recheck wheel nut tension after 50 to 100 km whenever a wheel is fitted; no impact drivers for final torque; service providers to tag the vehicle; driver pre-trip wheel checks and nut indicators; stop quickly on pressure loss. Approved by ATA Council November 2024; cover marked 'Draft for Comment'."
+    },
+    {
+      "name": "Fully Loaded",
+      "type": "industry",
+      "title": "NHVR responds to defect rise with snow safety warning",
+      "url": "https://www.fullyloaded.com.au/nhvr-responds-to-defect-rise-with-snow-safety-warning/",
+      "date": "2026-07-10",
+      "accessed": "2026-10-26",
+      "note": "Context only: industry coverage of the NHVR July 2026 snowy region defect warning, confirming the same figures."
+    }
+  ]
+}

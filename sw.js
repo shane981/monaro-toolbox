@@ -1,6 +1,6 @@
 /* Monaro Milk Toolbox Talks – service worker.
    CACHE_VERSION is bumped automatically by scripts/publish.sh on every publish. */
-const CACHE_VERSION = 'mm-toolbox-v12';
+const CACHE_VERSION = 'mm-toolbox-v13';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const DATA_CACHE = 'mm-toolbox-data'; // talks survive version bumps so old weeks stay readable offline
 const SHELL = [

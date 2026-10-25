@@ -1,9 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T19:10:01.267Z",
-  "latest": "2026-10-19",
-  "count": 3,
+  "generated_at": "2026-10-25T19:06:39.018Z",
+  "latest": "2026-10-26",
+  "count": 4,
   "talks": [
+    {
+      "id": "2026-10-26",
+      "title": "Wheels on, tyres right: wheel nut, tyre and hub checks, and staying safe around truck tyres",
+      "date": "2026-10-26",
+      "week_label": "Week of Monday 26 October 2026",
+      "file": "2026-10-26.json"
+    },
     {
       "id": "2026-10-19",
       "title": "Stopping power: daily brake checks, brake defects and braking with a milk load",
