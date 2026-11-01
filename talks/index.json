@@ -1,9 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T19:06:39.018Z",
-  "latest": "2026-10-26",
-  "count": 4,
+  "generated_at": "2026-11-01T19:04:29.119Z",
+  "latest": "2026-11-02",
+  "count": 5,
   "talks": [
+    {
+      "id": "2026-11-02",
+      "title": "Keep it upright: milk slosh, surge and rollover risk on the farm run",
+      "date": "2026-11-02",
+      "week_label": "Week of Monday 2 November 2026",
+      "file": "2026-11-02.json"
+    },
     {
       "id": "2026-10-26",
       "title": "Wheels on, tyres right: wheel nut, tyre and hub checks, and staying safe around truck tyres",

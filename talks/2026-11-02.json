@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-02",
+  "title": "Keep it upright: milk slosh, surge and rollover risk on the farm run",
+  "date": "2026-11-02",
+  "week_label": "Week of Monday 2 November 2026",
+  "prepared_by": "Monaro Milk safety (weekly toolbox talk)",
+  "summary": "A milk tanker does not behave like other freight. Milk moves inside the tank, and as you pick up farm after farm the load, its centre of gravity and the way the truck handles keep changing. NTI's dairy crash data shows that one in three major dairy tanker incidents were caused by inappropriate speed, mostly single-vehicle rollovers, and that the risk is highest when the tank is around half full. Spring is peak milk season, typically October to November, so loads are bigger and runs are busier right now. This week is for every Monaro Milk driver, heavy rigid (HR) tanker and semi alike: how slosh and surge work, when your tanker is most likely to roll, and how to drive, plan and check so it stays upright.",
+  "key_risk": "Rollover or loss of control of a part-loaded milk tanker on a curve, roundabout, crest or rough rural road, caused by speed that is wrong for the load and the road rather than by breaking the speed limit. When a tanker is part full, milk sloshes sideways in a turn, raising the centre of gravity and pushing the tank towards the outside of the curve, and surges forward under braking and back under acceleration. NTI says this is most dangerous when the tank is around 40 to 70 per cent full, because the load has enough mass to strongly affect handling and plenty of room to move. NTI's data shows dairy tanker rollovers often happen at relatively low speeds, mostly with no other vehicle involved, and skew towards the early part of the day when pick-ups happen. A rollover can kill or seriously injure the driver, block a rural road and destroy the truck and load.",
+  "drivers_need_to_know": [
+    "Milk is a live load. The NHVR says live loads such as bulk liquids can move during transport, and the extra forces can make a vehicle unstable or even roll it over. Tanks without baffles or compartments let liquid slosh freely and shift unexpectedly.",
+    "Slosh (sideways): when you turn, the milk is pushed up the outside wall of the tank. NTI says this raises the trailer's centre of gravity and makes it more likely to roll. A left-right-left sequence, like a roundabout or a run of S-bends, is especially hard on a part-loaded tank because the milk swings one way then the other.",
+    "Surge (forwards and backwards): NTI says that under braking milk surges forward, and under acceleration it surges back. Surge adds force and can increase the risk of sliding, especially under braking. Take particular care cresting a hill (forward surge) and climbing (backward surge).",
+    "Know your danger zone. NTI's guidance is that slosh and surge are most dangerous when the tank is around 40 to 70 per cent full: high centre of gravity, plenty of room for the milk to move and enough mass to push the truck around. A near-empty or near-full tank is less risky, but not risk free. Keep track of roughly how full you are after each farm, because your truck handles differently after every pick-up.",
+    "If your tanker has a front or spillover compartment, it is designed to fill first and keep weight forward, which reduces surge and helps traction on the drive axles. Fill it the way the tanker is designed to be filled. If you are not sure how the compartments and baffles on your truck work, ask before you go out.",
+    "Not every tanker behaves the same. NTI warns that pin-mounted baffles are less effective at reducing surge than fully welded baffles, and to take care when changing between tankers with different baffles. If you swap from your usual truck to a different HR tanker or semi, drive it gently until you know how it handles with milk on board.",
+    "Speed for the load, not the sign. NTI's data on major dairy tanker incidents (2019 to 2022) found inappropriate speed was the number one cause, at 32 per cent of incidents compared with 13 per cent across all truck types, mostly single-vehicle untripped rollovers. NTI stresses this means speed too high for the conditions and load, not breaking the speed limit. A milk tanker can roll at a relatively low speed.",
+    "Corners: the NHVR Load Restraint Guide 2025 says many rollovers are caused by inappropriate speed when changing direction, particularly on corners, and the faster you go and the tighter the turn, the more likely you are to lose control. Cornering force rises with the square of speed: double the speed and the force pushing you over is about four times as much. Brake and slow down in a straight line before the bend, not in it, and drive through at a steady speed.",
+    "Drive smooth. The NHVR's advice for live loads is to take wider and slower turns, keep acceleration and braking steady, leave a bigger gap to the vehicle in front so you don't have to brake hard, and avoid sudden movements. Avoid clipping gutters and roundabouts and take care on negative camber roads, such as roundabouts.",
+    "Farm gates, driveways and table drains: NTI's data found 60 per cent of dairy tanker crashes involved the tanker leaving the road on its own, with 'off path on curve' the most common. Soft or broken road edges, a wheel dropping into a table drain, or a steep crossfall at a farm entrance can tip a part-loaded tanker. Slow right down for farm entrances, cattle grids and narrow gravel roads, and keep the wheels on firm ground.",
+    "Stability control helps but will not save you every time. Where electronic stability control (ESC) or roll stability control is fitted and working, NTI says it greatly reduces the chance of a rollover, but it should never be fully relied on and a rollover can still happen. If you feel the brakes come on by themselves in a corner, that was the system catching a near rollover: slow down more next time and report it. If the ESC, ABS or EBS warning light is on, report it before you leave.",
+    "Early starts and fatigue add to the risk. NTI notes dairy tanker crashes skew earlier in the day, and that early mornings, cold and fog are part of the farm run. The NHVR said on 20 October 2026 that fatigue offences rose almost 16 per cent to 5,835 last financial year, and reminded drivers that under the updated HVNL they can stop driving if they are unfit, and employers must support this. A tired driver is slower to read a bend and set the right speed.",
+    "Never let schedule pressure set your speed. NTI reports drivers feeling pressure to reach a farm before gates close for milking after an earlier delay. If you are running late, ring it in. Being late to a farm is a phone call; a rollover is not fixable. Under Chain of Responsibility, nobody in our business may ask or pressure you to drive at an unsafe speed.",
+    "Never enter a milk tank. NTI reminds drivers that the inside of a tanker is a confined space and experienced workers have died. Only trained and authorised people, following the confined space procedure, go inside a tank."
+  ],
+  "supervisors_must_check": [
+    "Every driver has been shown how slosh and surge work, where the 40 to 70 per cent danger zone is, and how the compartments, spillover (if fitted) and baffles on each HR tanker and semi-trailer in our fleet work.",
+    "We know which of our tankers have fully welded baffles and which have pin-mounted baffles or none, and drivers are told when they are moved onto a tanker that handles differently.",
+    "Run sheets and pick-up order have been reviewed for peak season: where practical, plan the run so the truck is not part-loaded on the worst roads (tight bends, steep crossfall, roundabouts, poor gravel), and identify the high-risk curves and farm entrances on each run.",
+    "Run times are realistic for peak season volumes, gate closing times and early-morning fog and cold, so drivers are not pushed to make up time. Under the Chain of Responsibility primary duty, we must not directly or indirectly cause or encourage a driver to speed or drive unsafely.",
+    "ESC, roll stability, ABS and EBS systems are working on every vehicle and trailer that has them, warning lights are part of the daily pre-start, and any fault is repaired before the vehicle goes back into service.",
+    "If our telematics or trailer EBS records stability control interventions, someone reviews them regularly. NTI says frequent interventions are a leading sign that a driver, corner, route or combination has a higher rollover risk. Follow up supportively, not as punishment.",
+    "Suspension, kingpin, fifth wheel and steering are in good condition, and tyre pressures are correct, because worn or soft components make a tall liquid load less stable.",
+    "Seasonal or relief drivers are not sent out alone on a full run until they have driven with an experienced Monaro Milk driver and been briefed on milk tanker handling and the high-risk spots on that run.",
+    "Drivers know they can refuse to drive, or stop driving, if they are unfit, and that they will be supported if they report schedule pressure or a near rollover."
+  ],
+  "discussion_questions": [
+    "On your usual run, at which farm does your tanker usually reach around half full, and what is the road like straight after that pick-up?",
+    "Which bends, roundabouts, crests or farm entrances on our runs feel the least stable with a part load, and what speed do you take them at?",
+    "Have you ever felt the milk push the truck in a corner or under braking, or felt the stability control kick in? What happened and what did you change?",
+    "When you swap to a different tanker, what feels different, and what would help you get to know a truck before you take it out loaded?",
+    "If you are running late with a farm gate about to close for milking, what do you do, and is there anything about our scheduling that makes you feel rushed?"
+  ],
+  "practical_checklist": [
+    "Pre-start: ESC/ABS/EBS warning lights off after start-up; any fault reported before leaving.",
+    "Tyre pressures checked, suspension sitting level, no obvious air bag or spring problems on truck or trailer.",
+    "Know your tanker: compartments, spillover (if fitted) and baffle type, and the order it is designed to fill.",
+    "Know your run: where you will be around half full and which bends, roundabouts and farm entrances come next.",
+    "Slow down in a straight line before every bend, roundabout and farm entrance. Steady speed through the turn.",
+    "Wider, slower turns. Smooth steering, smooth braking, smooth acceleration. No sudden moves.",
+    "Bigger following distance so you never need to brake hard with a part load.",
+    "Extra care cresting hills (forward surge) and on climbs (backward surge), and on negative camber.",
+    "Keep wheels on firm ground: watch soft edges, table drains, cattle grids and farm driveway crossfall.",
+    "Fog, ice, gravel or wet roads: slow down further. Fatigued or unwell: stop and call in.",
+    "Running late: phone it in. Never make up time on bends.",
+    "Report any near rollover, wheel lift, stability control intervention or high-risk spot at the end of the shift."
+  ],
+  "required_records": [
+    "Toolbox talk sign-on register for this talk (this app's CSV export, or the printed register).",
+    "Completed daily pre-start check for each HR rigid tanker, prime mover and semi-trailer each shift, including ESC/ABS/EBS warning lights, tyres and suspension.",
+    "Driver induction and familiarisation records showing each driver has been briefed on milk tanker slosh, surge and rollover risk, and on each tanker type they drive.",
+    "Register of high-risk road sections and farm entrances for each run, with the date reviewed and any agreed controls (for example, pick-up order or a slower approach).",
+    "Stability control intervention reports from telematics or trailer EBS (where available), with who reviewed them and any follow-up.",
+    "Run schedules and pick-up times for peak season, showing they were checked for realistic travel times.",
+    "Defect reports and repair records for ESC, ABS, EBS, suspension and steering faults, with the date the vehicle was cleared to return to service.",
+    "Incident and near-miss reports for any rollover, wheel lift, run-off-road or loss of control, with investigation findings and corrective actions.",
+    "Entries in the Chain of Responsibility breach/exception register for schedule pressure, speeding or unfit-to-drive reports, reviewed by the Director monthly."
+  ],
+  "follow_up_actions": [
+    {
+      "action": "List every tanker in the fleet with its compartment layout, spillover (if fitted) and baffle type (fully welded, pin-mounted or none), and put a simple card in each cab explaining how it fills and handles.",
+      "owner": "Workshop / Maintenance",
+      "due": "Friday 13 November 2026"
+    },
+    {
+      "action": "With the drivers, mark the high-risk bends, roundabouts, crests and farm entrances on each run, note roughly how full the tanker is at each, and record them in a run risk register.",
+      "owner": "Supervisor",
+      "due": "Friday 13 November 2026"
+    },
+    {
+      "action": "Review peak-season run sheets, pick-up order and farm gate closing times so drivers are not part-loaded on the worst roads where avoidable and are not under time pressure.",
+      "owner": "Operations Manager",
+      "due": "Friday 13 November 2026"
+    },
+    {
+      "action": "Check whether our telematics or trailer EBS can report stability control interventions. If it can, set up a monthly review; if it can't, record that and ask the supplier what is possible.",
+      "owner": "Operations Manager",
+      "due": "Friday 20 November 2026"
+    },
+    {
+      "action": "Confirm the ESC/ABS/EBS warning light check is on the daily pre-start sheet for every truck and trailer, and fix any outstanding stability or brake system faults.",
+      "owner": "Supervisor",
+      "due": "Friday 6 November 2026"
+    },
+    {
+      "action": "Put the NTI Dairy Tanker Basics 'Tanker dynamics' pages and the NHVR Live Loads loading guide on the depot noticeboard.",
+      "owner": "Supervisor",
+      "due": "Wednesday 4 November 2026"
+    },
+    {
+      "action": "Follow up with any driver who raised a high-risk road, tanker handling, scheduling or fatigue concern during this talk.",
+      "owner": "Supervisor",
+      "due": "Within 7 days"
+    }
+  ],
+  "sources_reviewed": [
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Loading Guide - Live Loads",
+      "url": "https://www.nhvr.gov.au/road-access/loading/loading-guides/live-loads",
+      "date": "undated",
+      "accessed": "2026-11-02",
+      "note": "Bulk liquids are live loads; load movement can make a vehicle unstable or roll over; unbaffled tanks let liquid slosh freely; drive with care (wider, slower turns, steady acceleration and braking, bigger gaps, no sudden movements); avoid clipping gutters and roundabouts, care on negative camber; partly filled tanks should be baffled or compartmented."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Load Restraint Guide 2025",
+      "url": "https://www.nhvr.gov.au/files/media/document/728/202506-1285-load-restraint-guide-2025.pdf",
+      "date": "2025-06",
+      "accessed": "2026-11-02",
+      "note": "Part-filled tanks prone to sideways liquid movement affecting stability; baffles or compartments to stop slosh; keep centre of gravity low; many rollovers caused by inappropriate speed when changing direction, particularly on corners. Date from file reference (202506)."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR calls on industry to tackle fatigue this National Safe Work month",
+      "url": "https://www.nhvr.gov.au/news/2026/10/20/nhvr-calls-on-industry-to-tackle-fatigue-this-national-safe-work-month",
+      "date": "2026-10-20",
+      "accessed": "2026-11-02",
+      "note": "Supporting point on early starts: 5,835 fatigue offences last financial year, up almost 16%; updated HVNL unfit to drive duty lets drivers stop if unfit and employers must support this; HVCRL 1800 931 785."
+    },
+    {
+      "name": "Transport for NSW",
+      "type": "government",
+      "title": "Safety features and technologies for heavy vehicles",
+      "url": "https://www.transport.nsw.gov.au/system/files/media/documents/2024/crs_safety_technologies_heavy_vehicles.pdf",
+      "date": "2024-03",
+      "accessed": "2026-11-02",
+      "note": "ESC applies braking to selected wheels and can help avoid rollover crashes; trailer roll stability systems predict the rollover threshold and brake the trailer as critical speed is approached. Date from PDF metadata."
+    },
+    {
+      "name": "NTI (National Transport Insurance)",
+      "type": "industry",
+      "title": "Dairy Tanker Basics (Spilt Milk program)",
+      "url": "https://www.nti.com.au/getmedia/1f32dcea-6c43-4b76-a462-2a14d70e6d10/Dairy-Tanker-Basics-Web-v14-1.pdf",
+      "date": "2023-09",
+      "accessed": "2026-11-02",
+      "note": "Context only: slosh raises the centre of gravity in turns; surge forward under braking, back under acceleration; highest risk at 41-70% of main compartment; spillover fills first; pin-mounted baffles less effective than fully welded; ESC helps but must not be relied on; tanks are confined spaces. Funded by the NHVR Heavy Vehicle Safety Initiative. Date from PDF metadata."
+    },
+    {
+      "name": "NTI / NTARC",
+      "type": "industry",
+      "title": "Dairy tanker incidents: Why dairy is different",
+      "url": "https://www.nti.com.au/getmedia/33c3f829-9e76-4b84-b41c-d141cd339661/NTARC-DairyTankerIncidents-Report_1.pdf",
+      "date": "2023-09",
+      "accessed": "2026-11-02",
+      "note": "Context only: major dairy tanker incidents 2019-2022; inappropriate speed 32% vs 13% all units; 80% single-vehicle; 60% left the roadway on their own, 36% off path on curve; skew earlier in the day; peak milk October-November; gate closing time pressure. Date from PDF metadata."
+    },
+    {
+      "name": "NRSPP",
+      "type": "industry",
+      "title": "Heavy Vehicle Rollover Prevention Program - Understanding Causes of Rollover Crashes",
+      "url": "https://www.nrspp.org.au/resources/heavy-vehicle-rollover-prevention-program-understanding-causes-of-rollover-crashes/",
+      "date": "2010",
+      "accessed": "2026-11-02",
+      "note": "Context only: rollovers more common with bulk liquids; cornering forces increase four times when speed doubles; high centre of gravity reduces stability. Date is the published year shown on the page."
+    }
+  ]
+}
