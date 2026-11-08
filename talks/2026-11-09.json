@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-09",
+  "title": "Chain of Responsibility is personal: defects acted on, fit to drive, loads under mass, and records that prove it",
+  "date": "2026-11-09",
+  "week_label": "Week of Monday 9 November 2026",
+  "prepared_by": "Monaro Milk safety (weekly toolbox talk)",
+  "summary": "The NHVR and the courts are now going after the people who run transport businesses, not just the company or the driver on the day. In September 2026 an Albury court fined a sole director $18,000 and an operations manager $20,000 personally after one of their drivers breached fatigue rules 18 times. In late October the NHVR took two trucks off the road at a company whose safety systems let the same defects come back again and again. This week covers what each of us at Monaro Milk (drivers, schedulers, loaders and managers) must personally do every day, and the records that prove we did it.",
+  "key_risk": "Safety systems that exist on paper but are not followed day to day: daily checks done but defects not acted on, runs scheduled that cannot be done inside work and rest limits, drivers going out unfit, and pallets loaded without anyone knowing the axle weights. Under the Heavy Vehicle National Law (HVNL), Chain of Responsibility (CoR) duties sit with each person who controls or influences the transport task. The NHVR court outcomes show directors and managers being convicted and fined personally when they do not take basic, reasonable steps. If the system fails, the risk is a crash, a fallen load or a brake or steering failure, and then personal prosecution.",
+  "drivers_need_to_know": [
+    "CoR is personal. On 28 September 2026 at Albury Local Court, after a driver breached HVNL fatigue rules 18 times, the company's sole director was convicted under s26D and fined $18,000 for failing to exercise due diligence. The operations manager was convicted under s26H and fined $20,000 for failing to take basic steps to make sure the drivers they hired and scheduled complied with fatigue rules and that the trucks were registered (NHVR court outcomes). The driver is in the chain too, but so is everyone who rosters, loads and manages.",
+    "Your daily check is your signature that the truck is safe. The Safety Management System (SMS) Standard 2026 says the person doing the daily check confirms that, as far as the check goes, the vehicle is safe to use, or that faults have been found and reported. It should cover safety-critical items such as brakes, couplings and tyres. At Monaro Milk that includes the fridge body doors, locks and floor, and your load restraint gear.",
+    "Write it down and report it straight away. Faults found during a run (on the truck or the trailer) should be recorded and reported as soon as reasonably practicable. A defect you mention in the yard but never write down did not happen as far as the records go.",
+    "Repeat defects get operators shut down. On 30 October 2026 the NHVR reported it had banned two trucks from use (prohibition notice, 28 October) and issued an improvement notice to an operator. Every vehicle got a defect notice in late August 2026, a further 24 defect notices followed, and the same or similar components kept failing: steering, brakes, air bag suspension and tyres (one steer tyre was worn down to the steel cords). The NHVR said its safety management systems were not managing maintenance or mass and dimension risks.",
+    "A defect notice is not optional. On 9 October 2026 at Goulburn Local Court, a company was fined $5,000 and had a truck's registration suspended for six months after it was used with a defect notice (spring shackle movement on the front axle) that had not been cleared by the due date (NHVR court outcomes). If your truck has an open defect notice, tell your supervisor before you start.",
+    "You can and must stop if you are unfit to drive. HVNL changes from August 2026 widened the duty about fitness to drive beyond fatigue to include physical illness, injury, stress and mental illness. NHVR says the new unfit to drive duty gives drivers the authority to stop driving if they are unfit to continue, and employers must legally support this (NHVR, 20 October 2026). That matters on our early starts: if you have not slept, are crook or something is weighing on you, say so before the run.",
+    "Fatigue offences are rising. NHVR recorded 5,835 fatigue-related offences nationally in FY26, up almost 16 per cent from 5,039 the year before (we covered fatigue on 6 October). Keep your work diary accurate. Courts are fining drivers $15,000 for recording rest while cameras showed the truck moving (NHVR court outcomes, Albury, 7 September 2026).",
+    "Know your load weight, not just how it looks. On 29 April 2026 a company was fined $10,000 after its B-double's trailers were loaded at a milk depot by forklift, half in each trailer, and the driver did not check the weight; the third axle group was at 107 per cent (NHVR court outcomes). Pallets of bottled milk are heavy. Pushing them hard to the front helps restraint, but it can put the steer axle over its limit. If the load sheet or the truck does not look right, ask before you leave the dock.",
+    "If something is wrong and you are not being listened to, you can call the NHVR Heavy Vehicle Confidential Reporting Line on 1800 931 785 (7.00am to 4.30pm AEST, Monday to Friday). We would much rather you raised it with us first."
+  ],
+  "supervisors_must_check": [
+    "Every truck and trailer has a completed daily check before it leaves, and every fault written on a check sheet has a decision recorded against it: fixed, deferred with a time limit and who decided, or vehicle stood down. The SMS Standard 2026 expects decisions to defer repairs to be documented and attributable to a named person.",
+    "Open defect notices are tracked with their clearance date, and no vehicle is used once a defect notice is overdue (Goulburn, 9 October 2026: $5,000 fine and six-month registration suspension).",
+    "Repeat faults are looked at as a pattern, not just patched. If the same brake, steering, suspension, tyre or fridge door fault comes back, escalate it to the workshop and manager. The 30 October 2026 NHVR case turned on the same components failing again and again.",
+    "Maintenance is scheduled at the manufacturer's service intervals and the service records are complete. NHVR court outcomes note that regular maintenance is more than taking a truck in when it breaks down, and that pre-start checks and fault logs must be actually overseen and acted on by management.",
+    "Rosters and delivery schedules can be done inside work and rest limits, including the time it takes to load, unload at customers and get through traffic. No one is asked or pressured to skip breaks to make a delivery window.",
+    "Drivers' licences are current and the right class, and there is a way for drivers to say they are not fit to drive without fear of being punished. The SMS Standard 2026 asks operators to support drivers to disclose relevant conditions without fear of reprisal.",
+    "Loaders and drivers know the axle and gross mass limits for each truck and trailer and have a way to work out or check the weight of the load (pallet weights on the load sheet, a load plan, or scales). NHVR court outcomes repeatedly recommend giving staff the means to weigh or verify loads and training them in mass and loading.",
+    "New or casual drivers are inducted and trained before they drive for us. On 20 October 2026 at Coffs Harbour a company was fined $6,000 and given a Supervisory Intervention Order for a front axle overload, with the court saying it was not acceptable to have drivers who are inexperienced and untrained (NHVR court outcomes)."
+  ],
+  "discussion_questions": [
+    "When you last wrote a fault on your daily check sheet, what happened next, and how long did it take to get fixed?",
+    "Is there any run or delivery window on our schedule that you can only make by cutting a break or pushing your hours?",
+    "Would you feel comfortable telling a supervisor at 3am that you are not fit to drive today? What would make that easier?",
+    "Do you know the steer axle and gross mass limits for the truck you drive, and how heavy a full pallet of milk crates is?",
+    "If the NHVR asked us tomorrow to prove we look after defects, hours and loading, what records could we show them, and where are the gaps?"
+  ],
+  "practical_checklist": [
+    "Daily check done and signed before the truck leaves, including brakes, steering, tyres, lights, couplings (semis), fridge doors and locks, and restraint gear",
+    "Any fault written down and reported to the supervisor straight away, not just mentioned",
+    "No open or overdue defect notice on the truck or trailer",
+    "I am fit to drive: slept, sober, not sick, injured or too stressed to concentrate",
+    "Licence current and right class; work diary filled in accurately (if required)",
+    "Run can be done inside work and rest limits, with breaks planned",
+    "Load sheet checked: pallet count and weights make sense for this truck's axle and gross limits",
+    "Pallets restrained, not overloading the front axle",
+    "Faults found during the run recorded and reported before the next shift"
+  ],
+  "required_records": [
+    "Toolbox talk sign-on register for this talk (this app's CSV export, or the printed register).",
+    "Daily check sheets for every truck and trailer, with any faults recorded and the repair or deferral decision, who made it and when.",
+    "Defect notice register showing each notice, the due date and when and where it was cleared.",
+    "Maintenance and service records at the manufacturer's intervals for each truck, trailer and fridge unit.",
+    "Rosters and run schedules, plus work diary or work and rest records, kept and checked against actual hours.",
+    "Driver licence checks, induction and training records (including mass, loading and fatigue).",
+    "Load sheets or load plans showing pallet numbers and weights, and any weighing records.",
+    "Fit-for-duty and incident or near-miss reports, including any time a driver stood down as unfit, and what was done."
+  ],
+  "follow_up_actions": [
+    {
+      "action": "Review the last four weeks of daily check sheets: list every fault and confirm each has a recorded repair or deferral decision with a name and date.",
+      "owner": "Supervisor",
+      "due": "Friday 13 November 2026"
+    },
+    {
+      "action": "Set up (or update) a defect notice register and confirm no vehicle has an open or overdue notice.",
+      "owner": "Operations Manager",
+      "due": "Friday 13 November 2026"
+    },
+    {
+      "action": "Check every regular run against work and rest limits, including load and unload time, and fix any run that cannot be done legally.",
+      "owner": "Scheduler / Operations Manager",
+      "due": "Friday 20 November 2026"
+    },
+    {
+      "action": "Write down the steer, drive axle and gross mass limits for each truck and trailer, put them in the cab and at the dock, and confirm pallet weights are on the load sheet.",
+      "owner": "Operations Manager",
+      "due": "Friday 20 November 2026"
+    },
+    {
+      "action": "Confirm and tell all drivers the fit-for-duty procedure: who to call if unfit before or during a run, and that no one will be penalised for standing down.",
+      "owner": "General Manager",
+      "due": "Friday 13 November 2026"
+    },
+    {
+      "action": "Directors and managers to review the NHVR SMS Standard 2026 and SMS checklist against how we actually run, and list the gaps.",
+      "owner": "Directors / General Manager",
+      "due": "Friday 4 December 2026"
+    },
+    {
+      "action": "Follow up any defect, scheduling, fitness or loading concern raised in this talk.",
+      "owner": "Supervisor",
+      "due": "Within 7 days"
+    }
+  ],
+  "sources_reviewed": [
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Court outcomes",
+      "url": "https://www.nhvr.gov.au/law-policies/prosecutions/court-outcomes",
+      "date": "undated",
+      "accessed": "2026-11-09",
+      "note": "NSW court orders: Albury 28 Sep 2026 director s26D $18,000 and operations manager s26H $20,000 (18 fatigue breaches); Goulburn 9 Oct 2026 uncleared defect notice $5,000 plus 6-month rego suspension; Coffs Harbour 20 Oct 2026 $6,000 plus SIO, untrained drivers; 29 Apr 2026 milk depot load 107%; Albury 7 Sep 2026 false diary $15,000; maintenance educational points."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR holds operator to account over serious safety failures",
+      "url": "https://www.nhvr.gov.au/news/2026/10/30/nhvr-holds-operator-to-account-over-serious-safety-failures",
+      "date": "2026-10-30",
+      "accessed": "2026-11-09",
+      "note": "Late Aug 2026 inspections: all vehicles got defect notices; further 24 defect notices with same or similar components recurring; SMS failings on maintenance and mass/dimension; 28 Oct 2026 prohibition notice on two vehicles plus improvement notice; fuel and dangerous goods carrier."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR calls on industry to tackle fatigue this National Safe Work month",
+      "url": "https://www.nhvr.gov.au/news/2026/10/20/nhvr-calls-on-industry-to-tackle-fatigue-this-national-safe-work-month",
+      "date": "2026-10-20",
+      "accessed": "2026-11-09",
+      "note": "5,835 fatigue offences in FY26, up almost 16% from 5,039; HVCRL fatigue calls 365 (FY26) vs 326 (FY25); August 2026 HVNL unfit to drive duty covers illness, injury, stress and mental illness, drivers may stop and employers must support; HVCRL 1800 931 785."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR tackles key industry questions arising from HVNL reforms",
+      "url": "https://www.nhvr.gov.au/news/2026/10/22/nhvr-tackles-key-industry-questions-arising-from-hvnl-reforms",
+      "date": "2026-10-22",
+      "accessed": "2026-11-09",
+      "note": "New HVNL FAQs: eligible combinations up to 20 m (from 19 m) if requirements met; BFM/AFM continue until expiry, cancellation or transition to HVA; new alternative hours via ACA-Fatigue. Brief mention only."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "NHVR targets ongoing heavy vehicle safety breaches at Melbourne Market",
+      "url": "https://www.nhvr.gov.au/news/2026/10/19/nhvr-targets-ongoing-heavy-vehicle-safety-breaches-at-melbourne-market",
+      "date": "2026-10-19",
+      "accessed": "2026-11-09",
+      "note": "Loading and mass offences were 90% of breaches across the past three Melbourne Market operations; everyone in a transport task is in the CoR regardless of business size. Background on fresh-food freight; used for context."
+    },
+    {
+      "name": "National Transport Commission (approved by responsible Ministers)",
+      "type": "government",
+      "title": "Safety Management System Standard 2026",
+      "url": "https://www.ntc.gov.au/sites/default/files/assets/files/Safety%20Management%20System%20Standard%20-%20May%202026.pdf",
+      "date": "2026-05",
+      "accessed": "2026-11-09",
+      "note": "Approved 13 May 2026; standard for accreditation SMS. Used: fitness to drive (disclosure without fear of reprisal), daily check controls, fault recording and reporting, fault repair and documented deferral decisions, maintenance schedules."
+    },
+    {
+      "name": "NHVR",
+      "type": "regulator",
+      "title": "Safety Management Systems (SMS)",
+      "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/safety-management/safety-management-systems-sms",
+      "date": "undated",
+      "accessed": "2026-11-09",
+      "note": "Regardless of business size, an effective SMS is one of the best ways to meet the HVNL safety duty; SMS Standard required for Heavy Vehicle Accreditation; free SMS webinars and resources for small operators."
+    }
+  ]
+}

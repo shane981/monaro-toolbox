@@ -1,9 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T02:56:08.085Z",
-  "latest": "2026-11-02",
-  "count": 5,
+  "generated_at": "2026-11-08T19:05:44.155Z",
+  "latest": "2026-11-09",
+  "count": 6,
   "talks": [
+    {
+      "id": "2026-11-09",
+      "title": "Chain of Responsibility is personal: defects acted on, fit to drive, loads under mass, and records that prove it",
+      "date": "2026-11-09",
+      "week_label": "Week of Monday 9 November 2026",
+      "file": "2026-11-09.json"
+    },
     {
       "id": "2026-11-02",
       "title": "Pallets that stay put: restraining bottled milk crates in fridge trucks and at the dock",
