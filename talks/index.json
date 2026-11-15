@@ -1,9 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T19:05:44.155Z",
-  "latest": "2026-11-09",
-  "count": 6,
+  "generated_at": "2026-11-15T19:04:06.065Z",
+  "latest": "2026-11-16",
+  "count": 7,
   "talks": [
+    {
+      "id": "2026-11-16",
+      "title": "Design the risk out: crates, pallets, pallet jacks and fridge bodies without the sprains and strains",
+      "date": "2026-11-16",
+      "week_label": "Week of Monday 16 November 2026",
+      "file": "2026-11-16.json"
+    },
     {
       "id": "2026-11-09",
       "title": "Chain of Responsibility is personal: defects acted on, fit to drive, loads under mass, and records that prove it",
