@@ -1,7 +1,9 @@
 /* Monaro Milk Toolbox Talks */
 :root {
-  --green: #13783c; --green-dark: #0d5a2c; --green-light: #5cb85c; --green-tint: #eaf6ee;
-  --ink: #14211a; --muted: #5b6b61; --line: #d5e2d9; --bg: #f4f7f5; --card: #fff;
+  /* Hi-vis safety orange theme. --green* names kept so existing rules remap cleanly. */
+  --green: #C2560F; --green-dark: #8F3E0A; --green-light: #F6A04D; --green-tint: #FDF1E6;
+  --success: #13783c; --success-dark: #0d5a2c;
+  --ink: #14211a; --muted: #5b6b61; --line: #e4d8cc; --bg: #f7f3ee; --card: #fff;
   --warn: #b45309; --warn-tint: #fff4e5; --danger: #b42318;
   --radius: 14px; --tap: 52px;
 }
@@ -56,7 +58,7 @@ input[type="checkbox"], input[type="radio"] { width: 28px; height: 28px; flex: 0
 .checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
 .followups li.done .fu-text { color: var(--muted); }
 .fu-meta, .fu-done { display: block; color: var(--muted); font-size: .85rem; margin-top: 2px; }
-.fu-done { color: var(--green-dark); font-weight: 700; }
+.fu-done { color: var(--success-dark); font-weight: 700; }
 .hint { color: var(--muted); font-size: .9rem; margin: 0 0 .5rem; }
 .sources ol { padding-left: 1.3rem; } .sources li { margin-bottom: .7rem; overflow-wrap: anywhere; }
 .sources summary { cursor: pointer; font-weight: 700; min-height: 44px; }
