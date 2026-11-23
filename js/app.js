@@ -1,451 +1,344 @@
-/* Monaro Milk Toolbox Talks – app logic (vanilla JS, no build step). */
+/* Monaro Milk driver hub. Hash routes, no login, static files. */
 (function () {
   'use strict';
-  var TZ = 'Australia/Sydney';
-  var main = document.getElementById('main');
-  var state = { index: null, talks: {}, currentId: null, formDirty: false, pad: null };
+  var U = window.MM;
+  var state = { index: null, talks: {}, cor: null, systems: null, booted: false };
 
-  // ---------- helpers ----------
-  function $(sel, root) { return (root || document).querySelector(sel); }
-  function $all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
-  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  function setting(k, v) { if (v === undefined) return localStorage.getItem('mm-set-' + k) || ''; localStorage.setItem('mm-set-' + k, v); }
-  function fmtTalkDate(iso) {
-    var p = iso.split('-').map(Number);
-    return new Intl.DateTimeFormat('en-AU', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(p[0], p[1] - 1, p[2])));
+  function parseHash() {
+    var raw = location.hash.replace(/^#\/?/, '');
+    var bits = raw.split('?');
+    var parts = bits[0].split('/').filter(Boolean);
+    var q = new URLSearchParams(bits[1] || '');
+    return { parts: parts, q: q };
   }
-  function fmtStamp(iso, withSeconds) {
-    var o = { day: 'numeric', month: 'short', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: TZ, timeZoneName: 'short' };
-    if (withSeconds) o.second = '2-digit';
-    return new Intl.DateTimeFormat('en-AU', o).format(new Date(iso));
-  }
-  function fmtSourceDate(d) {
-    if (!d || d === 'undated') return 'undated';
-    if (/^\d{4}-\d{2}-\d{2}$/.test(d)) { var p = d.split('-').map(Number); return new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(p[0], p[1] - 1, p[2]))); }
-    if (/^\d{4}-\d{2}$/.test(d)) { var q = d.split('-').map(Number); return new Intl.DateTimeFormat('en-AU', { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(q[0], q[1] - 1, 1))); }
-    return d;
-  }
-  function toast(msg, ms) {
-    var t = document.getElementById('toast');
-    t.textContent = msg; t.hidden = false;
-    clearTimeout(toast._t); toast._t = setTimeout(function () { t.hidden = true; }, ms || 3500);
-  }
-  function banner(html, onClick) {
-    var b = document.getElementById('banner');
-    b.innerHTML = html; b.hidden = false;
-    b.onclick = function () { b.hidden = true; if (onClick) onClick(); };
-  }
-  function asList(v) { return Array.isArray(v) ? v : (v ? [v] : []); }
-  function actionText(a) { return typeof a === 'string' ? { action: a } : a; }
 
-  // ---------- data ----------
-  function getJSON(url) {
-    return fetch(url, { cache: 'no-cache' }).then(function (r) {
-      if (!r.ok) throw new Error(r.status === 503 ? 'offline' : 'HTTP ' + r.status);
-      return r.json();
+  function setTab(name) {
+    U.$all('.tabbar a').forEach(function (a) {
+      if (a.getAttribute('data-tab') === name) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
     });
   }
+
+  function showError(err, what) {
+    console.error(err);
+    var offline = !navigator.onLine || String(err && err.message) === 'offline';
+    U.$('#main').innerHTML = '<section class="card"><h1>' + (offline ? 'You’re offline' : 'Couldn’t load ' + U.esc(what || 'that')) + '</h1>' +
+      '<p>' + (offline
+        ? 'This hasn’t been saved on this phone yet. Open it once on Wi-Fi or mobile data and it will be here next time.'
+        : 'Pull to refresh, or try again in a moment.') + '</p>' +
+      '<p><button class="btn" type="button" id="retry">Try again</button></p></section>';
+    var b = U.$('#retry');
+    if (b) b.onclick = function () { location.reload(); };
+  }
+
   function loadIndex() {
-    return getJSON('talks/index.json').then(function (idx) {
+    if (state.index) return Promise.resolve(state.index);
+    return U.getJSON('talks/index.json').then(function (idx) {
       state.index = idx;
-      warmCache(idx);
+      warm(idx);
       return idx;
     });
   }
   function loadTalk(id) {
     if (state.talks[id]) return Promise.resolve(state.talks[id]);
-    var entry = (state.index && state.index.talks || []).find(function (t) { return t.id === id; });
+    var entry = ((state.index && state.index.talks) || []).filter(function (t) { return t.id === id; })[0];
     var file = entry ? entry.file : id + '.json';
-    return getJSON('talks/' + encodeURIComponent(file)).then(function (t) { state.talks[id] = t; return t; });
+    return U.getJSON('talks/' + encodeURIComponent(file)).then(function (t) { state.talks[id] = t; return t; });
   }
-  function warmCache(idx) {
-    if (!navigator.serviceWorker || !navigator.serviceWorker.controller) return;
-    var urls = (idx.talks || []).slice(0, 12).map(function (t) { return new URL('talks/' + t.file, location.href).href; });
-    navigator.serviceWorker.controller.postMessage({ type: 'warm', urls: urls });
+  function loadCor() {
+    if (state.cor) return Promise.resolve(state.cor);
+    return U.getJSON('content/cor.json').then(function (c) { state.cor = c; return c; });
   }
-
-  // ---------- routing ----------
-  function route() {
-    var h = location.hash.replace(/^#\/?/, '');
-    var parts = h.split('/');
-    $all('.tabs a').forEach(function (a) { a.removeAttribute('aria-current'); });
-    var tab = 'current';
-    if (state.pad) { state.pad.destroy(); state.pad = null; }
-    state.formDirty = false;
-    var p;
-    if (parts[0] === 'archive') { tab = 'archive'; p = renderArchive(); }
-    else if (parts[0] === 'supervisor') { tab = 'supervisor'; p = renderSupervisor(); }
-    else if (parts[0] === 'talk' && parts[1]) {
-      var id = decodeURIComponent(parts[1]);
-      tab = state.index && state.index.latest === id ? 'current' : 'archive';
-      p = renderTalk(id, parts[2]);
-    } else { p = renderCurrent(); }
-    var a = $('.tabs a[data-tab="' + tab + '"]'); if (a) a.setAttribute('aria-current', 'page');
-    return Promise.resolve(p).catch(showError);
+  function loadSystems() {
+    if (state.systems) return Promise.resolve(state.systems);
+    return U.getJSON('content/systems.json').then(function (s) { state.systems = s; return s; });
   }
-  function showError(err) {
-    console.error(err);
-    var offline = !navigator.onLine || String(err && err.message) === 'offline';
-    main.innerHTML = '<section class="card"><h1>' + (offline ? 'You\u2019re offline' : 'Couldn\u2019t load the talk') + '</h1>' +
-      '<p>' + (offline ? 'This talk hasn\u2019t been saved to this device yet. Connect to mobile data or Wi-Fi once and it will be available offline after that.' : 'Something went wrong loading the toolbox talk. Pull down to refresh or try again shortly.') + '</p>' +
-      '<p><button class="btn" type="button" onclick="location.reload()">Try again</button></p></section>';
+  function warm(idx) {
+    var urls = (idx.talks || []).map(function (t) { return new URL('talks/' + t.file, location.href).href; });
+    urls.forEach(function (u) { fetch(u, { cache: 'no-cache' }).catch(function () {}); });
+    if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({ type: 'warm', urls: urls });
+    }
   }
 
-  function ensureIndex() { return state.index ? Promise.resolve(state.index) : loadIndex(); }
-
-  function renderCurrent() {
-    return ensureIndex().then(function (idx) {
-      if (!idx.latest) { main.innerHTML = '<section class="card"><h1>No talks yet</h1><p>The first toolbox talk hasn\u2019t been published.</p></section>'; return; }
-      return renderTalk(idx.latest);
-    });
+  function latestTalk() {
+    var idx = state.index;
+    if (!idx || !idx.latest) return Promise.resolve(null);
+    return loadTalk(idx.latest);
   }
 
-  // ---------- talk page ----------
-  function listHTML(items, cls) {
-    return '<ul class="' + (cls || 'bullets') + '">' + asList(items).map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>';
-  }
-  function section(id, title, body, extraClass) {
-    return '<section class="card ' + (extraClass || '') + '" id="' + id + '" aria-labelledby="' + id + '-h"><h2 id="' + id + '-h">' + esc(title) + '</h2>' + body + '</section>';
-  }
-
-  function renderTalk(id, anchor) {
-    return ensureIndex().then(function () { return loadTalk(id); }).then(function (t) {
-      state.currentId = t.id;
-      var isLatest = state.index && state.index.latest === t.id;
-      document.title = t.title + ' \u2013 MM Toolbox';
-      var checklist = '<ul class="checklist">' + t.practical_checklist.map(function (c, i) {
-        return '<li><label><input type="checkbox" data-check="' + i + '"><span>' + esc(c) + '</span></label></li>';
-      }).join('') + '</ul>';
-      var followups = '<p class="hint">Supervisors: tick each action when it\u2019s done. Ticks are saved on this device.</p><ul class="followups">' +
-        t.follow_up_actions.map(function (a, i) {
-          a = actionText(a);
-          var meta = [a.owner ? 'Owner: ' + esc(a.owner) : '', a.due ? 'Due: ' + esc(a.due) : ''].filter(Boolean).join(' \u00b7 ');
-          return '<li data-fu="' + i + '"><label><input type="checkbox" data-fu-box="' + i + '"><span class="fu-text">' + esc(a.action) +
-            (meta ? '<small class="fu-meta">' + meta + '</small>' : '') + '<small class="fu-done" hidden></small></span></label></li>';
-        }).join('') + '</ul>';
-      var sources = '<details class="sources" open><summary>' + t.sources_reviewed.length + ' sources reviewed</summary><ol>' +
-        t.sources_reviewed.map(function (s) {
-          return '<li><strong>' + esc(s.name) + '</strong>' + (s.type === 'industry' ? ' <span class="tag">industry context</span>' : '') +
-            ' \u2013 <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.title) + '</a> <span class="muted">(' + esc(fmtSourceDate(s.date)) + ')</span>' +
-            '<span class="print-url">' + esc(s.url) + '</span>' + (s.note ? '<br><small>' + esc(s.note) + '</small>' : '') + '</li>';
-        }).join('') + '</ol></details>';
-
-      main.innerHTML =
-        '<article class="talk">' +
-        '<header class="card hero">' +
-          (isLatest ? '<p class="eyebrow">This week\u2019s toolbox talk</p>' : '<p class="eyebrow archive-flag">Archived talk</p>') +
-          '<h1>' + esc(t.title) + '</h1>' +
-          '<p class="when">' + esc(t.week_label) + (t.week_label.indexOf(fmtTalkDate(t.date).replace(/^\w+ /, '')) >= 0 ? '' : ' \u00b7 ' + esc(fmtTalkDate(t.date))) + '</p>' +
-          (t.summary ? '<p class="summary">' + esc(t.summary) + '</p>' : '') +
-          '<div class="hero-actions no-print"><a class="btn" href="#/talk/' + encodeURIComponent(t.id) + '/signon">Sign on</a>' +
-          '<button class="btn ghost" type="button" id="printBtn">Print / save PDF</button></div>' +
-        '</header>' +
-        section('risk', 'Key risk this week', '<p class="risk-text">' + esc(t.key_risk) + '</p>', 'risk') +
-        section('drivers', 'What drivers need to know', listHTML(t.drivers_need_to_know)) +
-        section('supervisors', 'What supervisors must check', listHTML(t.supervisors_must_check)) +
-        section('questions', 'Discussion questions', '<ol class="questions">' + t.discussion_questions.map(function (q) { return '<li>' + esc(q) + '</li>'; }).join('') + '</ol>') +
-        section('checklist', 'Practical checklist', checklist) +
-        section('records', 'Required records', listHTML(asList(t.required_records))) +
-        section('followups', 'Follow-up actions', followups) +
-        section('sources', 'Sources reviewed', sources, 'sources-card') +
-        signonSection(t) +
-        printRegister(t) +
-        '</article>';
-
-      $('#printBtn').onclick = function () { window.print(); };
-      wireFollowups(t);
-      wireSignon(t);
-      refreshSignons(t);
-      if (anchor === 'signon') setTimeout(function () { var s = document.getElementById('signon'); if (s) s.scrollIntoView({ behavior: 'smooth' }); }, 50);
-      else window.scrollTo(0, 0);
-    });
-  }
-
-  // ---------- follow-up actions ----------
-  function wireFollowups(t) {
-    MMDB.followupsForTalk(t.id).then(function (rows) {
-      rows.forEach(function (r) { paintFollowup(r.index, r); });
-    });
-    $all('[data-fu-box]').forEach(function (box) {
-      box.addEventListener('change', function () {
-        var i = Number(box.getAttribute('data-fu-box'));
-        var who = setting('supervisor');
-        if (box.checked && !who) {
-          who = (prompt('Your name (saved on this device for ticking off actions):') || '').trim();
-          if (!who) { box.checked = false; return; }
-          setting('supervisor', who);
-        }
-        var row = { done: box.checked, by: who, at: new Date().toISOString() };
-        MMDB.setFollowup(t.id, i, row).then(function () { paintFollowup(i, row); toast(box.checked ? 'Action ticked off' : 'Action re-opened'); });
-      });
-    });
-  }
-  function paintFollowup(i, r) {
-    var li = $('[data-fu="' + i + '"]'); if (!li) return;
-    var box = $('input', li); var d = $('.fu-done', li);
-    box.checked = !!r.done; li.classList.toggle('done', !!r.done);
-    if (r.done) { d.textContent = 'Done \u2013 ' + (r.by || '') + ', ' + fmtStamp(r.at); d.hidden = false; } else { d.hidden = true; }
-  }
-
-  // ---------- sign-on ----------
-  function signonSection(t) {
-    var depot = esc(setting('depot'));
-    return '<section class="card signon no-print" id="signon" aria-labelledby="signon-h">' +
-      '<h2 id="signon-h">Sign on to this talk</h2>' +
-      '<form id="signonForm" novalidate autocomplete="on">' +
-        '<label class="field"><span>Your name <b aria-hidden="true">*</b></span><input name="name" required autocomplete="name" maxlength="80" enterkeyhint="next"></label>' +
-        '<fieldset class="field roles"><legend>Role <b aria-hidden="true">*</b></legend>' +
-          '<label class="pill"><input type="radio" name="role" value="Driver" required><span>Driver</span></label>' +
-          '<label class="pill"><input type="radio" name="role" value="Supervisor"><span>Supervisor</span></label>' +
-          '<label class="pill"><input type="radio" name="role" value="Other"><span>Other</span></label>' +
-          '<input name="roleOther" class="role-other" placeholder="Role (e.g. yard hand, mechanic)" maxlength="60" hidden>' +
-        '</fieldset>' +
-        '<label class="field"><span>Depot <small>(optional)</small></span><input name="depot" maxlength="60" value="' + depot + '" autocomplete="off"></label>' +
-        '<label class="tick"><input type="checkbox" name="attended" required><span>I attended this toolbox talk and understood it.</span></label>' +
-        '<div class="field"><span class="label-row"><span>Signature <b aria-hidden="true">*</b></span><button type="button" class="link" id="sigClear">Clear</button></span>' +
-          '<canvas id="sigPad" class="sigpad" aria-label="Signature pad: sign with your finger"></canvas>' +
-          '<small class="hint">Sign with your finger in the box.</small></div>' +
-        '<p class="stamp">Time: <strong id="stamp"></strong></p>' +
-        '<p id="formError" class="error" role="alert" hidden></p>' +
-        '<button class="btn big" type="submit">Sign on</button>' +
-      '</form>' +
-      '<div class="signed"><h3>Signed on (this device) <span id="signCount" class="count">0</span></h3><ul id="signList" class="signlist"></ul>' +
-      '<div class="sup-tools"><button type="button" class="btn ghost" data-export="' + esc(t.id) + '">Download CSV</button>' +
-      '<button type="button" class="btn ghost" data-share="' + esc(t.id) + '">Share / email CSV</button></div></div>' +
-      '</section>';
-  }
-  function printRegister(t) {
-    return '<section class="print-only register" aria-hidden="true"><h2>Sign-on register \u2013 ' + esc(t.title) + ' (' + esc(fmtTalkDate(t.date)) + ')</h2>' +
-      '<table><thead><tr><th>#</th><th>Name</th><th>Role</th><th>Depot</th><th>Attended &amp; understood</th><th>Signed (Sydney time)</th><th>Signature</th></tr></thead><tbody id="printRows"></tbody></table>' +
-      '<p class="muted">Supervisor: ______________________ Signature: ______________________ Date: ____________</p></section>';
-  }
-  function wireSignon(t) {
-    var form = $('#signonForm');
-    var canvas = $('#sigPad');
-    state.pad = new SignaturePad(canvas, function () { state.formDirty = true; });
-    $('#sigClear').onclick = function () { state.pad.clear(); };
-    var stampEl = $('#stamp');
-    function tick() { if (document.body.contains(stampEl)) { stampEl.textContent = fmtStamp(new Date().toISOString(), true); setTimeout(tick, 1000); } }
-    tick();
-    form.addEventListener('input', function () { state.formDirty = true; });
-    $all('input[name="role"]', form).forEach(function (r) {
-      r.addEventListener('change', function () { var o = $('.role-other', form); o.hidden = form.role.value !== 'Other'; if (!o.hidden) o.focus(); });
-    });
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var err = $('#formError');
-      var name = form.name.value.trim().replace(/\s+/g, ' ');
-      var role = form.role.value;
-      var roleOther = form.roleOther.value.trim();
-      var problems = [];
-      if (name.length < 2) problems.push('enter your name');
-      if (!role) problems.push('choose your role');
-      if (role === 'Other' && !roleOther) problems.push('type your role');
-      if (!form.attended.checked) problems.push('tick that you attended and understood');
-      if (state.pad.isEmpty()) problems.push('sign in the box');
-      if (problems.length) { err.textContent = 'Please ' + problems.join(', ') + '.'; err.hidden = false; return; }
-      err.hidden = true;
-      MMDB.signonsForTalk(t.id).then(function (rows) {
-        var dup = rows.some(function (r) { return r.name.toLowerCase() === name.toLowerCase(); });
-        if (dup && !confirm(name + ' has already signed on to this talk on this device. Sign on again?')) return;
-        var depot = form.depot.value.trim();
-        if (depot) setting('depot', depot);
-        var row = {
-          talkId: t.id, talkTitle: t.title, talkDate: t.date, weekLabel: t.week_label,
-          name: name, role: role === 'Other' ? 'Other: ' + roleOther : role, depot: depot,
-          attended: true, signedAt: new Date().toISOString(), signature: state.pad.toDataURL()
-        };
-        return MMDB.addSignon(row).then(function () {
-          MMDB.persist();
-          toast('Signed on: ' + name + ' \u2013 ' + fmtStamp(row.signedAt));
-          form.name.value = ''; form.attended.checked = false;
-          $all('input[name="role"]', form).forEach(function (r) { r.checked = false; });
-          form.roleOther.value = ''; $('.role-other', form).hidden = true;
-          state.pad.clear(); state.formDirty = false;
-          refreshSignons(t);
-        });
-      }).catch(function (ex) { err.textContent = 'Could not save the sign-on on this device: ' + ex.message; err.hidden = false; });
-    });
-    $all('[data-export]').forEach(function (b) { b.onclick = function () { exportCSV(t, false); }; });
-    $all('[data-share]').forEach(function (b) { b.onclick = function () { exportCSV(t, true); }; });
-  }
-  function refreshSignons(t) {
-    return MMDB.signonsForTalk(t.id).then(function (rows) {
-      var list = $('#signList'); var count = $('#signCount'); var pr = $('#printRows');
-      if (count) count.textContent = rows.length;
-      if (list) list.innerHTML = rows.length ? rows.map(function (r) {
-        return '<li><img src="' + esc(r.signature) + '" alt="" class="sig-thumb"><span><strong>' + esc(r.name) + '</strong> \u2013 ' + esc(r.role) +
-          (r.depot ? ' \u00b7 ' + esc(r.depot) : '') + '<br><small>' + esc(fmtStamp(r.signedAt)) + '</small></span></li>';
-      }).join('') : '<li class="muted">No sign-ons yet on this device.</li>';
-      if (pr) {
-        var html = rows.map(function (r, i) {
-          return '<tr><td>' + (i + 1) + '</td><td>' + esc(r.name) + '</td><td>' + esc(r.role) + '</td><td>' + esc(r.depot) + '</td><td>Yes</td><td>' + esc(fmtStamp(r.signedAt)) +
-            '</td><td><img src="' + esc(r.signature) + '" alt="signature"></td></tr>';
-        }).join('');
-        for (var i = rows.length; i < Math.max(rows.length + 6, 12); i++) html += '<tr class="blank"><td>' + (i + 1) + '</td><td></td><td></td><td></td><td>\u2610</td><td></td><td></td></tr>';
-        pr.innerHTML = html;
-      }
-      return rows;
-    });
-  }
-
-  // ---------- CSV export / share ----------
-  function csvCell(v) {
-    var s = String(v == null ? '' : v);
-    if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; // stop spreadsheet formula injection
-    return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
-  }
-  function buildCSV(t, rows, withSignatures) {
-    var head = ['talk_id', 'talk_title', 'talk_date', 'week_label', 'worker_name', 'role', 'depot', 'attended_and_understood', 'signed_at_sydney', 'signed_at_utc_iso', 'device_id', 'signon_id'];
-    if (withSignatures) head.push('signature_png_data_url');
-    var lines = [head.join(',')];
-    rows.forEach(function (r) {
-      var cells = [t.id, t.title, t.date, t.week_label, r.name, r.role, r.depot, r.attended ? 'Yes' : 'No', fmtStamp(r.signedAt, true), r.signedAt, r.deviceId, r.id];
-      if (withSignatures) cells.push(r.signature);
-      lines.push(cells.map(csvCell).join(','));
-    });
-    return lines.join('\r\n') + '\r\n';
-  }
-  function download(name, text) {
-    var blob = new Blob(['\ufeff' + text], { type: 'text/csv;charset=utf-8' });
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(blob); a.download = name;
-    document.body.appendChild(a); a.click();
-    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
-  }
-  function exportCSV(t, share) {
-    return MMDB.signonsForTalk(t.id).then(function (rows) {
-      if (!rows.length) { toast('No sign-ons on this device for this talk yet.'); return; }
-      var name = 'monaro-toolbox-signons-' + t.id + '.csv';
-      var csv = buildCSV(t, rows, true);
-      var subject = 'Toolbox talk sign-ons: ' + t.title + ' (' + fmtTalkDate(t.date) + ')';
-      var summary = rows.length + ' sign-on(s) for "' + t.title + '" \u2013 ' + t.week_label + '.';
-      window.__lastCSV = csv; // used by automated checks
-      if (!share) { download(name, csv); toast('CSV downloaded (' + rows.length + ' sign-ons)'); return; }
-      var file;
-      try { file = new File(['\ufeff' + csv], name, { type: 'text/csv' }); } catch (e) { file = null; }
-      if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
-        return navigator.share({ files: [file], title: subject, text: summary }).catch(function (e) {
-          if (e && e.name === 'AbortError') return;
-          mailtoFallback(t, rows, name, csv, subject, summary);
-        });
-      }
-      mailtoFallback(t, rows, name, csv, subject, summary);
-    });
-  }
-  function mailtoFallback(t, rows, name, csv, subject, summary) {
-    download(name, csv);
-    var plain = buildCSV(t, rows, false);
-    var body = summary + '\n\nThe full CSV (with signatures) has been downloaded as ' + name + ' \u2013 please attach it to this email.\n\nSummary (no signatures):\n' + plain;
-    if (body.length > 1800) body = body.slice(0, 1750) + '\n\u2026 (truncated \u2013 see attached CSV)';
-    var to = setting('email');
-    location.href = 'mailto:' + encodeURIComponent(to) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  }
-
-  // ---------- archive ----------
-  function renderArchive() {
-    return ensureIndex().then(function (idx) {
-      document.title = 'Archive \u2013 MM Toolbox';
-      return MMDB.allSignons().then(function (all) {
-        var counts = {}; all.forEach(function (r) { counts[r.talkId] = (counts[r.talkId] || 0) + 1; });
-        main.innerHTML = '<section class="card"><h1>Archive</h1><p class="muted">' + idx.count + ' talk' + (idx.count === 1 ? '' : 's') + ', newest first.</p>' +
-          '<ul class="archive">' + idx.talks.map(function (t, i) {
-            return '<li><a href="#/talk/' + encodeURIComponent(t.id) + '"><span class="a-date">' + esc(fmtTalkDate(t.date)) + (i === 0 ? ' <span class="tag now">This week</span>' : '') + '</span>' +
-              '<span class="a-title">' + esc(t.title) + '</span><span class="a-meta">' + esc(t.week_label) + ' \u00b7 ' + (counts[t.id] || 0) + ' sign-on(s) on this device</span></a></li>';
-          }).join('') + '</ul></section>';
+  function renderHome() {
+    setTab('home');
+    document.title = 'Monaro Milk';
+    window.MMTalks.destroyPad();
+    return loadIndex().then(function () {
+      return Promise.all([loadCor(), window.MMProgress.snapshot(state.index)]);
+    }).then(function (res) {
+      var snap = res[1];
+      return latestTalk().then(function (t) {
+        var hero = !t
+          ? '<section class="card"><h1>No talk published yet</h1><p>When Monday’s talk is published, it will land here.</p></section>'
+          : '<a class="hero-link" href="#/talk/' + encodeURIComponent(t.id) + '"><article class="card hero home-hero">' +
+              '<p class="eyebrow">This week</p><h1>' + U.esc(t.title) + '</h1>' +
+              '<p class="when">' + U.esc(t.week_label) + '</p>' +
+              '<p class="risk-text">' + U.esc(t.key_risk) + '</p></article></a>' +
+              '<div class="home-actions"><a class="btn big" href="#/talk/' + encodeURIComponent(t.id) + '">Read the talk</a>' +
+              '<a class="btn big ghost" href="#/talk/' + encodeURIComponent(t.id) + '/signon">' + (snap.signedThisWeek ? 'You’re signed on' : 'Sign on') + '</a></div>';
+        var weekPct = snap.signedThisWeek ? 1 : 0;
+        var quizSub = snap.last ? (snap.last.score + '/' + snap.last.total + ' last go') : 'Not yet';
+        U.$('#main').innerHTML =
+          '<p class="hello">' + U.esc(U.greet()) + '</p>' +
+          '<p class="hello-sub">Monaro Milk &amp; Juice · Cooma</p>' +
+          hero +
+          '<section class="card progress-card"><h2>My progress</h2><p class="hint">Saved on this phone. It does not leave the device.</p>' +
+            '<div class="rings">' +
+              window.MMProgress.ring(weekPct, snap.signedThisWeek ? 'Signed' : 'Not yet', 'This week’s talk', snap.signedThisWeek ? 'good' : '') +
+              window.MMProgress.ring(snap.best, snap.best ? Math.round(snap.best * 100) + '%' : '—', quizSub, snap.best >= 1 ? 'good' : '') +
+            '</div>' +
+            '<p class="streak">' + (snap.streak ? '<strong>' + snap.streak + '</strong> talk' + (snap.streak === 1 ? '' : 's') + ' signed in a row' : 'Sign on to start a streak') + '</p>' +
+            window.MMProgress.badgesHtml(snap.earned) +
+            '<a class="btn ghost" href="#/rules/quiz?set=all">Quiz · ' + state.cor.quiz.length + ' questions</a>' +
+          '</section>' +
+          '<a class="soon-teaser" href="#/soon"><span class="kicker">Coming soon</span><strong>What’s next for this app</strong><span>SWMS, messages, hazard reports, your tickets, and more. A look at what’s being built. None of it is live.</span></a>' +
+          '<div class="home-jumps">' +
+            '<a href="#/speak"><strong>Speak up</strong><span>000, your manager, or the NHVR line. You can stop.</span></a>' +
+            '<a href="#/rules"><strong>CoR rules</strong><span>By the job you are doing today.</span></a>' +
+            '<a href="#/systems"><strong>Systems</strong><span>Tanda, Logmaster, Intellifleet, MiX.</span></a>' +
+          '</div>';
         window.scrollTo(0, 0);
       });
     });
   }
 
-  // ---------- supervisor ----------
-  function renderSupervisor() {
-    return ensureIndex().then(function (idx) {
-      document.title = 'Supervisor \u2013 MM Toolbox';
-      return MMDB.allSignons().then(function (all) {
-        var by = {}; all.forEach(function (r) { (by[r.talkId] = by[r.talkId] || []).push(r); });
-        main.innerHTML = '<section class="card"><h1>Supervisor tools</h1>' +
-          '<p>Sign-ons are saved on <strong>this device only</strong>. Export them after each talk and file the CSV (or printed register) with your WHS/CoR records.</p>' +
-          '<form id="supSettings" class="settings"><label class="field"><span>Supervisor name (used when ticking off follow-up actions)</span><input name="supervisor" value="' + esc(setting('supervisor')) + '" maxlength="80"></label>' +
-          '<label class="field"><span>Default email for CSV exports (mailto fallback)</span><input name="email" type="email" value="' + esc(setting('email')) + '" maxlength="120" placeholder="e.g. office@example.com.au"></label>' +
-          '<button class="btn ghost" type="submit">Save settings</button></form></section>' +
-          '<section class="card"><h2>Sign-on registers</h2><div class="sup-table">' + idx.talks.map(function (t) {
-            var rows = (by[t.id] || []).sort(function (a, b) { return a.signedAt.localeCompare(b.signedAt); });
-            return '<details class="sup-talk"><summary><span>' + esc(fmtTalkDate(t.date)) + ' \u2013 ' + esc(t.title) + '</span><span class="count">' + rows.length + '</span></summary>' +
-              '<div class="sup-tools"><button class="btn ghost" data-sexport="' + esc(t.id) + '">Download CSV</button><button class="btn ghost" data-sshare="' + esc(t.id) + '">Share / email CSV</button>' +
-              '<a class="btn ghost" href="#/talk/' + encodeURIComponent(t.id) + '" data-print="' + esc(t.id) + '">Print register</a></div>' +
-              (rows.length ? '<ul class="signlist">' + rows.map(function (r) {
-                return '<li><img src="' + esc(r.signature) + '" alt="" class="sig-thumb"><span><strong>' + esc(r.name) + '</strong> \u2013 ' + esc(r.role) + (r.depot ? ' \u00b7 ' + esc(r.depot) : '') +
-                  '<br><small>' + esc(fmtStamp(r.signedAt)) + '</small></span><button class="link danger" data-del="' + esc(r.id) + '">Delete</button></li>';
-              }).join('') + '</ul>' : '<p class="muted">No sign-ons on this device.</p>') + '</details>';
-          }).join('') + '</div></section>' +
-          '<section class="card"><h2>Install on your phone</h2><ul class="bullets"><li><strong>Android (Chrome):</strong> tap \u22ee menu \u2192 <em>Install app</em> / <em>Add to Home screen</em>.</li>' +
-          '<li><strong>iPhone (Safari):</strong> tap the Share button \u2192 <em>Add to Home Screen</em>.</li><li>Open it once with signal so the talk is saved for offline use in the yard.</li></ul></section>';
-        $('#supSettings').onsubmit = function (e) { e.preventDefault(); setting('supervisor', this.supervisor.value.trim()); setting('email', this.email.value.trim()); toast('Settings saved on this device'); };
-        $all('[data-sexport],[data-sshare]').forEach(function (b) {
-          b.onclick = function () {
-            var id = b.getAttribute('data-sexport') || b.getAttribute('data-sshare');
-            loadTalk(id).then(function (t) { exportCSV(t, b.hasAttribute('data-sshare')); });
-          };
+  function renderSearch(q) {
+    setTab('');
+    document.title = 'Search – Monaro';
+    window.MMTalks.destroyPad();
+    U.$('#main').innerHTML = '<section class="card"><p class="eyebrow">Search</p><h1>Talks and rules</h1>' +
+      '<label class="field"><span class="visually-hidden">Search</span><input id="q" type="search" enterkeyhint="search" placeholder="Try fatigue, pallets, PBS, doors…" value="' + U.esc(q) + '"></label>' +
+      '<div id="hits"><p class="muted">Loading…</p></div></section>';
+    var input = U.$('#q');
+    input.focus();
+    function go() {
+      var query = input.value.trim();
+      var box = U.$('#hits');
+      if (query.length < 2) { box.innerHTML = '<p class="muted">Type at least two letters.</p>'; return; }
+      var needle = query.toLowerCase();
+      Promise.all([loadIndex(), loadCor()]).then(function () {
+        var jobs = (state.index.talks || []).map(function (t) { return loadTalk(t.id); });
+        return Promise.all(jobs);
+      }).then(function (talks) {
+        var hits = [];
+        talks.forEach(function (t) {
+          var text = window.MMTalks.searchBits(t);
+          if ((t.title + ' ' + text).toLowerCase().indexOf(needle) !== -1) {
+            hits.push({ href: '#/talk/' + encodeURIComponent(t.id), kind: 'Talk', title: t.title, text: t.week_label });
+          }
         });
-        $all('[data-print]').forEach(function (a) {
-          a.onclick = function (e) { e.preventDefault(); location.hash = '#/talk/' + encodeURIComponent(a.getAttribute('data-print')); setTimeout(function () { window.print(); }, 700); };
+        window.MMRules.searchDocs(state.cor).forEach(function (d) {
+          if ((d.title + ' ' + d.text).toLowerCase().indexOf(needle) !== -1) hits.push(d);
         });
-        $all('[data-del]').forEach(function (b) {
-          b.onclick = function () {
-            if (!confirm('Delete this sign-on from this device? Export the CSV first if you need a record.')) return;
-            MMDB.deleteSignon(b.getAttribute('data-del')).then(function () { toast('Sign-on deleted'); renderSupervisor(); });
-          };
-        });
-      });
+        if (!hits.length) { box.innerHTML = '<p>Nothing matches <strong>' + U.esc(query) + '</strong>. Try a shorter word, like load, hours or speed.</p>'; return; }
+        box.innerHTML = '<p class="muted">' + hits.length + ' match' + (hits.length === 1 ? '' : 'es') + '</p><ul class="archive">' + hits.slice(0, 40).map(function (h) {
+          return '<li><a class="archive-card" href="' + h.href + '"><span class="a-date">' + U.esc(h.kind) + '</span><span class="a-title">' + U.esc(h.title) + '</span>' +
+            (h.text && h.kind !== 'Quiz' ? '<span class="a-meta">' + U.esc(String(h.text).slice(0, 140)) + '</span>' : '') + '</a></li>';
+        }).join('') + '</ul>';
+      }).catch(function (err) { showError(err, 'search'); });
+    }
+    input.addEventListener('input', go);
+    go();
+  }
+
+  var SOON = [
+    { id: 'swms', title: 'SWMS', benefit: 'The safe way to do the job, written in plain steps, before you start.', icon: 'clipboard' },
+    { id: 'messages', title: 'Team messaging', benefit: 'Office-to-driver notices, with a read receipt so the office knows you saw it.', icon: 'chat' },
+    { id: 'hazard', title: 'Hazard and incident reporting', benefit: 'Report a hazard or an incident with a photo and where you are.', icon: 'pin' },
+    { id: 'wallet', title: 'Licence and ticket wallet', benefit: 'Your licence and tickets in one place, with a reminder before they run out.', icon: 'card' },
+    { id: 'fatigue', title: 'Fatigue and break prompts', benefit: 'A nudge for a break. It supports the work diary. It does not replace the diary.', icon: 'clock' },
+    { id: 'restraint', title: 'Load restraint photo checklist', benefit: 'Photos of the load before you leave, next to a simple checklist.', icon: 'camera' },
+    { id: 'dashboard', title: 'Manager dashboard', benefit: 'See talk and quiz completions in one place, ready when you prepare for an audit.', icon: 'chart' },
+    { id: 'recognition', title: 'Recognition', benefit: 'Badges and shout-outs when someone does the job well.', icon: 'star' },
+    { id: 'connections', title: 'Tanda, Intellifleet and MiX', benefit: 'Rosters and timesheets from Tanda. Pre-starts and defects from Intellifleet and MiX.', icon: 'link' }
+  ];
+  var SOON_ICONS = {
+    clipboard: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2zm0 2v1h8V5H8zm-3 4v10h14V9H5z"/></svg>',
+    chat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>',
+    pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 9.5A2.5 2.5 0 1 0 12 6a2.5 2.5 0 0 0 0 5.5z"/></svg>',
+    card: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 3v2h18V9H3zm0 5v2h8v-2H3z"/></svg>',
+    clock: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm1 5h-2v6l5 3 1-1.7-4-2.3V7z"/></svg>',
+    camera: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l1.5 2H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.5L9 4zm3 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg>',
+    chart: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16v2H2V3h2v16zm4-3h2V9H8v7zm4 0h2V5h-2v11zm4 0h2v-6h-2v6z"/></svg>',
+    star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6.6L22 9.3l-5 4.6L18.2 21 12 17.3 5.8 21 7 13.9 2 9.3l7.1-.7L12 2z"/></svg>',
+    link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1 1.4 1.4 1.1-1.1a3 3 0 0 1 4.2 4.2l-2 2A3 3 0 0 1 11.4 13L10 11.6A5 5 0 0 0 10 13zm4-2a5 5 0 0 0-7.1-.1l-2 2a5 5 0 0 0 7.1 7.1l1.1-1.1-1.4-1.4-1.1 1.1a3 3 0 0 1-4.2-4.2l2-2A3 3 0 0 1 12.6 11L14 12.4A5 5 0 0 0 14 11z"/></svg>'
+  };
+  function soonWanted() {
+    try { return JSON.parse(localStorage.getItem('mm-soon-wants') || '{}'); } catch (e) { return {}; }
+  }
+  function renderSoon() {
+    setTab('');
+    document.title = 'Coming soon – Monaro';
+    window.MMTalks.destroyPad();
+    var wanted = soonWanted();
+    U.$('#main').innerHTML =
+      '<p class="eyebrow">Coming soon</p><h1>A taste of what’s next</h1>' +
+      '<p class="lede">None of these are live. The cards are here so the team can see what’s being built. “I want this” stays on this phone.</p>' +
+      '<ul class="soon-list">' + SOON.map(function (item) {
+        var on = !!wanted[item.id];
+        return '<li class="soon-card" data-soon="' + U.esc(item.id) + '">' +
+          '<span class="soon-icon">' + SOON_ICONS[item.icon] + '</span>' +
+          '<div class="soon-copy"><h2>' + U.esc(item.title) + '</h2><p>' + U.esc(item.benefit) + '</p>' +
+          '<button type="button" class="want' + (on ? ' on' : '') + '" data-want="' + U.esc(item.id) + '" aria-pressed="' + (on ? 'true' : 'false') + '">' +
+          (on ? 'Saved on this phone' : 'I want this') + '</button></div>' +
+          '<span class="soon-badge">Coming soon</span></li>';
+      }).join('') + '</ul>' +
+      '<p class="soon-foot">Concept features in development. Not live yet.</p>';
+    U.$all('[data-want]').forEach(function (btn) {
+      btn.onclick = function () {
+        var id = btn.getAttribute('data-want');
+        var bag = soonWanted();
+        bag[id] = !bag[id];
+        if (!bag[id]) delete bag[id];
+        localStorage.setItem('mm-soon-wants', JSON.stringify(bag));
+        var on = !!bag[id];
+        btn.classList.toggle('on', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.textContent = on ? 'Saved on this phone' : 'I want this';
+        U.toast(on ? 'Saved on this phone' : 'Removed on this phone');
+      };
+    });
+    window.scrollTo(0, 0);
+  }
+
+  function renderSpeak() {
+    setTab('speak');
+    document.title = 'Speak up – Monaro';
+    window.MMTalks.destroyPad();
+    U.$('#main').innerHTML =
+      '<p class="eyebrow">Speak up</p><h1>If it is not safe, stop.</h1>' +
+      '<p class="lede">Saying something early is part of the job. If a truck, a load, or a driver is not safe, stop that job and tell someone.</p>' +
+      '<a class="speak emergency" href="tel:000"><span class="kicker">Someone could be hurt right now</span><strong>Call 000</strong><span>The NHVR gives examples: a crash with a heavy vehicle, a heavy vehicle losing its load, or a heavy vehicle swerving across the road.</span></a>' +
+      '<article class="speak manager"><span class="kicker">Tell us inside the business</span><strong>Tell your manager</strong><span>Tell your manager as soon as you can. If you cannot reach your manager, tell the General Manager. A failed pre-start in Intellifleet goes to the General Manager. Leave the failed record in place. The name of any extra internal form, phone, or after-hours contact is not in this app. Check with your manager.</span></article>' +
+      '<a class="speak nhvr" href="tel:1800931785"><span class="kicker">Heavy Vehicle Confidential Reporting Line</span><strong>NHVR 1800 931 785</strong><span>Monday to Friday, 7.00am to 4.30pm (AEST). For procedures, practices, or conditions that might endanger a driver or someone else. Not for immediate danger. Call 000 for that. The NHVR says it protects your identity and cannot tell you the outcome.</span></a>' +
+      '<article class="speak stop"><span class="kicker">Drivers can stop</span><strong>Stop the truck.</strong><span>If your health or fitness means you cannot drive safely, stop or do not start. Tell your manager. Do not keep going because the run is late or the customer is waiting. How the roster and your pay are handled when you stop is not in this app. Check with your manager.</span></article>' +
+      '<p class="cite">Source: <a href="https://www.nhvr.gov.au/safety-accreditation-compliance/heavy-vehicle-confidential-reporting-line" target="_blank" rel="noopener">NHVR Heavy Vehicle Confidential Reporting Line</a></p>';
+    window.scrollTo(0, 0);
+  }
+
+  function renderSystems() {
+    setTab('systems');
+    document.title = 'Systems – Monaro';
+    window.MMTalks.destroyPad();
+    return loadSystems().then(function (sys) {
+      U.$('#main').innerHTML = '<p class="eyebrow">Systems</p><h1>The other tools</h1>' +
+        '<p class="lede">These open the live system when a link has been set. Until then, the card says so. A tick in this app is not the record.</p>' +
+        sys.links.map(function (link) {
+          var ready = /^https?:\/\//.test(link.url || '');
+          var action = ready
+            ? '<a class="btn" href="' + U.esc(link.url) + '" target="_blank" rel="noopener">Open ' + U.esc(link.name) + '</a>'
+            : '<p class="unset">Link not set yet</p>';
+          return '<article class="card system"><h2>' + U.esc(link.name) + '</h2><p>' + U.esc(link.blurb) + '</p>' + action + '</article>';
+        }).join('') +
+        '<p class="hint">To set a link, edit <code>content/systems.json</code> and publish. Leave <code>url</code> empty until you have the real address.</p>';
+      window.scrollTo(0, 0);
     });
   }
 
-  // ---------- chrome: text size, network, SW, updates ----------
-  var sizes = [1, 1.15, 1.3];
-  function sizeIdx() { var i = Number(setting('size') || 0); return sizes[i] ? i : 0; }
-  function applySize() { document.documentElement.style.setProperty('--scale', String(sizes[sizeIdx()])); }
-  document.getElementById('textSize').onclick = function () { setting('size', String((sizeIdx() + 1) % sizes.length)); applySize(); toast('Text size ' + Math.round(sizes[sizeIdx()] * 100) + '%'); };
-  applySize();
+  function route() {
+    var h = parseHash();
+    var p = h.parts;
+    var tab = 'home';
+    if (p[0] === 'talks' || p[0] === 'archive' || p[0] === 'talk' || p[0] === 'supervisor') tab = 'talks';
+    else if (p[0] === 'rules') tab = 'rules';
+    else if (p[0] === 'speak') tab = 'speak';
+    else if (p[0] === 'systems') tab = 'systems';
+    else if (p[0] === 'soon' || p[0] === 'coming-soon' || p[0] === 'search') tab = '';
+    setTab(tab);
+    U.$('#main').innerHTML = '<p class="loading">Loading…</p>';
 
-  function netStatus() { var n = document.getElementById('net'); n.textContent = navigator.onLine ? '' : 'Offline'; n.classList.toggle('off', !navigator.onLine); }
-  window.addEventListener('online', function () { netStatus(); checkForNewTalk(); });
+    var job;
+    if (!p.length) job = renderHome();
+    else if (p[0] === 'talks' || p[0] === 'archive') job = loadIndex().then(function (idx) { return window.MMTalks.renderArchive(idx); });
+    else if (p[0] === 'talk' && p[1]) {
+      job = loadIndex().then(function () { return loadTalk(decodeURIComponent(p[1])); }).then(function (t) {
+        window.MMTalks.renderTalk(t, p[2], state.index && state.index.latest === t.id);
+      });
+    } else if (p[0] === 'supervisor') job = loadIndex().then(function (idx) { return window.MMTalks.renderSupervisor(idx, loadTalk); });
+    else if (p[0] === 'rules' && p[1] === 'role' && p[2]) job = loadCor().then(function (c) {
+      var r = c.roles.filter(function (x) { return x.id === decodeURIComponent(p[2]); })[0];
+      if (!r) throw new Error('missing role');
+      window.MMRules.renderParty(r, 'role');
+    });
+    else if (p[0] === 'rules' && p[1] === 'topic' && p[2]) job = loadCor().then(function (c) {
+      var t = c.topics.filter(function (x) { return x.id === decodeURIComponent(p[2]); })[0];
+      if (!t) throw new Error('missing topic');
+      window.MMRules.renderParty(t, 'topic');
+    });
+    else if (p[0] === 'rules' && p[1] === 'quiz') job = loadCor().then(function (c) { window.MMRules.renderQuiz(c, h.q.get('set') || 'all', h.q.get('id') || ''); });
+    else if (p[0] === 'rules') job = loadCor().then(function (c) { window.MMRules.renderHome(c); });
+    else if (p[0] === 'soon' || p[0] === 'coming-soon') { renderSoon(); job = Promise.resolve(); }
+    else if (p[0] === 'speak') { renderSpeak(); job = Promise.resolve(); }
+    else if (p[0] === 'systems') job = renderSystems();
+    else if (p[0] === 'search') { renderSearch(h.q.get('q') || ''); job = Promise.resolve(); }
+    else { location.hash = '#/'; return; }
+
+    Promise.resolve(job).catch(function (err) { showError(err, p[0] === 'talk' ? 'the talk' : 'the page'); });
+  }
+
+  function netStatus() {
+    var n = U.$('#net');
+    var off = !navigator.onLine;
+    n.textContent = off ? 'Offline' : '';
+    n.classList.toggle('off', off);
+    n.hidden = !off;
+  }
+
+  var sizes = [1, 1.15, 1.3];
+  function sizeIdx() { var i = Number(U.setting('size') || 0); return sizes[i] ? i : 0; }
+  function applySize() { document.documentElement.style.setProperty('--scale', String(sizes[sizeIdx()])); }
+  U.$('#textSize').onclick = function () {
+    U.setting('size', String((sizeIdx() + 1) % sizes.length));
+    applySize();
+    U.toast('Text size ' + Math.round(sizes[sizeIdx()] * 100) + '%');
+  };
+  applySize();
+  window.addEventListener('online', netStatus);
   window.addEventListener('offline', netStatus);
   netStatus();
 
+  U.$('#openSearch').onclick = function () { location.hash = '#/search'; };
+
   function showVersion() {
-    getJSON('version.json').then(function (v) {
-      document.getElementById('ver').textContent = 'Last published ' + fmtStamp(v.published_at) + ' \u00b7 ' + v.cache_version;
+    U.getJSON('version.json').then(function (v) {
+      var el = U.$('#ver');
+      if (el) el.textContent = v.cache_version + ' · published ' + U.fmtStamp(v.published_at);
     }).catch(function () {});
   }
-  function checkForNewTalk() {
-    if (!state.index) return;
-    var old = state.index.latest;
-    getJSON('talks/index.json').then(function (idx) {
-      if (idx.latest && idx.latest !== old) {
-        state.index = idx; warmCache(idx);
-        banner('<strong>New toolbox talk published.</strong> Tap to open it.', function () { location.hash = '#/'; route(); });
-      } else { state.index = idx; }
-    }).catch(function () {});
-  }
-  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') checkForNewTalk(); });
 
   if ('serviceWorker' in navigator) {
-    var hadController = !!navigator.serviceWorker.controller;
+    var had = !!navigator.serviceWorker.controller;
     navigator.serviceWorker.register('sw.js').then(function (reg) {
       setInterval(function () { reg.update().catch(function () {}); }, 60 * 60 * 1000);
     }).catch(function (e) { console.warn('SW registration failed', e); });
     navigator.serviceWorker.addEventListener('controllerchange', function () {
-      if (!hadController) { hadController = true; if (state.index) warmCache(state.index); return; }
-      if (state.formDirty) banner('<strong>App updated.</strong> Tap to reload when you\u2019ve finished signing on.', function () { location.reload(); });
-      else location.reload();
+      if (!had) { had = true; if (state.index) warm(state.index); return; }
+      if (window.MMTalks.isDirty()) {
+        var b = U.$('#banner');
+        b.hidden = false;
+        b.innerHTML = '<strong>App updated.</strong> Tap to reload when you have finished signing on.';
+        b.onclick = function () { location.reload(); };
+      } else location.reload();
     });
   }
 
   window.addEventListener('hashchange', route);
-  window.addEventListener('beforeprint', function () { $all('details').forEach(function (d) { d.dataset.wasOpen = d.open ? '1' : ''; d.open = true; }); });
-  window.addEventListener('afterprint', function () { $all('details').forEach(function (d) { if (d.dataset.wasOpen !== undefined) d.open = d.dataset.wasOpen === '1'; }); });
+  window.addEventListener('beforeprint', function () {
+    U.$all('details').forEach(function (d) { d.dataset.wasOpen = d.open ? '1' : ''; d.open = true; });
+  });
+  window.addEventListener('afterprint', function () {
+    U.$all('details').forEach(function (d) { if (d.dataset.wasOpen !== undefined) d.open = d.dataset.wasOpen === '1'; });
+  });
+
+  window.MMApp.route = route;
   route();
   showVersion();
-  window.MMApp = { buildCSV: buildCSV, state: state };
 })();

@@ -1,0 +1,1527 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-21",
+  "disclaimer": "These pages state the NHVR points that were checked, and they mark the rest as gaps. This is not legal advice, not a policy, and not a full list of our trucks. A notice, an approval, or your manager overrides a card. The work diary, the pre-start and the load paperwork are still the records. Where a page says it is a gap, check with your manager. Do not fill the blank yourself.",
+  "business_note": "Monaro Milk & Juice runs heavy rigid trucks and semi-trailers with palletised packaged goods in hard-sided refrigerated bodies. There are no milk tankers. Our interstate trips in this app are New South Wales and Victoria. The Heavy Vehicle National Law does not apply in Western Australia or the Northern Territory. Some combinations are PBS. This app does not list the approvals.",
+  "roles": [
+    {
+      "id": "everyone",
+      "title": "Rules for everyone",
+      "kicker": "Every job",
+      "summary": "Do your part. The NHVR says safety of transport activities is the shared responsibility of each party in the chain. The duty cannot be handed to someone else.",
+      "law": "From 1 August 2026 the Heavy Vehicle National Law changed. The NHVR flyer lists a new Heavy Vehicle Accreditation scheme, updates to fatigue requirements, simpler work diary record-keeping, and changes to mass, dimension and loading. General Mass Limits are increased to align with the Concessional Mass Limits that applied before. The length limit for vehicles moves from 19 metres to 20 metres if the requirements are met. Euro VI concessions are expanded to include road trains. The tow mass ratio and the conditions for tag trailers are amended. Whether any Monaro truck may use a new limit is a gap. Check with your manager. Do not guess a weight or a length. A new unfit-to-drive duty applies to drivers of heavy vehicles over 4.5 tonnes. A driver whose health or fitness means they cannot drive safely must be able to stop, or not start. National Heavy Vehicle Accreditation Scheme entry is being progressively replaced by Heavy Vehicle Accreditation. That scheme has General Safety Accreditation and Alternative Compliance Accreditation. An operator’s Safety Management System sits at the centre of it. Whether Monaro’s accreditation changes your job is a gap. Check with your manager. Maximum court penalties in this app are from the NHVR schedule for 1 August 2026 to 30 June 2027. The NHVR indexes penalties on 1 July each year. A maximum is the most a court can impose. It is not the amount on every notice.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Remove a risk where you can. Where you cannot remove it, cut it down. Do not cause or encourage a driver, or anyone else, to speed or to break the Heavy Vehicle National Law."
+        },
+        {
+          "kind": "do",
+          "text": "Tell your manager when something is unsafe. If a person could be hurt right now, call 000."
+        },
+        {
+          "kind": "do",
+          "text": "Keep your word practical. A time, a price, or a roster that only works if a driver speeds or drives while impaired by fatigue is a prohibited request."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not say “that is the driver’s problem” and stop there. More than one person can hold the duty for the same job, and each person still has to meet it."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not treat the Master Code as the law. The NHVR says the 2026 Master Code does not create new legal obligations. A court may use it as evidence of what was known and of what was reasonably practicable. There is no offence for failing to use one control in the Code."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not skip a control only because it costs money. Cost is a reason only when the cost is grossly disproportionate to the risk."
+        },
+        {
+          "kind": "ask",
+          "text": "Which accreditation Monaro holds, and what that changes in your job."
+        },
+        {
+          "kind": "ask",
+          "text": "Which work and rest option Monaro uses, including whether Alternative Compliance Hours apply to any run."
+        },
+        {
+          "kind": "ask",
+          "text": "Which of our trucks may use a higher mass or the 20 metre length."
+        }
+      ]
+    },
+    {
+      "id": "gm",
+      "title": "General Manager",
+      "kicker": "Leading the business",
+      "summary": "You lead the business that employs the drivers and directs the trucks.",
+      "law": "The schedule for 1 August 2026 to 30 June 2027 sets executive duty section 26D(1A) at the maximum for the matching Category 1, 2, or 3 offence by an individual. Category 1, section 26F: an individual, $436,850 or 5 years’ imprisonment or both; a corporation, $4,230,550. Category 2, section 26G: an individual, $212,090; a corporation, $2,120,880. Category 3, section 26H: an individual, $70,580; a corporation, $705,820. The schedule does not list an infringement penalty for those primary duty offences. Heavy Vehicle Accreditation is progressively replacing the National Heavy Vehicle Accreditation Scheme from 1 August 2026. Operators need a Safety Management System. Whether we are in that transition is a gap.",
+      "source": {
+        "name": "NHVR",
+        "title": "Executive duty and due diligence",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/executive-due-diligence-duty"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Keep your own knowledge of safe heavy vehicle transport up to date."
+        },
+        {
+          "kind": "do",
+          "text": "Understand the hazards in our work: fatigue, loading, mass, vehicle condition, refrigerated freight, PBS combinations, and trips between New South Wales and Victoria."
+        },
+        {
+          "kind": "do",
+          "text": "Make sure the business has the people, time, and processes to remove or cut those risks, and that it actually uses them."
+        },
+        {
+          "kind": "do",
+          "text": "Make sure hazard and incident reports are received and acted on quickly. A failed pre-start in Intellifleet goes to the General Manager."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not try to transfer the primary duty to a driver, a supervisor, or a contractor. The NHVR says the duty cannot be transferred."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not allow a contract, a price, or a customer promise that you know, or ought to know, would push a driver to speed or to drive while impaired by fatigue."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not leave a failed pre-start, a repeated overload, or a truck that is not safe sitting in a tray with no action."
+        },
+        {
+          "kind": "ask",
+          "text": "Whether Monaro is moving from the National Heavy Vehicle Accreditation Scheme to Heavy Vehicle Accreditation, and what you must sign off."
+        },
+        {
+          "kind": "ask",
+          "text": "The business’s PBS approvals. Read that section, then check the records. If an approval is not written down, treat that as a gap to close."
+        }
+      ]
+    },
+    {
+      "id": "scheduler",
+      "title": "Managers and schedulers",
+      "kicker": "Runs and rosters",
+      "summary": "You set the runs, the roster, or the driver’s work and rest.",
+      "law": "From 1 August 2026, fatigue requirements are updated. Alternative Compliance Accreditation – Fatigue moves to one performance-based model. Operators can choose hours that suit the work, inside outer limits. This app does not state those outer limits. The written work diary can record Alternative Compliance Hours, and some daily-sheet fields are now optional. Our drivers use Logmaster. What they must enter there is a gap. Check with your manager. A driver who is unfit can stop. Do not rebuild the run by telling them to go anyway.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Build time for loading, traffic, delays, and rest."
+        },
+        {
+          "kind": "do",
+          "text": "Keep loading and unloading out of a rest break."
+        },
+        {
+          "kind": "do",
+          "text": "Use Tanda for the roster and Logmaster for the work diary. If they disagree, check with your manager before the truck leaves."
+        },
+        {
+          "kind": "do",
+          "text": "Read the PBS, NSW and Victoria, and hard-sided pages before you plan a combination, or any trip outside those two states."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not set a run that can only be done by speeding or by driving while impaired by fatigue."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not use a kilometre rate, a bonus, or a late penalty that pushes a driver to speed or to skip rest."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not guess which hours option applies, including Alternative Compliance Hours."
+        },
+        {
+          "kind": "ask",
+          "text": "Which work and rest option Monaro uses on each type of run."
+        },
+        {
+          "kind": "ask",
+          "text": "The outer limits that apply if we use Alternative Compliance Hours."
+        },
+        {
+          "kind": "ask",
+          "text": "Which combinations are PBS."
+        }
+      ]
+    },
+    {
+      "id": "sales",
+      "title": "Sales and consignors",
+      "kicker": "Promises to customers",
+      "summary": "You promise customers a time, a product, and sometimes a load size. If you consign goods for transport by a heavy vehicle — you coordinate and send them — you are a consignor. The title on your badge does not decide it.",
+      "law": "From 1 August 2026 a driver who is unfit is empowered to stop or not start. Your promise to the customer does not override that. Mass and length limits changed. Do not promise a bigger load or a 20 metre combination unless your manager has confirmed that truck may do it.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — Prohibited requests and contracts",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/prohibited-requests-and-contracts-under-the-hvnl"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Promise a delivery time the run can meet without speeding and without a skipped rest."
+        },
+        {
+          "kind": "do",
+          "text": "If a driver stops because they are unfit, accept the stop. Tell your manager. Do not talk them into leaving."
+        },
+        {
+          "kind": "do",
+          "text": "If a customer wants a weight or a length you are not sure we can do, or a delivery outside New South Wales or Victoria, check with your manager before you agree."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not put a late-delivery penalty in front of the driver or the scheduler if it would push unsafe driving."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not tell a driver the customer is waiting, so they should go anyway."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not agree a load size or a PBS combination you have not checked."
+        },
+        {
+          "kind": "ask",
+          "text": "What each truck, including any PBS combination, is allowed to carry."
+        }
+      ]
+    },
+    {
+      "id": "driver",
+      "title": "Drivers",
+      "kicker": "In the cab",
+      "summary": "You drive the truck. You also decide when you are not fit to drive.",
+      "law": "From 1 August 2026 the unfit-to-drive duty expands the rule about not driving while impaired by fatigue. It applies to heavy vehicle drivers over 4.5 tonnes. The NHVR says the duty empowers you to stop driving, or not to drive, when your health or fitness means you cannot do it safely. Written work diaries change from 1 August 2026, including an option to record Alternative Compliance Hours. Our diary is Logmaster. What you must do in Logmaster is a gap. Check with your manager. If your combination is PBS, open that section. A New South Wales–Victoria trip stays under the Heavy Vehicle National Law. Open Interstate trips for the time-zone line.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Do not drive while you are impaired by fatigue, or while you are otherwise unfit."
+        },
+        {
+          "kind": "do",
+          "text": "Stop, or do not start, if your health or fitness means you cannot drive safely. That can include illness, injury, or the effects of alcohol or other drugs, as well as fatigue. Tell your manager."
+        },
+        {
+          "kind": "do",
+          "text": "Record work and rest in Logmaster. If you are unsure what to enter, check with your manager."
+        },
+        {
+          "kind": "do",
+          "text": "Do the pre-start in Intellifleet. If it fails, it goes to the General Manager. Do not take a truck that is not safe."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not start “to see how you go”."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not speed, or skip rest, to save a late time."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not change a work record, or ask someone else to change it, so the day looks legal."
+        },
+        {
+          "kind": "ask",
+          "text": "Which hours option you are on."
+        },
+        {
+          "kind": "ask",
+          "text": "How your roster and pay are handled when you stop because you are unfit."
+        },
+        {
+          "kind": "ask",
+          "text": "Whether today’s combination is PBS."
+        }
+      ]
+    },
+    {
+      "id": "loader",
+      "title": "Warehouse loaders",
+      "kicker": "On and off the truck",
+      "summary": "You put freight on the truck, or you take it off. You are a loader if you load a heavy vehicle. You are an unloader if you unload one. A loading manager manages premises where five or more heavy vehicles are loaded or unloaded on a day. If that describes your job, check with your manager.",
+      "law": "From 1 August 2026, general access mass limits and the general length limit change. The flyer moves the length limit from 19 metres to 20 metres if the requirements are met, and aligns General Mass Limits with the old Concessional Mass Limits. Do not assume today’s truck can take more than last month. Check with your manager. On an existing PBS approval, a CML reference is read as GML. Which of our trucks that applies to is a gap.",
+      "source": {
+        "name": "NHVR",
+        "title": "Mass, dimension and loading",
+        "url": "https://www.nhvr.gov.au/road-access/mass-dimension-and-loading"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Stop if the load looks too heavy, too high, or unlikely to stay in place. Tell the driver and your manager."
+        },
+        {
+          "kind": "do",
+          "text": "Report damage to the body, doors, or fridge equipment before the truck leaves."
+        },
+        {
+          "kind": "do",
+          "text": "Open the hard-sided bodies section before you restrain a load. If the step you need is not written there, check with your manager."
+        },
+        {
+          "kind": "do",
+          "text": "If you are not sure the combination is PBS, check with your manager before you finish the load."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not guess a legal weight or a legal length."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not load during a driver’s rest break."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not invent a restraint method for a hard-sided body."
+        },
+        {
+          "kind": "ask",
+          "text": "The step-by-step restraint method for our hard-sided refrigerated bodies."
+        },
+        {
+          "kind": "ask",
+          "text": "The mass and length each of our trucks may use."
+        },
+        {
+          "kind": "ask",
+          "text": "Whether you are also a loading manager because five or more heavy vehicles load or unload here in a day."
+        }
+      ]
+    },
+    {
+      "id": "forklift",
+      "title": "Forklift operators",
+      "kicker": "Pallets and crates",
+      "summary": "You move pallets and crates. When you put them on the truck, you are loading it. If you load a heavy vehicle, you are a loader. The primary duty advice also says careless use of a forklift can damage the vehicle and affect whether it is safe to be on the road.",
+      "law": "Mass limits changed on 1 August 2026. Do not stack to a new height or weight unless your manager has confirmed that truck may carry it.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Report a hit on the body, doors, seals, or fridge equipment before the truck leaves."
+        },
+        {
+          "kind": "do",
+          "text": "Stop if you are asked to load during the driver’s rest. Tell your manager."
+        },
+        {
+          "kind": "do",
+          "text": "If you do not know the restraint steps or the mass limit, check with your manager before you keep stacking. Read the hard-sided bodies section. The steps are not filled in there."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not keep loading after you have hit the truck."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not use the driver’s rest to finish a load, including when the product is warming. Call your manager so the plan can change."
+        },
+        {
+          "kind": "ask",
+          "text": "The restraint steps for our hard-sided refrigerated bodies."
+        },
+        {
+          "kind": "ask",
+          "text": "The mass each truck may carry."
+        }
+      ]
+    },
+    {
+      "id": "mechanic",
+      "title": "Mechanics",
+      "kicker": "Fit for the road",
+      "summary": "You keep the trucks fit to be on the road.",
+      "law": "From 1 August 2026, operators who achieve General Safety Accreditation can progress to a Maintenance Assurance Program. The flyer does not say every workshop is placed on it automatically. The schedule lists section 60(1), compliance with heavy vehicle standards: maximum penalty $8,480, infringement penalty $848. That is for 1 August 2026 to 30 June 2027.",
+      "source": {
+        "name": "NHVR",
+        "title": "Penalties and infringements schedule, 1 August 2026 to 30 June 2027",
+        "url": "https://www.nhvr.gov.au/files/media/document/910/202606-1769-hvnl-penalties-and-infringements-2026-27.pdf"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Keep an unsafe truck stopped. Tell the General Manager."
+        },
+        {
+          "kind": "do",
+          "text": "Do the repair that is needed. Do not sign for work you did not do."
+        },
+        {
+          "kind": "do",
+          "text": "Leave a failed Intellifleet pre-start in place. It goes to the General Manager. Do not delete it."
+        },
+        {
+          "kind": "do",
+          "text": "If a PBS combination has a defect, say so clearly. Do not guess that a different approval makes the defect acceptable."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not release a truck that is not safe for the road, even for a short run."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not leave a defect for the next shift without telling the General Manager."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not assume the workshop is automatically on the Maintenance Assurance Program."
+        },
+        {
+          "kind": "ask",
+          "text": "Whether Monaro is on the National Heavy Vehicle Accreditation Scheme, General Safety Accreditation, or the Maintenance Assurance Program."
+        },
+        {
+          "kind": "ask",
+          "text": "Which of our combinations are PBS, and what maintenance conditions their approvals set. Check with your manager."
+        }
+      ]
+    },
+    {
+      "id": "office",
+      "title": "Office",
+      "kicker": "Bookings and records",
+      "summary": "You book times, send orders, and keep records.",
+      "law": "From 1 August 2026, written work diary record-keeping is simpler. For example, marking the day of the week, or marking Standard Hours, is optional on the daily sheet. Our drivers use Logmaster, not that paper diary. What you must file from Logmaster or Intellifleet is a gap. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Work diary",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/work-diary"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Enter the true time and the true record."
+        },
+        {
+          "kind": "do",
+          "text": "If you book a delivery, it has to be achievable without speeding or a skipped rest. If you are not sure, check with your manager."
+        },
+        {
+          "kind": "do",
+          "text": "If a booking would leave New South Wales and Victoria, check with your manager before you confirm it. If the truck is PBS, open that section first."
+        },
+        {
+          "kind": "do",
+          "text": "If someone asks you to make a record look right, do not change it. Tell your manager."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not delete a day, or alter a diary, pre-start, or roster, to hide a problem."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not treat a booking as “only paperwork” when it sets the driver’s time."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not fill a blank in the rules with your own guess."
+        },
+        {
+          "kind": "ask",
+          "text": "Which records you are responsible for keeping, and for how long."
+        },
+        {
+          "kind": "ask",
+          "text": "The PBS details behind a booking."
+        }
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "pbs",
+      "title": "PBS vehicles",
+      "kicker": "Performance-Based Standards",
+      "summary": "Some of our combinations are Performance-Based Standards (PBS) vehicles. This page has the 1 August 2026 points from the NHVR flyer. It does not list our approvals.",
+      "law": "The NHVR flyer says the amended law changes how mass limits are referenced in PBS Vehicle Approvals and Design Approvals. Existing PBS Vehicle Approvals issued before the commencement date remain valid. Vehicles continue under their current approval, notice, or access permit. References to CML in those approvals should be read as GML. The NHVR says updated terminology will show on new PBS applications and approvals over time. Anything on the NHVR PBS page that is not copied here is not filled in.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Treat a PBS Vehicle Approval issued before 1 August 2026 as still valid."
+        },
+        {
+          "kind": "do",
+          "text": "Keep that vehicle on its current approval, notice, or access permit."
+        },
+        {
+          "kind": "do",
+          "text": "Where an existing PBS approval mentions Concessional Mass Limits (CML), read that reference as General Mass Limits (GML)."
+        },
+        {
+          "kind": "do",
+          "text": "If you do not know whether the combination in front of you is PBS, stop and check with your manager before you load it or drive it."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not treat an old PBS approval as cancelled on 1 August 2026."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not keep reading CML in an existing PBS approval as CML. The flyer says those references should be read as GML."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not use one combination’s approval for a different combination."
+        },
+        {
+          "kind": "ask",
+          "text": "Which Monaro combinations are PBS."
+        },
+        {
+          "kind": "ask",
+          "text": "What each approval, notice, or permit allows, including mass and route."
+        }
+      ]
+    },
+    {
+      "id": "interstate",
+      "title": "Interstate trips",
+      "kicker": "NSW and Victoria",
+      "summary": "Our interstate trips are New South Wales and Victoria trips. Both states are under the Heavy Vehicle National Law. New South Wales and Victoria are both on AEST/AEDT, so daylight saving is mostly a non-issue, but work and rest are counted in base time. The Heavy Vehicle National Law does not apply in Western Australia or the Northern Territory. Check with your manager before any trip outside New South Wales or Victoria.",
+      "law": "New South Wales and Victoria are both under the Heavy Vehicle National Law, including the changes from 1 August 2026. This page does not add a separate border rule on top of that.",
+      "source": {
+        "name": "NHVR",
+        "title": "About the NHVR",
+        "url": "https://www.nhvr.gov.au/about-us/who-we-are/about-the-nhvr"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Treat a trip between New South Wales and Victoria as a Heavy Vehicle National Law trip."
+        },
+        {
+          "kind": "do",
+          "text": "Count work and rest in base time. Do not add or drop an hour because the truck crossed between New South Wales and Victoria."
+        },
+        {
+          "kind": "do",
+          "text": "Keep the electronic work diary running in Logmaster for the whole job, including across that border."
+        },
+        {
+          "kind": "do",
+          "text": "Set a delivery time that can be met without speeding and without skipping rest. The border does not change that rule."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not treat the Victorian border as the end of the Heavy Vehicle National Law."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not switch the work diary off, or rewrite a record, because the truck crossed into Victoria."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not promise an arrival time that only works if the driver speeds or drives while impaired by fatigue."
+        }
+      ]
+    },
+    {
+      "id": "hard-sided",
+      "title": "Hard-sided refrigerated bodies",
+      "kicker": "Load restraint",
+      "summary": "Every body we run is a hard-sided refrigerated body. The step-by-step way to restrain a load in those bodies is not written on this page.",
+      "law": "From 1 August 2026, prescribed general access mass and vehicle length limits change. The flyer says General Mass Limits align with the previous Concessional Mass Limits, and the length limit moves from 19 metres to 20 metres if the requirements are met. The flyer also lists Euro VI concessions for road trains, and an amended tow mass ratio and conditions for tag trailers. The flyer does not describe how to restrain freight in a hard-sided refrigerated body. That method is a gap.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      },
+      "cards": [
+        {
+          "kind": "do",
+          "text": "Treat every Monaro body as a hard-sided refrigerated body."
+        },
+        {
+          "kind": "do",
+          "text": "Stop if you do not know how that load is meant to be held in the body. Check with your manager before you keep loading or before you drive."
+        },
+        {
+          "kind": "do",
+          "text": "Tell the driver and your manager if the load will not sit safely, or if the body, doors, or fridge equipment are damaged."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not invent a restraint method."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not send a load you think will move, and do not leave the driver to fix it on the road."
+        },
+        {
+          "kind": "dont",
+          "text": "Do not guess a higher mass because the body looks strong. Mass limits changed on 1 August 2026. Whether this truck may use a new limit is a gap."
+        },
+        {
+          "kind": "ask",
+          "text": "The step-by-step load restraint method for our hard-sided refrigerated bodies."
+        },
+        {
+          "kind": "ask",
+          "text": "Which of our trucks may use the aligned General Mass Limit or the 20 metre length."
+        },
+        {
+          "kind": "ask",
+          "text": "Whether a road-train concession or a tag-trailer rule applies to any Monaro combination."
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "everyone-1",
+      "topic": "everyone",
+      "roles": [
+        "everyone"
+      ],
+      "prompt": "Who has to keep a heavy vehicle trip safe?",
+      "choices": [
+        "Only the driver, once the truck leaves the yard",
+        "Each person in the chain, for the part they can influence. The duty is shared and cannot be handed off",
+        "Only the customer who wanted the delivery"
+      ],
+      "answer": 1,
+      "why": "That is the primary duty. It is shared, and it cannot be transferred. The driver has duties, and so does every party in the chain. You cannot pass the duty to the driver and stop.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "everyone-2",
+      "topic": "everyone",
+      "roles": [
+        "everyone"
+      ],
+      "prompt": "A delivery time only works if the driver speeds. What do you do?",
+      "choices": [
+        "Change the time. Do not ask the driver to speed",
+        "Tell the driver to make up the time on the highway",
+        "Leave it unsaid and hope the driver sorts it out"
+      ],
+      "answer": 0,
+      "why": "Asking a driver to speed, or to drive while impaired by fatigue, is a prohibited request. The schedule lists a maximum court penalty of $28,230 for section 26E. It does not list an infringement penalty for that offence. Do not ask, hint, or contract for a speed or a skipped rest. Change the plan.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "everyone-3",
+      "topic": "everyone",
+      "roles": [
+        "everyone"
+      ],
+      "prompt": "What is the Master Code?",
+      "choices": [
+        "The law. You must follow every control in it",
+        "Guidance. It can be evidence of what is reasonably practicable. It is not the law",
+        "A form you send to the customer"
+      ],
+      "answer": 1,
+      "why": "The NHVR says the Code does not create new legal obligations, and there is no offence for missing one control in it. The Code is not the Heavy Vehicle National Law. A court may still look at it when deciding what was reasonably practicable.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "everyone-4",
+      "topic": "everyone",
+      "roles": [
+        "everyone"
+      ],
+      "prompt": "Someone could be hurt right now. What do you do first?",
+      "choices": [
+        "Call 000",
+        "Wait for the next toolbox talk",
+        "Send an email tomorrow"
+      ],
+      "answer": 0,
+      "why": "Call 000 for immediate danger. Then tell your manager when it is safe to do so. If someone could be hurt now, call 000.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "pbs-1",
+      "topic": "pbs",
+      "roles": [
+        "driver",
+        "loader",
+        "scheduler",
+        "gm",
+        "forklift"
+      ],
+      "prompt": "A PBS Vehicle Approval was issued before 1 August 2026. What happens to it?",
+      "choices": [
+        "It stays valid. The vehicle keeps its current approval, notice, or permit",
+        "It is cancelled. The truck cannot move until a new approval is printed",
+        "It now covers every truck in the yard"
+      ],
+      "answer": 0,
+      "why": "The NHVR flyer says existing approvals issued before the commencement date remain valid. Do not ground a truck because the approval is older than 1 August 2026. Do not share one approval across combinations.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      }
+    },
+    {
+      "id": "pbs-2",
+      "topic": "pbs",
+      "roles": [
+        "driver",
+        "loader",
+        "scheduler",
+        "gm",
+        "forklift"
+      ],
+      "prompt": "An existing PBS approval mentions CML. How do you read that from 1 August 2026?",
+      "choices": [
+        "Read it as GML",
+        "Ignore mass and load to the usual height",
+        "Add the old CML on top of GML"
+      ],
+      "answer": 0,
+      "why": "The flyer says references to CML in these approvals should be read as GML. Read CML in an existing PBS approval as GML. Do not add the two together, and do not guess.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      }
+    },
+    {
+      "id": "pbs-3",
+      "topic": "pbs",
+      "roles": [
+        "driver",
+        "loader",
+        "scheduler",
+        "gm",
+        "forklift"
+      ],
+      "prompt": "You are not sure this combination is PBS, or what its approval allows. What do you do?",
+      "choices": [
+        "Check with your manager before you load it or drive it",
+        "Load it the same as the last truck",
+        "Decide from the number of axles"
+      ],
+      "answer": 0,
+      "why": "Which of our combinations are PBS, and what each approval allows, is not listed in this app. Check with your manager. Do not guess. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      }
+    },
+    {
+      "id": "interstate-1",
+      "topic": "interstate",
+      "roles": [
+        "driver",
+        "scheduler",
+        "office",
+        "sales"
+      ],
+      "prompt": "Our interstate trips are between:",
+      "choices": [
+        "New South Wales and Victoria. Both are under the Heavy Vehicle National Law",
+        "Whichever state the customer names. This app does not say which",
+        "Western Australia and the Northern Territory, under the Heavy Vehicle National Law"
+      ],
+      "answer": 0,
+      "why": "We run in New South Wales and Victoria. Both are under the Heavy Vehicle National Law. The states are not unknown. Our interstate trips are New South Wales and Victoria, both under the Heavy Vehicle National Law.",
+      "source": {
+        "name": "NHVR",
+        "title": "About the NHVR",
+        "url": "https://www.nhvr.gov.au/about-us/who-we-are/about-the-nhvr"
+      }
+    },
+    {
+      "id": "interstate-2",
+      "topic": "interstate",
+      "roles": [
+        "driver",
+        "scheduler",
+        "office",
+        "sales"
+      ],
+      "prompt": "Daylight saving on a New South Wales–Victoria trip:",
+      "choices": [
+        "Both states are on AEST/AEDT, so it is mostly a non-issue. Work and rest are counted in base time",
+        "Add an hour when you enter Victoria",
+        "Drop an hour when you enter New South Wales"
+      ],
+      "answer": 0,
+      "why": "New South Wales and Victoria are both on AEST/AEDT, so daylight saving is mostly a non-issue, but work and rest are counted in base time. Do not change the clock at that border. Both states are on AEST/AEDT. Work and rest are counted in base time.",
+      "source": {
+        "name": "NHVR",
+        "title": "About the NHVR",
+        "url": "https://www.nhvr.gov.au/about-us/who-we-are/about-the-nhvr"
+      }
+    },
+    {
+      "id": "interstate-3",
+      "topic": "interstate",
+      "roles": [
+        "driver",
+        "scheduler",
+        "office",
+        "sales"
+      ],
+      "prompt": "A trip would leave New South Wales and Victoria. What do you do?",
+      "choices": [
+        "Check with your manager before that trip",
+        "Send it. The Heavy Vehicle National Law covers every state and territory",
+        "Send it to Western Australia or the Northern Territory with the same work diary and no check"
+      ],
+      "answer": 0,
+      "why": "The Heavy Vehicle National Law does not apply in Western Australia or the Northern Territory. Check with your manager before any trip outside New South Wales or Victoria. Do not send it as a normal run. The Heavy Vehicle National Law does not apply in Western Australia or the Northern Territory. Check with your manager before any trip outside New South Wales or Victoria.",
+      "source": {
+        "name": "NHVR",
+        "title": "About the NHVR",
+        "url": "https://www.nhvr.gov.au/about-us/who-we-are/about-the-nhvr"
+      }
+    },
+    {
+      "id": "body-1",
+      "topic": "hard-sided",
+      "roles": [
+        "loader",
+        "forklift",
+        "driver"
+      ],
+      "prompt": "What body do Monaro trucks use?",
+      "choices": [
+        "Hard-sided refrigerated bodies",
+        "Open trays",
+        "Whatever body is free that morning"
+      ],
+      "answer": 0,
+      "why": "Every body is a hard-sided refrigerated body. Our fleet bodies are hard-sided and refrigerated. Do not treat them as something else.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      }
+    },
+    {
+      "id": "body-2",
+      "topic": "hard-sided",
+      "roles": [
+        "loader",
+        "forklift",
+        "driver"
+      ],
+      "prompt": "Where is the step-by-step restraint method for those bodies?",
+      "choices": [
+        "It is not written in this app. Check with your manager",
+        "Make one up if you have done the job before",
+        "It is printed on every pallet"
+      ],
+      "answer": 0,
+      "why": "The method is a gap. Check with your manager. Do not invent one. Do not invent a method and do not assume it is on the pallet. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      }
+    },
+    {
+      "id": "body-3",
+      "topic": "hard-sided",
+      "roles": [
+        "loader",
+        "forklift",
+        "driver"
+      ],
+      "prompt": "You think the load will not stay in place. What do you do?",
+      "choices": [
+        "Stop. Tell the driver and your manager",
+        "Send it so the run is not late",
+        "Add more freight so the load packs tight"
+      ],
+      "answer": 0,
+      "why": "Stop and tell the driver and your manager. Do not add weight to make it feel tight. Do not send it, and do not add freight to jam it in. Stop and tell your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Flyer — Preparing for the amended HVNL (from 1 August 2026)",
+        "url": "https://www.nhvr.gov.au/files/media/document/927/202607-1780-hvnl-flyer-preparing-for-the-amended-hvnl.pdf"
+      }
+    },
+    {
+      "id": "gm-1",
+      "topic": "gm",
+      "roles": [
+        "gm"
+      ],
+      "prompt": "Due diligence for you includes which of these?",
+      "choices": [
+        "Know the hazards, resource the controls, and act on incidents",
+        "Hand the primary duty to the drivers so it no longer sits with the business",
+        "Sign every delivery docket yourself"
+      ],
+      "answer": 0,
+      "why": "That is the NHVR list in plain words: knowledge, the nature of the work, resources and processes, and a fast response to information and incidents. You cannot hand the duty away. Due diligence is knowledge, resources, processes, and action on incidents.",
+      "source": {
+        "name": "NHVR",
+        "title": "Executive duty and due diligence",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/executive-due-diligence-duty"
+      }
+    },
+    {
+      "id": "gm-2",
+      "topic": "gm",
+      "roles": [
+        "gm"
+      ],
+      "prompt": "A pre-start fails in Intellifleet. Who does it go to?",
+      "choices": [
+        "The General Manager",
+        "Only the driver who logged it",
+        "The customer"
+      ],
+      "answer": 0,
+      "why": "A failed pre-start goes to the General Manager. Act on it. It goes to the General Manager, not only to the driver or the customer.",
+      "source": {
+        "name": "NHVR",
+        "title": "Executive duty and due diligence",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/executive-due-diligence-duty"
+      }
+    },
+    {
+      "id": "gm-3",
+      "topic": "gm",
+      "roles": [
+        "gm"
+      ],
+      "prompt": "The Category 1 maximum for an individual, 1 August 2026 to 30 June 2027, is:",
+      "choices": [
+        "$436,850, or 5 years’ imprisonment, or both",
+        "$848",
+        "A warning only"
+      ],
+      "answer": 0,
+      "why": "That is the schedule figure for section 26F for an individual. A corporation’s Category 1 maximum is $4,230,550. These are maximums, not the fine on every notice. Use the schedule, not a guess. Category 1 for an individual is $436,850, or 5 years’ imprisonment, or both.",
+      "source": {
+        "name": "NHVR",
+        "title": "Executive duty and due diligence",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/executive-due-diligence-duty"
+      }
+    },
+    {
+      "id": "gm-4",
+      "topic": "gm",
+      "roles": [
+        "gm"
+      ],
+      "prompt": "Our PBS approvals are:",
+      "choices": [
+        "Not fully listed in this app. Check the records, and check with your manager if they are missing",
+        "The same for every truck",
+        "Cancelled on 1 August 2026"
+      ],
+      "answer": 0,
+      "why": "PBS approvals are a gap. Existing approvals were not cancelled. New South Wales and Victoria trips are under the Heavy Vehicle National Law. Do not assume every approval is the same, and do not treat an old PBS approval as cancelled. Check the records.",
+      "source": {
+        "name": "NHVR",
+        "title": "Executive duty and due diligence",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/executive-due-diligence-duty"
+      }
+    },
+    {
+      "id": "sch-1",
+      "topic": "scheduler",
+      "roles": [
+        "scheduler"
+      ],
+      "prompt": "When are you a scheduler under the Chain of Responsibility?",
+      "choices": [
+        "When you schedule the freight or the driver’s work and rest, even if your title says something else",
+        "Only if the word scheduler is in your contract",
+        "Only if you drive the truck"
+      ],
+      "answer": 0,
+      "why": "The NHVR says you are a party because of the function you perform, not the job title. The function decides it. Scheduling the trip or the work and rest hours makes you a scheduler.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "sch-2",
+      "topic": "scheduler",
+      "roles": [
+        "scheduler"
+      ],
+      "prompt": "A run only finishes on time if the driver skips a rest. What do you do?",
+      "choices": [
+        "Change the run",
+        "Ask them to skip it this once",
+        "Add a bonus if they finish early"
+      ],
+      "answer": 0,
+      "why": "Change the run. A skipped rest, or a bonus that causes one, is pressure the law prohibits. Do not ask for a skipped rest and do not pay people to skip one. Change the run.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "sch-3",
+      "topic": "scheduler",
+      "roles": [
+        "scheduler"
+      ],
+      "prompt": "Which hours option does Monaro use?",
+      "choices": [
+        "Check with your manager. Do not guess",
+        "Drivers pick one each morning",
+        "Alternative Compliance Hours on every run, with no need to check"
+      ],
+      "answer": 0,
+      "why": "The hours option is a gap in this app. Check with your manager. This app does not name our hours option. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "sch-4",
+      "topic": "scheduler",
+      "roles": [
+        "scheduler"
+      ],
+      "prompt": "Loading during a driver’s rest break is:",
+      "choices": [
+        "Something you must not schedule",
+        "Fine if the freight is milk",
+        "Fine if the yard is busy"
+      ],
+      "answer": 0,
+      "why": "The NHVR gives scheduling of loading during rest as an example of fatigue pressure. Do not put it in the plan. Do not schedule loading in a rest break. The product being cold does not change that.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "sales-1",
+      "topic": "sales",
+      "roles": [
+        "sales"
+      ],
+      "prompt": "A delivery promise only works if the driver speeds. What do you do?",
+      "choices": [
+        "Do not make that promise. Change the time",
+        "Make the promise and let the yard sort it out",
+        "Tell the driver it is only once"
+      ],
+      "answer": 0,
+      "why": "A promise that needs speed or a skipped rest can be a prohibited request. Change the time. Do not make the promise and do not lean on the driver. Change the time.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — Prohibited requests and contracts",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/prohibited-requests-and-contracts-under-the-hvnl"
+      }
+    },
+    {
+      "id": "sales-2",
+      "topic": "sales",
+      "roles": [
+        "sales"
+      ],
+      "prompt": "A driver says they are unfit and will not start. What do you do?",
+      "choices": [
+        "Accept the stop. Tell your manager. Do not pressure them",
+        "Tell them the customer is waiting",
+        "Cancel their pay yourself"
+      ],
+      "answer": 0,
+      "why": "The unfit-to-drive duty empowers the driver to stop. How pay or the roster is handled is a gap. Check with your manager. Do not pressure the driver. Do not pressure them to go, and do not decide their pay yourself. Tell your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — Prohibited requests and contracts",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/prohibited-requests-and-contracts-under-the-hvnl"
+      }
+    },
+    {
+      "id": "sales-3",
+      "topic": "sales",
+      "roles": [
+        "sales"
+      ],
+      "prompt": "You are a consignor when you:",
+      "choices": [
+        "Coordinate and send goods for transport on a heavy vehicle",
+        "Only when you drive the truck",
+        "Only when your contract uses the word consignor"
+      ],
+      "answer": 0,
+      "why": "That is the NHVR description of the consignor function. The contract wording is not what decides it. Sending the goods on a heavy vehicle is the consignor function, whatever your title says.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — Prohibited requests and contracts",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/prohibited-requests-and-contracts-under-the-hvnl"
+      }
+    },
+    {
+      "id": "sales-4",
+      "topic": "sales",
+      "roles": [
+        "sales"
+      ],
+      "prompt": "A customer asks for a load you are not sure the truck may carry. What do you do?",
+      "choices": [
+        "Check with your manager before you agree",
+        "Agree, then tell the warehouse later",
+        "Agree if the customer is a regular"
+      ],
+      "answer": 0,
+      "why": "Mass, length, and PBS limits for our trucks are gaps. Check with your manager. A delivery outside New South Wales or Victoria is not a normal run. Do not agree first. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — Prohibited requests and contracts",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/prohibited-requests-and-contracts-under-the-hvnl"
+      }
+    },
+    {
+      "id": "drv-1",
+      "topic": "driver",
+      "roles": [
+        "driver"
+      ],
+      "prompt": "You feel too unwell to drive safely. What do you do?",
+      "choices": [
+        "Stop, or do not start, and tell your manager",
+        "Start and see how you go",
+        "Go if the run is short"
+      ],
+      "answer": 0,
+      "why": "The NHVR says the duty empowers you to stop or not start. Tell your manager. Do not start to see how you go. Stop, or do not start, and tell your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "drv-2",
+      "topic": "driver",
+      "roles": [
+        "driver"
+      ],
+      "prompt": "Unfit to drive can include:",
+      "choices": [
+        "Fatigue, illness, injury, or the effects of alcohol or other drugs, when that means you cannot drive safely",
+        "Only falling asleep at the wheel",
+        "Only what a customer thinks"
+      ],
+      "answer": 0,
+      "why": "That is the NHVR flyer’s description. It is wider than falling asleep. It is wider than falling asleep. Health, injury, alcohol, and other drugs count when they mean you cannot drive safely.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "drv-3",
+      "topic": "driver",
+      "roles": [
+        "driver"
+      ],
+      "prompt": "Are you a Chain of Responsibility party just because you drive?",
+      "choices": [
+        "No. Driving is not one of the 10 functions. You still must not drive when you are unfit",
+        "Yes. Driving is function number one",
+        "Only on a Friday"
+      ],
+      "answer": 0,
+      "why": "The NHVR says driving is not a CoR function. Your driver duties still stand. If you load, you are also a loader. Driving is not one of the 10 functions. You still must not drive when you are unfit.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "drv-4",
+      "topic": "driver",
+      "roles": [
+        "driver"
+      ],
+      "prompt": "Your work diary at Monaro is:",
+      "choices": [
+        "Logmaster. If you are unsure what to enter, check with your manager",
+        "A form you design yourself",
+        "Optional on local runs"
+      ],
+      "answer": 0,
+      "why": "Use Logmaster. Do not guess the fields. Check with your manager. Use Logmaster, and check with your manager if you are unsure. It is not optional.",
+      "source": {
+        "name": "NHVR",
+        "title": "Duties for managing fatigue and fitness to drive",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/fatigue-management/duties-for-managing-fatigue-and-fitness-to-drive"
+      }
+    },
+    {
+      "id": "load-1",
+      "topic": "loader",
+      "roles": [
+        "loader"
+      ],
+      "prompt": "You are a loader when you:",
+      "choices": [
+        "Load goods onto a heavy vehicle",
+        "Only if you also drive it away",
+        "Only if your title says loading manager"
+      ],
+      "answer": 0,
+      "why": "Loading the vehicle is the loader function. The loading-manager test is different: managing a site where five or more heavy vehicles load or unload in a day. Putting the freight on the heavy vehicle makes you a loader, even if you do not drive it.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "load-2",
+      "topic": "loader",
+      "roles": [
+        "loader"
+      ],
+      "prompt": "The load does not look like it will stay in place. What do you do?",
+      "choices": [
+        "Stop. Tell the driver and your manager",
+        "Send it and let the driver decide on the highway",
+        "Change the paperwork so the weight looks lower"
+      ],
+      "answer": 0,
+      "why": "Stop and tell them. Do not hide it in the paperwork. Do not send it, and do not change the paperwork. Stop and tell the driver and your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "load-3",
+      "topic": "loader",
+      "roles": [
+        "loader"
+      ],
+      "prompt": "The restraint steps for our hard-sided bodies are:",
+      "choices": [
+        "Not written in full in this app. Check with your manager",
+        "Whatever fits before departure",
+        "The same on every truck in Australia"
+      ],
+      "answer": 0,
+      "why": "That method is a gap. Check with your manager. Do not invent it. Do not invent the method. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "load-4",
+      "topic": "loader",
+      "roles": [
+        "loader"
+      ],
+      "prompt": "Someone asks you to finish loading during the driver’s rest. What do you do?",
+      "choices": [
+        "Do not do it. Tell your manager",
+        "Do it quickly so the freight stays cold",
+        "Do it if the driver says they do not mind"
+      ],
+      "answer": 0,
+      "why": "Rest is not loading time. If the freight is a problem, your manager changes the plan. You do not use the rest break. Do not load in the rest break, even if the freight is warming or the driver feels they should agree. Tell your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "fork-1",
+      "topic": "forklift",
+      "roles": [
+        "forklift"
+      ],
+      "prompt": "You hit the body or the fridge equipment. What do you do?",
+      "choices": [
+        "Report it before the truck leaves",
+        "Keep going if the dent is small",
+        "Wait to see if the customer complains"
+      ],
+      "answer": 0,
+      "why": "Report it before the truck leaves. Damage can affect whether the truck is safe on the road. Do not wait and do not judge the dent yourself. Report it before the truck leaves.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "fork-2",
+      "topic": "forklift",
+      "roles": [
+        "forklift"
+      ],
+      "prompt": "You are asked to finish the load during the driver’s rest. What do you do?",
+      "choices": [
+        "Stop and tell your manager",
+        "Finish it so the product stays cold",
+        "Finish it if you can do it in five minutes"
+      ],
+      "answer": 0,
+      "why": "Do not use the rest break. Tell your manager. They can change the plan. Cold product does not make a rest break into loading time. Stop and tell your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "fork-3",
+      "topic": "forklift",
+      "roles": [
+        "forklift"
+      ],
+      "prompt": "You do not know how this hard-sided body should hold the load. What do you do?",
+      "choices": [
+        "Check with your manager before you keep stacking",
+        "Stack it the way you did last year",
+        "Fill the body until nothing moves by eye"
+      ],
+      "answer": 0,
+      "why": "The restraint method is not written in this app. Check with your manager. Do not invent a method from memory or from a full-looking body. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "fork-4",
+      "topic": "forklift",
+      "roles": [
+        "forklift"
+      ],
+      "prompt": "Putting goods on the heavy vehicle means you are:",
+      "choices": [
+        "A loader, for that task",
+        "Outside the chain, because you are on a forklift",
+        "The driver"
+      ],
+      "answer": 0,
+      "why": "Loading the heavy vehicle is the loader function, whatever machine you use to do it. If you put the freight on the truck, you are a loader for that task.",
+      "source": {
+        "name": "NHVR",
+        "title": "Regulatory Advice — The Primary Duty",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/regulatory-advice/the-primary-duty"
+      }
+    },
+    {
+      "id": "mech-1",
+      "topic": "mechanic",
+      "roles": [
+        "mechanic"
+      ],
+      "prompt": "The truck is not safe to leave. What do you do?",
+      "choices": [
+        "Keep it stopped and tell the General Manager",
+        "Let it go if the run is short",
+        "Tell the driver to be careful"
+      ],
+      "answer": 0,
+      "why": "Keep it stopped and tell the General Manager. A short run is still a trip on the road. Keep it stopped and tell the General Manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Penalties and infringements schedule, 1 August 2026 to 30 June 2027",
+        "url": "https://www.nhvr.gov.au/files/media/document/910/202606-1769-hvnl-penalties-and-infringements-2026-27.pdf"
+      }
+    },
+    {
+      "id": "mech-2",
+      "topic": "mechanic",
+      "roles": [
+        "mechanic"
+      ],
+      "prompt": "A failed pre-start in Intellifleet:",
+      "choices": [
+        "Goes to the General Manager. Do not delete it",
+        "Can be cleared by deleting the record",
+        "Is only the driver’s concern"
+      ],
+      "answer": 0,
+      "why": "It goes to the General Manager. Leave the record in place. Do not delete it. It goes to the General Manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Penalties and infringements schedule, 1 August 2026 to 30 June 2027",
+        "url": "https://www.nhvr.gov.au/files/media/document/910/202606-1769-hvnl-penalties-and-infringements-2026-27.pdf"
+      }
+    },
+    {
+      "id": "mech-3",
+      "topic": "mechanic",
+      "roles": [
+        "mechanic"
+      ],
+      "prompt": "The schedule maximum for not complying with heavy vehicle standards, section 60(1), is:",
+      "choices": [
+        "$8,480, with an infringement penalty of $848",
+        "$4,230,550",
+        "There is no penalty"
+      ],
+      "answer": 0,
+      "why": "That is the 1 August 2026 to 30 June 2027 schedule figure for section 60(1). The larger figures are the primary duty maximums, which are separate. Section 60(1) in the current schedule is a maximum of $8,480 and an infringement of $848.",
+      "source": {
+        "name": "NHVR",
+        "title": "Penalties and infringements schedule, 1 August 2026 to 30 June 2027",
+        "url": "https://www.nhvr.gov.au/files/media/document/910/202606-1769-hvnl-penalties-and-infringements-2026-27.pdf"
+      }
+    },
+    {
+      "id": "mech-4",
+      "topic": "mechanic",
+      "roles": [
+        "mechanic"
+      ],
+      "prompt": "Is our workshop automatically on the Maintenance Assurance Program from 1 August 2026?",
+      "choices": [
+        "No. Check with your manager. The flyer does not say it is automatic",
+        "Yes. Every workshop in Australia was enrolled that day",
+        "Yes, but only for local runs"
+      ],
+      "answer": 0,
+      "why": "Operators who achieve General Safety Accreditation can progress to that program. Whether we have done that is a gap. Check with your manager. It is not automatic. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Penalties and infringements schedule, 1 August 2026 to 30 June 2027",
+        "url": "https://www.nhvr.gov.au/files/media/document/910/202606-1769-hvnl-penalties-and-infringements-2026-27.pdf"
+      }
+    },
+    {
+      "id": "admin-1",
+      "topic": "office",
+      "roles": [
+        "office"
+      ],
+      "prompt": "Someone asks you to change a record so the day looks legal. What do you do?",
+      "choices": [
+        "Do not change it. Tell your manager",
+        "Change it if they are senior to you",
+        "Delete the day"
+      ],
+      "answer": 0,
+      "why": "Keep the true record. Tell your manager. Do not change it and do not delete the day, whoever asks. Tell your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "admin-2",
+      "topic": "office",
+      "roles": [
+        "office"
+      ],
+      "prompt": "Booking a delivery time can mean you are:",
+      "choices": [
+        "Helping to schedule or consign. The time must be achievable without speeding or skipped rest",
+        "Outside the chain, because you are in the office",
+        "The driver for that day"
+      ],
+      "answer": 0,
+      "why": "The function decides it. A time you book can push the driver. Make it achievable, or check with your manager. Office work can still be scheduling or consigning. The time has to be achievable safely.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "admin-3",
+      "topic": "office",
+      "roles": [
+        "office"
+      ],
+      "prompt": "You are not sure a task is a Chain of Responsibility function. What do you do?",
+      "choices": [
+        "Check with your manager",
+        "Ignore it if the word is not in your contract",
+        "Decide it is not your job"
+      ],
+      "answer": 0,
+      "why": "The NHVR says the function decides it, not the contract wording. If you are unsure, check with your manager. The contract does not decide it. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    },
+    {
+      "id": "admin-4",
+      "topic": "office",
+      "roles": [
+        "office"
+      ],
+      "prompt": "PBS, interstate, and hard-sided restraint detail in this app is:",
+      "choices": [
+        "Incomplete. Check with your manager where a page says it is a gap",
+        "Finished for every truck",
+        "Replaced by the Master Code, which is the law"
+      ],
+      "answer": 0,
+      "why": "Those pages state the NHVR points we could verify, and they mark the rest as gaps. The Master Code is not the law. The pages are not a full list of our trucks. The Master Code is not the law. Check with your manager.",
+      "source": {
+        "name": "NHVR",
+        "title": "Parties in the CoR",
+        "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/chain-of-responsibility/the-primary-duty/parties-in-the-cor"
+      }
+    }
+  ]
+}

@@ -16,7 +16,9 @@
     canvas.style.touchAction = 'none';
     canvas.addEventListener('pointerdown', function (e) { self._down(e); });
     canvas.addEventListener('pointermove', function (e) { self._move(e); });
-    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) { canvas.addEventListener(t, function (e) { self._up(e); }); });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (t) {
+      canvas.addEventListener(t, function (e) { self._up(e); });
+    });
   }
   SignaturePad.prototype._resize = function () {
     var ratio = Math.max(window.devicePixelRatio || 1, 1);
@@ -35,7 +37,7 @@
     }
   };
   SignaturePad.prototype._style = function () {
-    this.ctx.lineWidth = 2.6; this.ctx.lineCap = 'round'; this.ctx.lineJoin = 'round'; this.ctx.strokeStyle = '#0b2545';
+    this.ctx.lineWidth = 2.8; this.ctx.lineCap = 'round'; this.ctx.lineJoin = 'round'; this.ctx.strokeStyle = '#063318';
   };
   SignaturePad.prototype._fill = function () {
     var r = this.canvas.getBoundingClientRect();
@@ -49,7 +51,7 @@
     e.preventDefault();
     try { this.canvas.setPointerCapture(e.pointerId); } catch (err) {}
     this.drawing = true; this.last = this._pt(e);
-    this.ctx.beginPath(); this.ctx.arc(this.last.x, this.last.y, 1.2, 0, Math.PI * 2); this.ctx.fillStyle = '#0b2545'; this.ctx.fill();
+    this.ctx.beginPath(); this.ctx.arc(this.last.x, this.last.y, 1.2, 0, Math.PI * 2); this.ctx.fillStyle = '#063318'; this.ctx.fill();
     this.points = 1;
   };
   SignaturePad.prototype._move = function (e) {
@@ -74,7 +76,6 @@
     this.empty = true; this.strokes = 0; this.onChange(true);
   };
   SignaturePad.prototype.isEmpty = function () { return this.empty; };
-  // Export a compact PNG (max 600px wide) so CSVs and storage stay small.
   SignaturePad.prototype.toDataURL = function () {
     var maxW = 600;
     var w = this.canvas.width, h = this.canvas.height;

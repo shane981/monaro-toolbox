@@ -3,51 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Monaro Milk Toolbox Talks</title>
-  <meta name="description" content="Weekly toolbox talks and sign-on for Monaro Milk drivers and supervisors.">
+  <title>Monaro Milk</title>
+  <meta name="description" content="Toolbox talks, Chain of Responsibility rules and sign-on for Monaro Milk drivers and depot staff.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#C2560F">
+  <meta name="theme-color" content="#063318">
   <meta name="color-scheme" content="light">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="MM Toolbox">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="application-name" content="MM Toolbox">
-  <meta name="format-detection" content="telephone=yes">
+  <meta name="apple-mobile-web-app-title" content="Monaro">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="topbar">
-    <a class="brand" href="#/" aria-label="This week's toolbox talk">
-      <img src="icons/logo.png" alt="Monaro Milk &amp; Juice" width="120" height="44">
-      <span class="brand-text">Toolbox Talks</span>
-    </a>
-    <div class="top-actions">
-      <span id="net" class="net" role="status" aria-live="polite"></span>
-      <button id="textSize" class="iconbtn" type="button" aria-label="Change text size" title="Text size">A<span>A</span></button>
-    </div>
-  </header>
-  <nav class="tabs" aria-label="Main">
-    <a href="#/" data-tab="current">This week</a>
-    <a href="#/archive" data-tab="archive">Archive</a>
-    <a href="#/supervisor" data-tab="supervisor">Supervisor</a>
-  </nav>
-  <div id="banner" class="banner" hidden></div>
-  <main id="main" tabindex="-1">
-    <p class="loading">Loading toolbox talk…</p>
-  </main>
-  <footer class="foot">
-    <p>Monaro Milk &amp; Juice · Internal use only · Sign-ons are stored on this device until a supervisor exports them.</p>
-    <p id="ver" class="muted"></p>
-  </footer>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#/" aria-label="Monaro Milk home">
+        <img src="icons/logo.png" alt="" width="132" height="48">
+      </a>
+      <div class="top-actions">
+        <span id="net" class="net" role="status" aria-live="polite" hidden></span>
+        <button id="openSearch" class="iconbtn" type="button" aria-label="Search talks and rules">Search</button>
+        <button id="textSize" class="iconbtn" type="button" aria-label="Change text size" title="Text size">A<span>A</span></button>
+      </div>
+    </header>
+    <div id="banner" class="banner" hidden></div>
+    <main id="main" tabindex="-1">
+      <p class="loading">Loading…</p>
+    </main>
+    <footer class="foot">
+      <p>Monaro Milk &amp; Juice · Internal use. Sign-ons stay on this phone until a supervisor exports them. Nothing else leaves the device.</p>
+      <p id="ver" class="muted"></p>
+    </footer>
+    <nav class="tabbar" aria-label="Main">
+      <a href="#/" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg><span>Home</span></a>
+      <a href="#/talks" data-tab="talks"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm8 1.5V9h4.5"/></svg><span>Talks</span></a>
+      <a href="#/rules" data-tab="rules"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4.2 2.8 7.4 7 8.5 4.2-1.1 7-4.3 7-8.5V6z"/></svg><span>Rules</span></a>
+      <a href="#/speak" data-tab="speak"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0-6 6v2.2L4.3 14A1 1 0 0 0 5.2 16H8a4 4 0 0 0 8 0h2.8a1 1 0 0 0 .9-1.5L18 11.2V9a6 6 0 0 0-6-6z"/></svg><span>Speak</span></a>
+      <a href="#/systems" data-tab="systems"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2-2h3v6H4zm9-2h5a2 2 0 0 1 2 2v2h-7zm-9 8h7v6H6a2 2 0 0 1-2-2zm9 0h7v4a2 2 0 0 1-2 2h-5z"/></svg><span>Systems</span></a>
+    </nav>
+  </div>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <div id="celebrate" hidden></div>
   <noscript><p class="noscript">This app needs JavaScript turned on.</p></noscript>
+  <script src="js/util.js"></script>
   <script src="js/db.js"></script>
   <script src="js/signature.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/talks.js"></script>
+  <script src="js/rules.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
-/* Local storage for sign-ons and follow-up ticks (IndexedDB, with localStorage fallback). */
+/* Local storage for sign-ons and follow-up ticks (IndexedDB, with localStorage fallback).
+   Database name stays mm-toolbox so sign-ons already on a phone survive this update. */
 (function () {
   'use strict';
   var DB_NAME = 'mm-toolbox';
@@ -27,7 +28,6 @@
     return dbPromise;
   }
 
-  // ---- localStorage fallback ----
   function lsAll(store) { try { return JSON.parse(localStorage.getItem('mm-' + store) || '[]'); } catch (e) { return []; } }
   function lsSave(store, rows) { localStorage.setItem('mm-' + store, JSON.stringify(rows)); }
 

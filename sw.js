@@ -1,20 +1,30 @@
-/* Monaro Milk Toolbox Talks – service worker.
-   CACHE_VERSION is bumped automatically by scripts/publish.sh on every publish. */
-const CACHE_VERSION = 'mm-toolbox-v19';
+/* Monaro Milk driver hub – service worker.
+   CACHE_VERSION is bumped automatically by scripts/publish.sh on every publish.
+   Cache name stays on the mm-toolbox-v series so scripts/publish.sh can bump it.
+   v20 is a new shell cache so phones drop mm-toolbox-v19.
+   Talk JSON stays in mm-toolbox-data so weeks already saved on a phone are not thrown away. */
+const CACHE_VERSION = 'mm-toolbox-v21';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
-const DATA_CACHE = 'mm-toolbox-data'; // talks survive version bumps so old weeks stay readable offline
+const DATA_CACHE = 'mm-toolbox-data';
 const SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
   './css/app.css',
-  './js/app.js',
+  './js/util.js',
   './js/db.js',
   './js/signature.js',
+  './js/progress.js',
+  './js/talks.js',
+  './js/rules.js',
+  './js/app.js',
+  './content/cor.json',
+  './content/systems.json',
   './icons/logo.png',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/maskable-192.png',
+  './icons/maskable-512.png',
   './icons/apple-touch-icon.png',
   './icons/favicon-32.png'
 ];
@@ -44,7 +54,6 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Network-first (with timeout) for talk data + version.json so new weeks appear straight away.
 async function networkFirst(request) {
   const cache = await caches.open(DATA_CACHE);
   const key = request.url.split('?')[0];
@@ -62,7 +71,6 @@ async function networkFirst(request) {
   }
 }
 
-// Cache-first for the app shell.
 async function cacheFirst(request) {
   const cached = await caches.match(request, { ignoreSearch: true });
   if (cached) return cached;

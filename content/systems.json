@@ -1,0 +1,29 @@
+{
+  "note": "Leave url as an empty string until the real address is known. The app then shows Link not set yet. The reviewed CoR app used REPLACE-WITH-… placeholders for these four systems. Use a full https URL when you set one. Do not put personal phone numbers here.",
+  "links": [
+    {
+      "id": "tanda",
+      "name": "Tanda",
+      "blurb": "Roster and pay. A roster in Tanda does not override work and rest limits or fitness to drive.",
+      "url": ""
+    },
+    {
+      "id": "logmaster",
+      "name": "Logmaster",
+      "blurb": "Electronic work diary. If you are unsure what to enter, check with your manager.",
+      "url": ""
+    },
+    {
+      "id": "intellifleet",
+      "name": "Intellifleet",
+      "blurb": "Pre-starts. A failed pre-start goes to the General Manager. Do not delete it.",
+      "url": ""
+    },
+    {
+      "id": "mix",
+      "name": "MiX",
+      "blurb": "Telematics. It can show a problem. It is not a reason to tell a driver to catch up.",
+      "url": ""
+    }
+  ]
+}
