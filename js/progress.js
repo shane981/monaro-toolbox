@@ -10,7 +10,7 @@
     { id: 'streak3', name: 'Three straight', hint: 'Sign on to three talks in a row' },
     { id: 'quiz', name: 'Had a go', hint: 'Finish a quiz' },
     { id: 'ace', name: 'Full marks', hint: 'Score 100% on a quiz of 5 or more' },
-    { id: 'set45', name: 'All 45', hint: 'Finish the full question set' }
+    { id: 'set45', name: 'Full set', hint: 'Finish all 100 questions' }
   ];
 
   function quizLog() {
@@ -49,7 +49,7 @@
         streak3: streak >= 3,
         quiz: log.length > 0,
         ace: log.some(function (r) { return r.total >= 5 && r.score === r.total; }),
-        set45: log.some(function (r) { return r.total >= 45 && r.score != null; })
+        set45: log.some(function (r) { return r.total >= 100 && r.score != null; })
       };
       return {
         signons: signons,

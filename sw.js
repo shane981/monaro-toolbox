@@ -3,7 +3,7 @@
    Cache name stays on the mm-toolbox-v series so scripts/publish.sh can bump it.
    v20 is a new shell cache so phones drop mm-toolbox-v19.
    Talk JSON stays in mm-toolbox-data so weeks already saved on a phone are not thrown away. */
-const CACHE_VERSION = 'mm-toolbox-v24';
+const CACHE_VERSION = 'mm-toolbox-v25';
 const SHELL_CACHE = `${CACHE_VERSION}-shell`;
 const DATA_CACHE = 'mm-toolbox-data';
 const SHELL = [
