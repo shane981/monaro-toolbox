@@ -59,7 +59,9 @@
   }
   function sourceLine(s) {
     if (!s) return '';
-    return '<p class="cite">Source: <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + ' — ' + esc(s.title) + '</a></p>';
+    var label = esc(s.name) + (s.title ? ' — ' + esc(s.title) : '');
+    if (!s.url) return '<p class="cite">Source: ' + label + '</p>';
+    return '<p class="cite">Source: <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + label + '</a></p>';
   }
 
   window.MM = {

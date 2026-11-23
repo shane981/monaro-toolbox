@@ -87,7 +87,8 @@
         var weekPct = snap.signedThisWeek ? 1 : 0;
         var quizSub = snap.last ? (snap.last.score + '/' + snap.last.total + ' last go') : 'Not yet';
         U.$('#main').innerHTML =
-          '<p class="hello">' + U.esc(U.greet()) + '</p>' +
+          '<div class="hello-row"><p class="hello">' + U.esc(U.greet()) + '</p>' +
+            '<button type="button" id="refresh-app" class="refresh-btn" aria-label="Refresh the app to get the latest">&#x21bb; Refresh</button></div>' +
           '<p class="hello-sub">Monaro Milk &amp; Juice · Cooma</p>' +
           hero +
           '<section class="card progress-card"><h2>My progress</h2><p class="hint">Saved on this phone. It does not leave the device.</p>' +
@@ -97,7 +98,7 @@
             '</div>' +
             '<p class="streak">' + (snap.streak ? '<strong>' + snap.streak + '</strong> talk' + (snap.streak === 1 ? '' : 's') + ' signed in a row' : 'Sign on to start a streak') + '</p>' +
             window.MMProgress.badgesHtml(snap.earned) +
-            '<a class="btn ghost" href="#/rules/quiz?set=all">Quiz · ' + state.cor.quiz.length + ' questions</a>' +
+            '<a class="btn ghost" href="#/rules/quiz">Quiz · ' + state.cor.quiz.length + ' questions</a>' +
           '</section>' +
           '<a class="soon-teaser" href="#/soon"><span class="kicker">Coming soon</span><strong>What’s next for this app</strong><span>SWMS, messages, hazard reports, your tickets, and more. A look at what’s being built. None of it is live.</span></a>' +
           '<div class="home-jumps">' +
@@ -105,9 +106,26 @@
             '<a href="#/rules"><strong>CoR rules</strong><span>By the job you are doing today.</span></a>' +
             '<a href="#/systems"><strong>Systems</strong><span>Tanda, Logmaster, Intellifleet, MiX.</span></a>' +
           '</div>';
+        var rb = U.$('#refresh-app');
+        if (rb) rb.onclick = refreshApp;
         window.scrollTo(0, 0);
       });
     });
+  }
+
+  /* Pull the newest version: check for a new service worker, drop cached files
+     (sign-ons and quiz progress live in IndexedDB/localStorage and are kept), reload. */
+  function refreshApp() {
+    var rb = U.$('#refresh-app');
+    if (rb) { rb.disabled = true; rb.textContent = 'Refreshing…'; }
+    var jobs = [];
+    if ('serviceWorker' in navigator) {
+      jobs.push(navigator.serviceWorker.getRegistration().then(function (reg) { return reg && reg.update(); }).catch(function () {}));
+    }
+    if (window.caches) {
+      jobs.push(caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); }).catch(function () {}));
+    }
+    Promise.all(jobs).then(function () { location.reload(); }, function () { location.reload(); });
   }
 
   function renderSearch(q) {
@@ -218,9 +236,10 @@
       '<p class="lede">Saying something early is part of the job. If a truck, a load, or a driver is not safe, stop that job and tell someone.</p>' +
       '<a class="speak emergency" href="tel:000"><span class="kicker">Someone could be hurt right now</span><strong>Call 000</strong><span>The NHVR gives examples: a crash with a heavy vehicle, a heavy vehicle losing its load, or a heavy vehicle swerving across the road.</span></a>' +
       '<article class="speak manager"><span class="kicker">Tell us inside the business</span><strong>Tell your manager</strong><span>Tell your manager as soon as you can. If you cannot reach your manager, tell the General Manager. A failed pre-start in Intellifleet goes to the General Manager. Leave the failed record in place. The name of any extra internal form, phone, or after-hours contact is not in this app. Check with your manager.</span></article>' +
-      '<a class="speak nhvr" href="tel:1800931785"><span class="kicker">Heavy Vehicle Confidential Reporting Line</span><strong>NHVR 1800 931 785</strong><span>Monday to Friday, 7.00am to 4.30pm (AEST). For procedures, practices, or conditions that might endanger a driver or someone else. Not for immediate danger. Call 000 for that. The NHVR says it protects your identity and cannot tell you the outcome.</span></a>' +
+      '<a class="speak nhvr" href="tel:1800931785"><span class="kicker">Heavy Vehicle Confidential Reporting Line</span><strong>NHVR 1800 931 785</strong><span>Monday to Friday, 7.00am to 4.30pm (AEST). For safety issues that are not an emergency. The NHVR says it protects your identity and cannot tell you the outcome. Not a substitute for 000.</span></a>' +
+      '<a class="speak office" href="tel:136487"><span class="kicker">NHVR general contact. Not the confidential line</span><strong>13 NHVR (13 64 87)</strong><span>7.00am to 8.00pm AEST Monday to Friday, and 8.00am to 4.00pm AEST Saturday and Sunday. Closed on national public holidays. Standard 13 call charges apply. Use this for general Heavy Vehicle National Law questions, work diaries and permits. For a safety issue you do not want to raise only inside the business, use 1800 931 785. If someone could be hurt right now, call 000.</span></a>' +
       '<article class="speak stop"><span class="kicker">Drivers can stop</span><strong>Stop the truck.</strong><span>If your health or fitness means you cannot drive safely, stop or do not start. Tell your manager. Do not keep going because the run is late or the customer is waiting. How the roster and your pay are handled when you stop is not in this app. Check with your manager.</span></article>' +
-      '<p class="cite">Source: <a href="https://www.nhvr.gov.au/safety-accreditation-compliance/heavy-vehicle-confidential-reporting-line" target="_blank" rel="noopener">NHVR Heavy Vehicle Confidential Reporting Line</a></p>';
+      '<p class="cite">Sources: <a href="https://www.nhvr.gov.au/safety-accreditation-compliance/heavy-vehicle-confidential-reporting-line" target="_blank" rel="noopener">Heavy Vehicle Confidential Reporting Line</a> · <a href="https://www.nhvr.gov.au/contact-us" target="_blank" rel="noopener">Contact us (13 NHVR)</a> · <a href="https://www.nhvr.gov.au/safety-accreditation-compliance/human-factors/unfit-to-drive" target="_blank" rel="noopener">Unfit to Drive</a></p>';
     window.scrollTo(0, 0);
   }
 
@@ -273,7 +292,11 @@
       if (!t) throw new Error('missing topic');
       window.MMRules.renderParty(t, 'topic');
     });
-    else if (p[0] === 'rules' && p[1] === 'quiz') job = loadCor().then(function (c) { window.MMRules.renderQuiz(c, h.q.get('set') || 'all', h.q.get('id') || ''); });
+    else if (p[0] === 'rules' && p[1] === 'quiz') job = loadCor().then(function (c) {
+      var set = h.q.get('set');
+      if (!set || set === 'pick') window.MMRules.renderQuizPicker(c);
+      else window.MMRules.renderQuiz(c, set, h.q.get('id') || '');
+    });
     else if (p[0] === 'rules') job = loadCor().then(function (c) { window.MMRules.renderHome(c); });
     else if (p[0] === 'soon' || p[0] === 'coming-soon') { renderSoon(); job = Promise.resolve(); }
     else if (p[0] === 'speak') { renderSpeak(); job = Promise.resolve(); }

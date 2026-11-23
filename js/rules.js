@@ -16,7 +16,9 @@
       var rows = (cards || []).filter(function (c) { return c.kind === k; });
       if (!rows.length) return '';
       return '<section class="stack stack-' + k + '" aria-label="' + kindLabel(k) + '"><h2>' + kindLabel(k) + '</h2>' +
-        rows.map(function (c) { return '<article class="do-card">' + U().esc(c.text) + '</article>'; }).join('') + '</section>';
+        rows.map(function (c) {
+          return '<article class="do-card"><p>' + U().esc(c.text) + '</p>' + (c.source ? U().sourceLine(c.source) : '') + '</article>';
+        }).join('') + '</section>';
     }).join('');
   }
 
@@ -32,7 +34,7 @@
     U().$('#main').innerHTML =
       '<section class="card hero"><p class="eyebrow">Chain of Responsibility</p><h1>Rules for the job you’re doing</h1>' +
       '<p>' + U().esc(cor.disclaimer) + '</p>' +
-      '<a class="btn big" href="#/rules/quiz?set=all">Start the 45-question quiz</a></section>' +
+      '<a class="btn big" href="#/rules/quiz">Choose a quiz</a></section>' +
       '<h2 class="section-label">Pick your job</h2><div class="picks">' + roles + '</div>' +
       '<h2 class="section-label">Topics</h2><div class="picks topics">' + topics + '</div>' +
       '<section class="card note"><p>' + U().esc(cor.business_note) + '</p></section>';
@@ -50,11 +52,43 @@
       '<header class="card hero"><p class="eyebrow">' + U().esc(item.kicker) + '</p><h1>' + U().esc(item.title) + '</h1>' +
       '<p class="summary">' + U().esc(item.summary) + '</p>' +
       '<a class="btn" href="' + quiz + '">Quiz this ' + (kind === 'role' ? 'job' : 'topic') + '</a></header>' +
-      '<section class="card law"><h2>The rule, in short</h2><p>' + U().esc(item.law) + '</p>' + U().sourceLine(item.source) + '</section>' +
+      '<section class="card law"><h2>The rule, in short</h2><p>' + U().esc(item.law) + '</p>' +
+      tableHtml(item.table) + sourcesHtml(item) + '</section>' +
       cardsHtml(item.cards);
     window.scrollTo(0, 0);
   }
 
+  function tableHtml(table) {
+    if (!table || !table.headers || !table.rows) return '';
+    return '<div class="table-wrap"><table class="fig"><caption>' + U().esc(table.caption || '') + '</caption><thead><tr>' +
+      table.headers.map(function (h) { return '<th scope="col">' + U().esc(h) + '</th>'; }).join('') +
+      '</tr></thead><tbody>' + table.rows.map(function (row) {
+        return '<tr>' + row.map(function (cell) { return '<td>' + U().esc(cell) + '</td>'; }).join('') + '</tr>';
+      }).join('') + '</tbody></table></div>' + (table.note ? '<p class="hint">' + U().esc(table.note) + '</p>' : '');
+  }
+  function sourcesHtml(item) {
+    var list = item.sources && item.sources.length ? item.sources : (item.source ? [item.source] : []);
+    return list.map(function (s) { return U().sourceLine(s); }).join('');
+  }
+  function renderQuizPicker(cor) {
+    document.title = 'Quiz – Monaro';
+    var topics = cor.topics.map(function (t) {
+      var n = cor.quiz.filter(function (q) { return q.topic === t.id; }).length;
+      return '<a class="pick topic" href="#/rules/quiz?set=topic&id=' + encodeURIComponent(t.id) + '"><span class="kicker">' + n + ' questions</span><strong>' + U().esc(t.title) + '</strong></a>';
+    }).join('');
+    var roles = cor.roles.map(function (r) {
+      var n = cor.quiz.filter(function (q) { return q.roles.indexOf(r.id) !== -1; }).length;
+      return '<a class="pick" href="#/rules/quiz?set=role&id=' + encodeURIComponent(r.id) + '"><span class="kicker">' + n + ' questions</span><strong>' + U().esc(r.title) + '</strong></a>';
+    }).join('');
+    U().$('#main').innerHTML =
+      '<p class="back"><a href="#/rules">All rules</a></p>' +
+      '<section class="card hero"><p class="eyebrow">Quiz</p><h1>Pick a set</h1>' +
+      '<p>Scores stay on this phone. The full set is ' + cor.quiz.length + ' questions.</p>' +
+      '<a class="btn big" href="#/rules/quiz?set=all">Full quiz · ' + cor.quiz.length + '</a></section>' +
+      '<h2 class="section-label">By topic</h2><div class="picks topics">' + topics + '</div>' +
+      '<h2 class="section-label">By job</h2><div class="picks">' + roles + '</div>';
+    window.scrollTo(0, 0);
+  }
   function questionsFor(cor, set, id) {
     var all = cor.quiz;
     if (set === 'role') return all.filter(function (q) { return q.roles.indexOf(id) !== -1; });
@@ -179,5 +213,5 @@
     return docs;
   }
 
-  window.MMRules = { renderHome: renderHome, renderParty: renderParty, renderQuiz: renderQuiz, searchDocs: searchDocs };
+  window.MMRules = { renderHome: renderHome, renderParty: renderParty, renderQuiz: renderQuiz, renderQuizPicker: renderQuizPicker, searchDocs: searchDocs };
 })();
