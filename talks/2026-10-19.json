@@ -1,42 +1,42 @@
 {
   "schema_version": 1,
   "id": "2026-10-19",
-  "title": "Stopping power: daily brake checks, brake defects and braking with a milk load",
+  "title": "Stopping power: daily brake checks, brake defects and braking with a loaded refrigerated truck",
   "date": "2026-10-19",
   "week_label": "Week of Monday 19 October 2026",
   "prepared_by": "Monaro Milk safety (weekly toolbox talk)",
-  "summary": "Brakes are the number one problem the NHVR is finding on heavy vehicles this year. Between January and July 2026, 28 per cent of heavy vehicles given a defect notice had a brake defect, and in NSW it was nearly 31 per cent. In NSW a brake drum exploded off a truck slowing from high speed and hit the car behind. This week is for every Monaro Milk driver, heavy rigid (HR) tanker and semi alike: how to check your brakes properly before an early farm run, what to do when something isn't right, how to check safely without the truck moving, and how to brake smoothly with a milk load that surges.",
-  "key_risk": "Brakes that are worn, out of adjustment, leaking air or contaminated stop working when you need them most: coming down a hill with a full tanker, braking for a stock crossing or a car pulling out on a rural road, or pulling up at a farm gate in the dark. A damaged drum can also break apart and throw metal at following traffic. Our trucks run on unsealed farm tracks, where mud and gravel speed up wear and can jam brake parts such as automatic slack adjusters. On top of that, milk is a liquid load that surges forward and back under harsh braking, which makes a heavy vehicle harder to control. A brake fault that is skipped on the pre-start, or reported and not fixed, can kill the driver or another road user. And when a driver crawls under or near a truck to check a brake fault, a truck that isn't properly secured can roll and crush them.",
+  "summary": "Brakes are the number one problem the NHVR is finding on heavy vehicles this year. Between January and July 2026, 28 per cent of heavy vehicles given a defect notice had a brake defect, and in NSW it was nearly 31 per cent. In NSW a brake drum exploded off a truck slowing from high speed and hit the car behind. This week is for every Monaro Milk driver, heavy rigid (HR) and semi alike: how to check your brakes properly before an early delivery run, what to do when something isn't right, how to check safely without the truck moving, and how to brake smoothly with heavy palletised milk and juice loads.",
+  "key_risk": "Brakes that are worn, out of adjustment, leaking air or contaminated stop working when you need them most: coming down a steep grade with a full load of palletised milk and juice, braking for stock or a car pulling out on a rural road, or pulling up at a dark loading bay. A damaged drum can also break apart and throw metal at following traffic. Some regional and rural routes still have rough or unsealed sections, where mud and gravel speed up wear and can jam brake parts such as automatic slack adjusters. On top of that, harsh braking shifts heavy crates and pallets forward, stressing load restraint and making a loaded truck harder to control. A brake fault that is skipped on the pre-start, or reported and not fixed, can kill the driver or another road user. And when a driver crawls under or near a truck to check a brake fault, a truck that isn't properly secured can roll and crush them.",
   "drivers_need_to_know": [
     "Brakes are the top defect the NHVR is finding. Its August 2026 warning said 28 per cent of heavy vehicles issued a defect notice between January and July 2026 had a brake-related defect (6,502 of 23,195 vehicles). In NSW it was 4,674 of 15,130 vehicles, or 30.9 per cent. At a maintenance conference on 14 October 2026, the NHVR said it had issued 95,632 defect notices in the first three quarters of 2026, and that brake imbalances, excessive wear and brakes that were completely non-operational were what it sees most.",
     "This happened in NSW: a brake drum exploded from a heavy vehicle as it slowed from high speed and struck the vehicle behind. Nobody was seriously hurt, but the truck was sent for a full mechanical inspection that found a number of defects. The NHVR said it could have had devastating consequences.",
-    "Every shift, HR rigid tankers and semis: the NHVR daily check for brakes is that brake failure warning lights work, pressure gauges work, the low-air warning works and the air tank drain valves work. Drain the air tanks. If a lot of water comes out, tell your supervisor: the NHVR inspection manual says it is usually a sign of neglected brake maintenance. If a lot of oil comes out, that usually means a faulty compressor.",
+    "Every shift, HR rigids and semis: the NHVR daily check for brakes is that brake failure warning lights work, pressure gauges work, the low-air warning works and the air tank drain valves work. Drain the air tanks. If a lot of water comes out, tell your supervisor: the NHVR inspection manual says it is usually a sign of neglected brake maintenance. If a lot of oil comes out, that usually means a faulty compressor.",
     "The NHVR's quick brake check: with the engine off, apply the brake and listen for air leaks. Then, with the park brakes released, apply the brake again and listen for abnormal sounds, as this can point to excessive brake travel (brakes out of adjustment). Only do this with the truck secured and the wheels chocked (see below).",
     "On your walk-around, look for the things the NHVR inspection manual says make brakes unroadworthy: air hoses with cuts or rubbing through the outer cover, hoses or pipes that are kinked, cracked, bulging, leaking or hanging loose; brake chambers or brackets that are loose, cracked or bent; drums with missing pieces or cracks; and oil or grease on the brake linings (a leaking hub seal can do this). If your truck has stroke indicators on the brake pushrods and one shows over-stroke, the brake needs adjusting.",
     "The ABS warning light must come on and go out at start-up. An ABS light that stays on, or doesn't work at all, is a defect. Semi drivers: the trailer brakes must work when you use the prime mover's brake controls, and the ABS/EBS lead must be connected to the trailer.",
-    "Unsealed farm tracks are hard on brakes. The NHVR says operating on unsealed roads can mean the vehicle needs servicing more often, and that brakes and brake components, especially automatic slack adjusters, should be kept clear of mud and debris. The Australian Trucking Association warns automatic slack adjusters are often skipped on visual checks because people assume they look after themselves, but they can jam with road debris. If your truck has been through deep mud or water at a farm, have a look at the brakes before you head off.",
+    "Rough or unsealed road sections are hard on brakes. The NHVR says operating on unsealed roads can mean the vehicle needs servicing more often, and that brakes and brake components, especially automatic slack adjusters, should be kept clear of mud and debris. The Australian Trucking Association warns automatic slack adjusters are often skipped on visual checks because people assume they look after themselves, but they can jam with road debris. If your truck has been through deep mud or water on a delivery route, have a look at the brakes before you head off.",
     "The NHVR is clear: fix any brake defect before travel, whether it is minor or major. If you find a brake fault on your pre-start, the truck doesn't go until your supervisor and the workshop have sorted it. During the trip, report any change in braking: pulling to one side, a longer or softer pedal, new noises, vibration, a smell of hot brakes, or a warning light.",
     "Safe checks (SafeWork NSW): roll-aways kill and injure people in NSW every year, and in most cases the operator wasn't in the driver's seat. In October 2020 a mechanic in Tumut was killed when the tipper truck he was under, working on a brake line, rolled forward over him. Before you check brakes or look under a truck: park on level ground, park brake on, engine off and key out, and chock the wheels. Never crawl under a truck to look at a fault unless it is secured and someone knows you're there.",
-    "Braking with milk on board: the NHVR says tankers can become unstable if liquid shifts unexpectedly, and its live loads guide tells drivers to keep acceleration and braking steady, increase the gap to the vehicle in front to avoid harsh braking, take wider and slower turns, and avoid sudden movements. Your load changes at every farm, so the truck will behave differently on each leg of the run.",
+    "Braking with palletised dairy freight on board: bottled milk and juice on pallets are dense, heavy loads. Keep acceleration and braking steady, increase the gap to the vehicle in front to avoid harsh braking, take wider and slower corners, and use engine braking / retarders sensibly on steep descents. Remember your load weight and axle distribution change as crates and pallets come off at each delivery stop, so the truck will handle differently on each leg of the run.",
     "Hills: on long, steep descents, the NHVR says use your engine brake and a low enough gear for the load you're carrying, obey steep-descent signs, and expect a loaded truck to need to go well below the posted limit to stay in control. Talking about the long, steep South Eastern Freeway descent into Adelaide, the South Australian Road Transport Association said crashes nearly always come down to too high a gear, not slowing before the descent, not using the engine brake, or a mechanical failure. Pick your gear and slow down at the top, not halfway down.",
     "If you get a defect notice from the NHVR, police or a transport inspector, you must comply with any conditions on it and not use the vehicle past the time it states. If you are not the owner or operator, you must give the notice to the operator as soon as practicable, and no later than 14 days. At Monaro Milk, hand it to your supervisor the same day. A major defect notice means the vehicle can only be moved as the notice allows, or after repairs."
   ],
   "supervisors_must_check": [
-    "Every HR rigid tanker and prime mover/semi-trailer has a completed daily pre-start each shift, and the brake section (warning lights, gauges, low-air warning, air tank drains, air leaks, hoses) has actually been ticked, not left blank.",
+    "Every HR rigid truck and prime mover/semi-trailer has a completed daily pre-start each shift, and the brake section (warning lights, gauges, low-air warning, air tank drains, air leaks, hoses) has actually been ticked, not left blank.",
     "Any brake fault reported by a driver is assessed straight away, the vehicle is grounded until it is fixed, and the repair and return-to-service are recorded. The NHVR expects unsafe vehicles to be grounded until the defect is fixed.",
-    "Service intervals for brakes reflect how we actually operate: unsealed farm tracks, mud and frequent stop-start farm work. The NHVR says these conditions can justify more frequent servicing.",
+    "Service intervals for brakes reflect how we actually operate: highway grades, regional road conditions and frequent stop-start multi-drop delivery work. The NHVR says operating conditions can justify more frequent servicing.",
     "The workshop is checking brake adjustment and pushrod stroke against the NHVR inspection manual (NHVIM V3.2 Section 2), including automatic slack adjusters, not assuming they look after themselves.",
     "Drivers are draining air tanks, and any reports of excessive water or oil in the tanks are passed to the workshop.",
     "Every truck carries wheel chocks, and drivers park on level ground with the park brake on, engine off and key out before doing walk-around or brake checks. No one goes under a truck that isn't secured.",
     "Any defect notice issued to one of our vehicles is handed in the same day, logged, repaired, and cleared as the notice instructs, with the clearance record kept.",
-    "Run schedules and farm pick-up times give drivers enough time to do a proper pre-start and to drive smoothly with a surging milk load, without rushing descents or braking late to make up time. Under the Chain of Responsibility primary duty, we must not directly or indirectly cause or encourage a driver to break the Heavy Vehicle National Law."
+    "Run schedules and delivery windows give drivers enough time to do a proper pre-start and to drive smoothly with heavy palletised loads, without rushing descents or braking late to make up time. Under the Chain of Responsibility primary duty, we must not directly or indirectly cause or encourage a driver to break the Heavy Vehicle National Law."
   ],
   "discussion_questions": [
     "When did you last drain your air tanks, and what came out? What would you do if you saw a lot of water or oil?",
     "Have you ever felt the brakes on one of our trucks pull to one side, fade or feel different on a run? What did you do, and was it fixed?",
-    "Which farm tracks or yards are hardest on our brakes (mud, gravel, water crossings), and what should we check after running through them?",
+    "Which steep descents, regional roads or delivery access points are hardest on our brakes (steep grades, gravel, wet sections, tight stops), and what should we check after running through them?",
     "How does the truck feel when you brake with a part-full load of milk compared with full or empty, and where on our runs do you have to plan your braking earliest?",
-    "Is there anything stopping you from doing a full brake check before an early run, such as time, lighting, no chocks, or pressure to get to a farm on time? What would help?"
+    "Is there anything stopping you from doing a full brake check before an early run, such as time, lighting, no chocks, or pressure to hit a delivery window? What would help?"
   ],
   "practical_checklist": [
     "Parked on level ground, park brake on, engine off, key out, wheels chocked before any walk-around or brake check.",
@@ -47,14 +47,14 @@
     "Park brakes released, brake applied again: no abnormal sounds (possible excessive brake travel).",
     "Walk-around: air hoses and pipes not cut, rubbed through, kinked, bulging, leaking or hanging loose.",
     "Walk-around: brake chambers and brackets secure, no cracked drums, no oil or grease on linings or leaking hub seals. Any stroke indicator not showing over-stroke.",
-    "After mud or water at a farm: brakes and slack adjusters checked for mud and debris.",
+    "After mud, water or rough road sections: brakes and slack adjusters checked for mud and debris.",
     "Semis: trailer brakes work from the prime mover controls, ABS/EBS lead connected.",
     "On the road: steady braking, bigger gap to the vehicle in front, wider and slower turns with a part load. Low gear and engine brake selected before every descent.",
     "Any brake fault: recorded on the pre-start and reported before you move. A brake fault means the truck doesn't go."
   ],
   "required_records": [
     "Toolbox talk sign-on register for this talk (this app's CSV export, or the printed register).",
-    "Completed daily pre-start check for each HR rigid tanker, prime mover and semi-trailer each shift, with the brake items ticked, who did it and when.",
+    "Completed daily pre-start check for each HR rigid truck, prime mover and semi-trailer each shift, with the brake items ticked, who did it and when.",
     "Driver defect and fault reports for brakes, with the repair, who did it, the date, and when the vehicle was cleared to return to service.",
     "Workshop service and brake inspection records (including brake adjustment and pushrod stroke, linings and drums), showing the service intervals used for each vehicle.",
     "Register of any defect notices issued to our vehicles, with the date handed in, the repair, and the clearance record.",
@@ -73,7 +73,7 @@
       "due": "Friday 30 October 2026"
     },
     {
-      "action": "Review brake service intervals for each vehicle against how it actually operates (unsealed farm tracks, mud, stop-start work), as the NHVR recommends, and shorten intervals where needed.",
+      "action": "Review brake service intervals for each vehicle against how it actually operates (steep grades, regional roads, stop-start multi-drop work), as the NHVR recommends, and shorten intervals where needed.",
       "owner": "Operations Manager",
       "due": "Friday 30 October 2026"
     },
@@ -93,7 +93,7 @@
       "due": "Wednesday 21 October 2026"
     },
     {
-      "action": "Follow up with any driver who raised a brake, farm track, schedule or equipment concern during this talk.",
+      "action": "Follow up with any driver who raised a brake, route, schedule or equipment concern during this talk.",
       "owner": "Supervisor",
       "due": "Within 7 days"
     }
@@ -165,11 +165,11 @@
     {
       "name": "NHVR",
       "type": "regulator",
-      "title": "Loading Guide – Live Loads",
-      "url": "https://www.nhvr.gov.au/road-access/loading/loading-guides/live-loads",
+      "title": "Load Restraint Guide",
+      "url": "https://www.nhvr.gov.au/safety-accreditation-compliance/vehicle-standards-and-modifications/load-restraint",
       "date": "undated",
       "accessed": "2026-10-19",
-      "note": "Bulk liquids are live loads; tanker liquid can shift and make the vehicle unstable; steady acceleration and braking, bigger following gap to avoid harsh braking, wider and slower turns, avoid sudden movements."
+      "note": "Palletised and crated loads in enclosed refrigerated bodies: keep loads restrained against forward shift under braking and cornering smoothly."
     },
     {
       "name": "SafeWork NSW",

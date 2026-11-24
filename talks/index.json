@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T05:21:32.601Z",
+  "generated_at": "2026-11-24T23:35:45.343Z",
   "latest": "2026-11-23",
   "count": 8,
   "talks": [
@@ -41,7 +41,7 @@
     },
     {
       "id": "2026-10-19",
-      "title": "Stopping power: daily brake checks, brake defects and braking with a milk load",
+      "title": "Stopping power: daily brake checks, brake defects and braking with a loaded refrigerated truck",
       "date": "2026-10-19",
       "week_label": "Week of Monday 19 October 2026",
       "file": "2026-10-19.json"
